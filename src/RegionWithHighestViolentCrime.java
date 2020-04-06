@@ -36,24 +36,24 @@ public class RegionWithHighestViolentCrime {
 			
 			if(crime.getDistrict().equalsIgnoreCase(region) && crime.getGeneralCode().contains("firearm") ) {
 				int temp2 = totalCrimeCount.get(region) + 1;
-				totalVioCount.put(region,temp2); //count the total number of Burglary Residential for each region
+				totalVioCount.put(region,temp2); //count the total number of violent crime (firearm related) for each region
 			}
 			
 			else if(crime.getDistrict().equalsIgnoreCase(region) && crime.getGeneralCode().contains("assault")) {
 				int temp2 = totalCrimeCount.get(region) + 1;
-				totalVioCount.put(region,temp2); //count the total number of Burglary Residential for each region
+				totalVioCount.put(region,temp2); //count the total number of violent crime (assault related) for each region
 			}
 			
 			else if(crime.getDistrict().equalsIgnoreCase(region) && crime.getGeneralCode().contains("offense")) {
 				int temp2 = totalCrimeCount.get(region) + 1;
-				totalVioCount.put(region,temp2); //count the total number of Burglary Residential for each region
+				totalVioCount.put(region,temp2); //count the total number of violent crime (offense related) for each region
 			}
 			
 		}
 		
 		HashMap<String, Double> vioRate = new HashMap<>();
 		for (String region: regionSet.keySet()) {
-			vioRate.put(region, (double)totalVioCount.get(region)/(double)totalCrimeCount.get(region)); //calculate the residential burglary rate for each region
+			vioRate.put(region, (double)totalVioCount.get(region)/(double)totalCrimeCount.get(region)); //calculate the violent crime rate for each region
 		}
 		
 		ArrayList<Double> sorted = new ArrayList<>(); // create an arrayList to store all the values;

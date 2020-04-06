@@ -21,7 +21,7 @@ public class MostFrequentCrimeTypeOfEachRegion {
 			
 			for(Crime crime: crimeData) {
 				crimeTypeSet.put(crime.getGeneralCode(),true);
-				totalCrimeCount.put(crime.getGeneralCode(),0);
+				totalCrimeCount.put(crime.getGeneralCode(),0);//set the initial count to 0
 			}
 			
 			for(Crime crime: crimeData) {
@@ -47,12 +47,16 @@ public class MostFrequentCrimeTypeOfEachRegion {
 			return crimeType;
 		}
 		
-		//Create a HashMap to store region and most frequent crime type
-		public HashMap<String, String> getMosFreCriOfEaRe(ArrayList<Crime> crimeData){ //loop through each year to return a hashMap of year and most frequent crime
+		/**
+		 * Create a HashMap to store region and most frequent crime type
+		 * @param crimeData
+		 * @return a HashMap storing regions and their respective most frequent crime type
+		 */
+		public HashMap<String, String> getMosFreCriOfEaRe(ArrayList<Crime> crimeData){ 
 			HashMap<String, String> mosFreCriOfEaRe = new HashMap<String, String>();
 
 			for (Crime crime: crimeData) {
-				String region = crime.getDistrict();
+				String region = crime.getDistrict(); // loop through each region
 				if(crime.getDistrict().equals(region))
 				mosFreCriOfEaRe.put(region, calMosFreCri(crimeData, region));
 			}

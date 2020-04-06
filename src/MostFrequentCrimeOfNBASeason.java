@@ -13,7 +13,7 @@ public class MostFrequentCrimeOfNBASeason {
 	/**
 	 * @author Tian Xue
 	 * @param crimeData
-	 * @return most frequent crime type of a NBA season for a particular year
+	 * @return most frequent crime type of during a NBA season for a particular year
 	 */
 	public String calMosFreCri(ArrayList<Crime> crimeData, String year) {
 		Season newSeason = new Season();
@@ -22,7 +22,7 @@ public class MostFrequentCrimeOfNBASeason {
 		
 		for(Crime crime: crimeData) {
 			crimeTypeSet.put(crime.getGeneralCode(),true);
-			totalCrimeCount.put(crime.getGeneralCode(),0);
+			totalCrimeCount.put(crime.getGeneralCode(),0);//set the initial count 0
 		}
 		
 		for(Crime crime: crimeData) {
@@ -49,7 +49,12 @@ public class MostFrequentCrimeOfNBASeason {
 		return crimeType;
 	}
 	
-	public HashMap<String, String> getMosFreCriOfNBASeason(ArrayList<Crime> crimeData){ //loop through each year to return a hashMap of year and most frequent crime
+	/**
+	 * Create a HashMap to store a NBA season year and the most frequent crime type
+	 * @param crimeData
+	 * @return a HashMap storing each NBA season year and their respective most frequent crime type
+	 */
+	public HashMap<String, String> getMosFreCriOfNBASeason(ArrayList<Crime> crimeData){ 
 		HashMap<String, String> mosFreCriOfNBASeason = new HashMap<String, String>();
 		
 		for (Crime crime: crimeData) {

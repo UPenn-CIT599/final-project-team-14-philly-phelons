@@ -14,7 +14,7 @@ public class MostFrequentCrimeTypeOfEachYear {
 	/**
 	 * @author Tian Xue
 	 * @param dataInfo
-	 * @return The most frequent crime type happened in Philly in each year.
+	 * @return The most frequent crime type happened in Philly each year.
 	 */
 	public String calMosFreCri(ArrayList<Crime> crimeData, String year) {
 		HashMap<String, Integer> totalCrimeCount = new HashMap<>();
@@ -22,7 +22,7 @@ public class MostFrequentCrimeTypeOfEachYear {
 		
 		for(Crime crime: crimeData) {
 			crimeTypeSet.put(crime.getGeneralCode(),true);
-			totalCrimeCount.put(crime.getGeneralCode(),0);
+			totalCrimeCount.put(crime.getGeneralCode(),0);//set the initial count to 0
 		}
 		
 		for(Crime crime: crimeData) {
@@ -48,11 +48,15 @@ public class MostFrequentCrimeTypeOfEachYear {
 		return crimeType;
 	}
 	
-	//create a HashMap to store year and most frequent crime type of each year
-	public HashMap<String, String> getMosFreCriOfEaYr(ArrayList<Crime> crimeData){ //loop through each year to return a hashMap of year and most frequent crime
+	/**
+	 * create a HashMap to store years and most frequent crime type of each year
+	 * @param crimeData
+	 * @return
+	 */
+	public HashMap<String, String> getMosFreCriOfEaYr(ArrayList<Crime> crimeData){ 
 		HashMap<String, String> mosFreCriOfEaYr = new HashMap<String, String>();
 		
-		for (Crime crime: crimeData) {
+		for (Crime crime: crimeData) {//loop through each year to return a hashMap of year and most frequent crime
 			String crimeYear = crime.getMonth().substring(0, 3);
 			if(crime.getMonth().substring(0, 3).equals(crimeYear))
 			mosFreCriOfEaYr.put(crimeYear, calMosFreCri(crimeData, crimeYear));
