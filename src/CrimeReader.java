@@ -42,8 +42,5 @@ System.out.println("There were " + Integer.toString(count) + " DUIs");
         e.printStackTrace();
     }
 }
-    public static void main(String[] args) {
-        CrimeReader cr = new CrimeReader();
-cr.readCrimes();  //Tests the output. 57,351 DUIs
-}
+
 }
