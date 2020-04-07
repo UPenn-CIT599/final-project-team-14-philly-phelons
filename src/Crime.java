@@ -9,37 +9,37 @@ public class Crime {
     private String psa;
     
     @CsvBindByPosition(position = 2)
-    private String dispatchDateTime;
+    private String dispatchDateTime; //The date and time the crime was reported
     
     @CsvBindByPosition(position = 3)
-    private String dispatchDate;
+    private String dispatchDate;//The date on which police were dispatched to the scene
     
     @CsvBindByPosition(position = 4)
-    private String dispatchTime;
+    private String dispatchTime;//The time at which police were dispatched
     
     @CsvBindByPosition(position = 5)
-    private String hour;
+    private String hour;//The hour at which police were dispatched
     
     @CsvBindByPosition(position = 6)
-    private String dcKey;
+    private String dcKey;//No clear explanation for this one
     
     @CsvBindByPosition(position = 7)
-    private String locationBlock;
+    private String locationBlock;//What city block the crime occurred on
     
     @CsvBindByPosition(position = 8)
-    private String ucrGeneral;
+    private String ucrGeneral;//No clear explanation for this data
     
     @CsvBindByPosition(position = 9)
-    private String generalCode;
+    private String generalCode;//The code of the crime (e.g., Arson, Burglary, ...)
     
     @CsvBindByPosition(position = 11)
-    private String month;
+    private String month;//What month the crime occurred in
     
     @CsvBindByPosition(position = 12)
-    private String lon;
+    private String lon;//The longitude data for where the crime was committed
     
     @CsvBindByPosition(position = 13)
-    private String lat;
+    private String lat;//The latitude date for where the crime was committed
     
     
     public Crime() {

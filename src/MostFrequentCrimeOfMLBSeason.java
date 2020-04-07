@@ -23,7 +23,8 @@ public class MostFrequentCrimeOfMLBSeason {
 	 * @param crimeData
 	 * @return a HashMap storing each MLB season year and their respective most frequent crime type
 	 */
-	public HashMap<String, String> getMosFreCriOfNFLSeason(ArrayList<Crime> crimeData){ 
+	public HashMap<String, String> getMosFreCriOfNFLSeason(ArrayList<Crime> crimeData){
+        return null; 
 
 	}
 
