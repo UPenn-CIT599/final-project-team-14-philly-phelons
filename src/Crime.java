@@ -176,4 +176,48 @@ public class Crime {
     public String getLat() {
         return lat;
     }
+    public Object getMethodName(String methodName) { //The following trivial methods are used by the CrimeReader class 
+        if(methodName.equals("getDistrict")) {
+            return getDistrict();
+        }
+        if(methodName.equals("getPsa")) {
+            return getPsa();
+        }
+        if(methodName.equals("getDispatchDateTime")) {
+            return getDispatchDateTime();
+        }
+        if(methodName.equals("getDispatchDate")) {
+            return getDispatchDate();
+        }
+        if(methodName.equals("getDispatchTime")) {
+            return getDispatchTime(); 
+        }
+        if(methodName.equals("getHour")) {
+            return getHour(); 
+        }
+        if(methodName.equals("getDcKey")) {
+            return getDcKey(); 
+        }
+        if(methodName.equals("getLocationBlock")) {
+            return getLocationBlock(); 
+        }
+        if(methodName.equals("getUcrGeneral")) {
+            return getUcrGeneral(); 
+        }
+        if(methodName.equals("getGeneralCode")) {
+            return getGeneralCode(); 
+        }
+        if(methodName.equals("getMonth")) {
+            return getMonth(); 
+        }
+        if(methodName.equals("getLon")) {
+            return getLon(); 
+        }
+        if(methodName.equals("getLat")) {
+            return getLat(); 
+        }
+        return null;
+    }
 }
+        
+            
