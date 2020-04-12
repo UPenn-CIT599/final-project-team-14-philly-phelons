@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -22,8 +23,7 @@ public class App extends JFrame {
 		this.setTitle("Philly Phelon Search");
 		setSize(FRAME_WIDTH, FRAME_HEIGHT);
 		add(createTopPanel(), BorderLayout.NORTH);
-		add(createRadioBoxGroup(), BorderLayout.WEST);
-		add(createButtonGroup(), BorderLayout.CENTER);
+		add(createCenterPanel(), BorderLayout.CENTER);
 	}
 	
 	
@@ -34,6 +34,16 @@ public class App extends JFrame {
 		return topPanel;
 	}
 
+	private JPanel createCenterPanel() {
+		JPanel centerPanel = new JPanel();
+		
+		centerPanel.add(createRadioBoxGroup());
+		centerPanel.add(createComboBox());
+		centerPanel.add(createButtonGroup());
+		
+		return centerPanel;
+	}
+	
 	private JPanel createRadioBoxGroup() {
 		// radio buttons
 		JRadioButton option1 = new JRadioButton("Option 1");
@@ -48,7 +58,7 @@ public class App extends JFrame {
 
 		// add radio buttons to a panel
 		JPanel panel = new JPanel();
-		panel.setLayout(new GridLayout(3, 2));
+		panel.setLayout(new GridLayout(1, 1));
 		panel.add(option1);
 		panel.add(option2);
 		panel.add(option3);
@@ -57,33 +67,36 @@ public class App extends JFrame {
 		return panel;
 	}
 	
+	private JPanel createComboBox() {
+		
+		//create Combo Box
+		String[] crimeStatOptions = {"Most Frequent Crime", "Region with Highest Crime", "Game Wins and Crime Rates", "Game Losses and Crime Rates", "Sport with Highest Crime Rate", "Opponent with Highest Crime Rate"};
+	
+		JComboBox crimeStatList = new JComboBox(crimeStatOptions);
+		crimeStatList.setSelectedIndex(0);
+		crimeStatList.addActionListener(crimeStatList);		
+		
+		//create Panel
+		JPanel panel = new JPanel();
+		panel.setLayout(new GridLayout(1,1));
+		panel.add(crimeStatList);
+		
+		return panel;
+		
+	}
+	
 	private JPanel createButtonGroup() {
 		//create buttons
-		JButton btn1 = createButton("Get Most Frequent Crime");
-		JButton btn2 = createButton("Get Region with Highest Crime");
-		JButton btn3 = createButton("Get Game Wins and Crime Rates");
-		JButton btn4 = createButton("Get Game Losses and Crime Rates");
-		JButton btn5 = createButton("Get Sport with Highest Crime Rates");
-		JButton btn6 = createButton("Get Opponent with Highest Crime Rates");
+		JButton getButton = createButton("Get Stat");
 
 		//group buttons
 		ButtonGroup buttonGroup = new ButtonGroup();
-		buttonGroup.add(btn1);
-		buttonGroup.add(btn2);
-		buttonGroup.add(btn3);
-		buttonGroup.add(btn4);
-		buttonGroup.add(btn5);
-		buttonGroup.add(btn6);
+		buttonGroup.add(getButton);
 		
 		//create panel
 		JPanel panel = new JPanel();
-		panel.setLayout(new GridLayout(5, 3));
-		panel.add(btn1);
-		panel.add(btn2);
-		panel.add(btn3);
-		panel.add(btn4);
-		panel.add(btn5);
-		panel.add(btn6);
+		panel.setLayout(new GridLayout(1, 1));
+		panel.add(getButton);
 		
 		return panel;
 		
