@@ -1,13 +1,15 @@
-//import static org.junit.jupiter.api.Assertions.*;
-//
-//import org.junit.jupiter.api.Test;
-//
-//class CrimeReaderTest {
-//
-//    @Test
-//    void testReadCrimes() {
-//CrimeReader111444 cr = new CrimeReader111444();
-//cr.readCrimes();
-//}
-//
-//}
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CrimeReaderTest {
+
+	@Test
+	void testReadCrimes() {
+		CrimeReader crTest = new CrimeReader();
+
+		assertEquals(crTest.readCrimes("Thefts", "17", "getGeneralCode", "getDistrict").size(), 6352);
+
+	}
+
+}

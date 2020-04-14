@@ -44,13 +44,13 @@ public class CrimeReader {
 			for (Crime crime : (Iterable<Crime>) csvToBean) {
 				if (crime.getMethodName(methodName1).equals(request1)
 						&& crime.getMethodName(methodName2).equals(request2)) {
-					crimeArray.add(crime);// Fills crimeArray ArrayList with Crime objects that match the search criteria
+					
+					// fills ArrayList with Crime objects that match the search criteria
+					crimeArray.add(crime);
 				}
 			}
 
 			reader.close();
-
-			System.out.println("There were " + crimeArray.size() + " Thefts in District " + request2);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -60,11 +60,6 @@ public class CrimeReader {
 		}
 		return crimeArray;
 
-	}
-
-	public static void main(String[] args) {
-		CrimeReader cr = new CrimeReader();
-		cr.readCrimes("Thefts", "17", "getGeneralCode", "getDistrict");
 	}
 
 }
