@@ -20,7 +20,9 @@ public class CrimeReader {
     private int count;//Used if making a tally or finding the size of an ArrayList
    
     /*
-     * Method that takes in 2 item search parameters and 2 corresponding method parameters and makes an array list of all crimes match those parameters. 
+     * Method that takes in 2 item search parameters and 2 corresponding method parameters and makes an array list of all crimes match those parameters.
+     * Use of this method would be as such: To retrieve an ArrayList of Crime objects where "Arson" was committed on "23-04-1998", request1 = "Arson", request2 = "23-04-1998",
+     * methodName1 = Crime.getGeneralCode(), methodName2 = Crime.getDate().  
      */
 public ArrayList<Crime> readCrimes(String request1, String request2, String methodName1, String methodName2){
     ArrayList<Crime> crimeArray = new ArrayList<>();
