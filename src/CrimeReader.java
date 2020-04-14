@@ -33,7 +33,7 @@ public ArrayList<Crime> readCrimes(String request1, String request2, String meth
         CSVReader reader = new CSVReader(br);
     //Reader reader = Files.newBufferedReader(Paths.get("crime.csv"));
     
-    CsvToBean<Crime> csvToBean = new CsvToBeanBuilder<Crime>(reader)
+    CsvToBean<Crime> csvToBean = new CsvToBeanBuilder<Crime>(reader)//Reads each line of a CSV and parses it into JavaBeans
             .withType(Crime.class)
             .withIgnoreLeadingWhiteSpace(true)
             .build();//Converts rows of csv data to JavaBeans
@@ -41,7 +41,7 @@ public ArrayList<Crime> readCrimes(String request1, String request2, String meth
     for(Crime crime : (Iterable<Crime>) csvToBean) { 
         
         if (crime.getMethodName(methodName1).equals(request1) &&
-                crime.getMethodName(methodName2).equals(request2)){
+                crime.getMethodName(methodName2).equals(request2)){//Filters data to ensure eacg bean includes only the parameters we are looking for
             
             crimeArray.add(crime);//Fills crimeArray ArrayList with Crime objects that match the search criteria
         }
@@ -49,7 +49,7 @@ public ArrayList<Crime> readCrimes(String request1, String request2, String meth
 
 reader.close();
     
-System.out.println("There were " + crimeArray.size() + " Thefts in District " + request2);
+
 
     } catch (IOException e) {
         e.printStackTrace();
@@ -83,10 +83,8 @@ public Object getMethodName(String className, String methodName) {
     
 }
 */
-public static void main(String[] args) {
-    CrimeReader cr = new CrimeReader();
-    cr.readCrimes("Thefts", "17", "getGeneralCode", "getDistrict");
-}
 
 }
+
+
 
