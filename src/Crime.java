@@ -1,9 +1,16 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 import com.opencsv.bean.CsvBindByPosition;
 
 public class Crime {
 
     @CsvBindByPosition(position = 0)
-    private String district;//The district in which the crim was reported. Must be input as 2 digits (i.e. District 1 = "01", District 12 = "12")
+    private String district;//The district in which the crime was reported. Must be input as 2 digits (i.e. District 1 = "01", District 12 = "12")
     
     @CsvBindByPosition(position = 1)
     private String psa;
@@ -27,7 +34,7 @@ public class Crime {
     private String locationBlock;//What city block the crime occurred on
     
     @CsvBindByPosition(position = 8)
-    private String ucrGeneral;//No clear explanation for this data
+    private String ucrGeneral;//3 digit code representing the type of offense. Codes 100, 200, 300, 400, 800, 900, 1500 considered violent offenses. Codes 1400, 2100, 2300, 2400 considered public disturbances.  
     
     @CsvBindByPosition(position = 9)
     private String generalCode;//The code of the crime (e.g., Arson, Burglary, ...)
@@ -128,8 +135,10 @@ public class Crime {
     }
 
 
-    public String getDispatchDate() {
-        return dispatchDate;
+    public LocalDateTime getDispatchDate() throws ParseException {
+        DateTimeFormatter dmy = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        LocalDateTime date = LocalDateTime.parse(dispatchDate, dmy);
+        return date;
     }
 
 
@@ -176,7 +185,7 @@ public class Crime {
     public String getLat() {
         return lat;
     }
-    public Object getMethodName(String methodName) { //The following trivial methods are used by the CrimeReader class 
+    public Object getMethodName(String methodName) throws ParseException { //The following trivial methods are used by the CrimeReader class 
         if(methodName.equals("getDistrict")) {
             return getDistrict();
         }
