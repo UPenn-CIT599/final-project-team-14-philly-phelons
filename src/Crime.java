@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 /**
@@ -15,7 +16,7 @@ import java.time.format.DateTimeFormatter;
  */
 public class Crime {
 
-    private String district;//The district in which the crime was reported. Must be input as 2 digits (i.e. District 1 = "01", District 12 = "12")
+    private String district;//The district in which the crime was reported. Only districts 1, 3, 6, 9, 12, 16, 17, 18, 22, 24, 25, and 26 are included in the study.
     
     private String dispatchDate; //The date on which police were dispatched to the scene
     
@@ -36,9 +37,9 @@ public class Crime {
     }
 
 
-    public LocalDateTime getDate() {
-        DateTimeFormatter dmy = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        LocalDateTime date = LocalDateTime.parse(dispatchDate, dmy);
+    public LocalDate getDate() {
+        DateTimeFormatter dmy = DateTimeFormatter.ofPattern("dd-MM-yy");
+        LocalDate date = LocalDate.parse(dispatchDate, dmy);
         return date;
     }
 
