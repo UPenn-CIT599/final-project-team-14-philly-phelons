@@ -2,7 +2,7 @@ import java.io.FileNotFoundException;
 import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Map.Entry;
 
 /**
  * This class is to establish certain
@@ -13,6 +13,7 @@ import java.util.HashMap;
  *
  */
 public class EstablishDataRates {
+
     CrimeReader cr = new CrimeReader();
     private final ArrayList<Crime> violentCrimeArray = cr.violentCrimeArray;
     private final ArrayList<Crime> genDisturbanceArray = cr.genDisturbanceArray;
@@ -216,15 +217,6 @@ public class EstablishDataRates {
         }
         crimeCodeRate = (crimeCodeCount / (double) districtDateArray.size());//Divide the crimeCodeCount by the number of days being studied
         return crimeCodeRate;//Returns the probability that a given crime code occurred on a given day in the supplied district
-    }
-    public double countMostCrimes(int districtNum) {
-        double tally = 0.0;
-        for(Crime crime : genDisturbanceArray) {
-            if(Integer.parseInt(crime.getDistrict()) == districtNum) {
-                tally++;
-            }
-        }
-        return tally;
     }
 }
 
