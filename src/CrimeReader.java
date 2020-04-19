@@ -1,92 +1,82 @@
-import java.io.*;
-import java.lang.reflect.Method;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.zip.GZIPInputStream;
 
-import com.opencsv.CSVReader;
-import com.opencsv.bean.CsvToBean;
-import com.opencsv.bean.CsvToBeanBuilder;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
 /**
  * 
  * @author Robby Ballard
  * 
- * This class reads the crime.csv file and returns Crime objects using the OpenCsv library. 
+ * Class to read "Crime.csv" file and input data into 2 usable ArrayLists.
+ * ViolentCrimeArray includes only crimes deemed "violent" (See Crime class for specific code enumeration).
+ * General Social Disturbances, non-violent in nature, are included in the genDisturbanceArray.
  *
  */
 public class CrimeReader {
+private ArrayList<Crime> allCrimeArray = new ArrayList<Crime>();
 
-    private int count;//Used if making a tally or finding the size of an ArrayList
-   
-    /*
-     * Method that takes in 2 item search parameters and 2 corresponding method parameters and makes an array list of all crimes match those parameters.
-     * Use of this method would be as such: To retrieve an ArrayList of Crime objects where "Arson" was committed on "23-04-1998", request1 = "Arson", request2 = "23-04-1998",
-     * methodName1 = Crime.getGeneralCode(), methodName2 = Crime.getDate().  
-     */
-public ArrayList<Crime> readCrimes(String request1, String request2, String methodName1, String methodName2){
-    ArrayList<Crime> crimeArray = new ArrayList<>();
+public ArrayList<Crime> violentCrimeArray = new ArrayList<Crime>();
+
+public ArrayList<Crime> genDisturbanceArray = new ArrayList<Crime>();
+
+
+
+
+public CrimeReader() throws FileNotFoundException {
+    allCrimeArray = makeAllCrimeArray();
+    violentCrimeArray = makeViolentArray(allCrimeArray);
+    genDisturbanceArray = makeGenDisturbanceArray(allCrimeArray);
+}
+
+private ArrayList<Crime> makeAllCrimeArray() throws FileNotFoundException{
+    FileInputStream fis = new FileInputStream("Crime.csv");
+    InputStreamReader isr = new InputStreamReader(fis);
+    BufferedReader br = new BufferedReader(isr);
+    
+    String dataLine;
     try {
-
-        FileInputStream fis = new FileInputStream("crime.gz.gz");
-        GZIPInputStream gis = new GZIPInputStream(fis);
-        InputStreamReader isr = new InputStreamReader(gis);
-        BufferedReader br = new BufferedReader(isr);
-        CSVReader reader = new CSVReader(br);
-    //Reader reader = Files.newBufferedReader(Paths.get("crime.csv"));
+        while((dataLine = br.readLine()) != null) {
+           String[] dataLineSplit = dataLine.split(",");
+           String district = dataLineSplit[0];
+           String date = dataLineSplit[1];
+           String crimeCode = dataLineSplit[2];
+           
+           Crime crime = new Crime(district, date, crimeCode);
+           
+           allCrimeArray.add(crime);
+        }
+        br.close();
+    } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
+    return allCrimeArray;
     
-    CsvToBean<Crime> csvToBean = new CsvToBeanBuilder<Crime>(reader)//Reads each line of a CSV and parses it into JavaBeans
-            .withType(Crime.class)
-            .withIgnoreLeadingWhiteSpace(true)
-            .build();//Converts rows of csv data to JavaBeans
     
-    for(Crime crime : (Iterable<Crime>) csvToBean) { 
-        
-        if (crime.getMethodName(methodName1).equals(request1) &&
-                crime.getMethodName(methodName2).equals(request2)){//Filters data to ensure eacg bean includes only the parameters we are looking for
-            
-            crimeArray.add(crime);//Fills crimeArray ArrayList with Crime objects that match the search criteria
+    
+}
+private ArrayList<Crime> makeViolentArray(ArrayList<Crime> crimeArray){
+    for(Crime crime : crimeArray) {
+        if(crime.getCrimeCode().equals("100") || crime.getCrimeCode().equals("200") ||
+                crime.getCrimeCode().equals("300") || crime.getCrimeCode().equals("400") ||
+                crime.getCrimeCode().equals("800") || crime.getCrimeCode().equals("900") ||
+                crime.getCrimeCode().equals("1500")) {
+            violentCrimeArray.add(crime);
         }
     }
-
-reader.close();
-    
-
-
-    } catch (IOException e) {
-        e.printStackTrace();
-    
-    } catch (Exception e) {
-    System.err.println("Invoke() failed: " + e);
+    return this.violentCrimeArray;
+}
+private ArrayList<Crime> makeGenDisturbanceArray(ArrayList<Crime> crimeArray){
+    for(Crime crime : crimeArray) {
+        if(crime.getCrimeCode().equals("1400") || crime.getCrimeCode().equals("2100") ||
+                crime.getCrimeCode().equals("2300") || crime.getCrimeCode().equals("2400")) {
+            genDisturbanceArray.add(crime);
+        }
     }
-    return crimeArray;
-    
-}
-
-
-
-    //                                              //
-   // Code used for testing aspects of CrimeReader // 
-  //                                              //
-
-
-/* 
-public Object getMethodName(String className, String methodName) {
-    try {
-    Class<?> C = Class.forName(className); //Uses parameter to call on Class name (Crime, MLB, NHL, NBA, etc.)
-    
-    Method worker = C.getMethod(methodName); //Creates a method variable using methodName as the name and will pass parameters to the method through argTypes array
-
-    worker.invoke(C);
-    } catch (Exception e) {
-        System.err.println("Invoke() failed: " + e);
-    }
-   return getMethodName(className, methodName);
-    
-}
-*/
+    return this.genDisturbanceArray;
 
 }
-
-
-
+}
