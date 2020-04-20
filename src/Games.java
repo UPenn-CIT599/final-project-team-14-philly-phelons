@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 /**
  * 
  * @author Robby Ballard
@@ -50,8 +53,11 @@ public class Games {
     }
 
 
-    public String getGameDate() {
-        return gameDate;
+    public LocalDate getGameDate() {
+        DateTimeFormatter dmy = DateTimeFormatter.ofPattern("dd-MM-yy");
+        LocalDate date = LocalDate.parse(gameDate, dmy);
+        return date;
+        
     }
 
 
