@@ -63,17 +63,17 @@ private ArrayList<Crime> makeViolentArray(ArrayList<Crime> crimeArray){
         if(crime.getCrimeCode().equals("100") || crime.getCrimeCode().equals("200") ||
                 crime.getCrimeCode().equals("300") || crime.getCrimeCode().equals("400") ||
                 crime.getCrimeCode().equals("800") || crime.getCrimeCode().equals("900") ||
-                crime.getCrimeCode().equals("1500")) {
+                crime.getCrimeCode().equals("1500")) {//Filters Crime objects for only those containing Violent Crime codes
             violentCrimeArray.add(crime);
         }
     }
     return this.violentCrimeArray;
 }
-private ArrayList<Crime> makeGenDisturbanceArray(ArrayList<Crime> crimeArray){
+private ArrayList<Crime> makeGenDisturbanceArray(ArrayList<Crime> crimeArray){//General disturbances include public drunkenness, vandalism, and other crimes that could be associated with reckless celebration or dejection fueled debauchery brought about by either an important win or loss, respectively
     for(Crime crime : crimeArray) {
         if(crime.getCrimeCode().equals("1400") || crime.getCrimeCode().equals("2100") ||
                 crime.getCrimeCode().equals("2300") || crime.getCrimeCode().equals("2400")) {
-            genDisturbanceArray.add(crime);
+            genDisturbanceArray.add(crime);//Filters crimes for only those containing general disturbance codes
         }
     }
     return this.genDisturbanceArray;
