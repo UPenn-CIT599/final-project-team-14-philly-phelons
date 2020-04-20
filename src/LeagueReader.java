@@ -43,19 +43,19 @@ public class LeagueReader {
         String fileName = ""; //Creates a String variable that will take the value of the csv file associated with the requested league.
         if(league.equals("NHL")) { //Determines if the league variable passed into the method is "NHL"
             fileName = "NHL Games.csv"; //Assigns the NHL csv file to the variable fileName.
-            leagueData = readNHLGame(fileName); //Assigns the NHL game data, compiled in the readNHLGame() method, to the leagueData variable.
+//            leagueData = readNHLGame(fileName); //Assigns the NHL game data, compiled in the readNHLGame() method, to the leagueData variable.
         }
         if(league.equals("NFL")) { //Determines if the league variable passed into the method is "NFL"
             fileName = "NFL Games.csv"; //Assigns the NFL csv file to the variable fileName.
-            leagueData = readNFLGame(fileName); //Assigns the NFL game data, compiled in the readNFLGame() method, to the leagueData variable.
+//            leagueData = readNFLGame(fileName); //Assigns the NFL game data, compiled in the readNFLGame() method, to the leagueData variable.
         }
         if(league.equals("NBA")) { //Determines if the league variable passed into the method is "NBA"
             fileName = "NBA Games.csv"; //Assigns the NBA csv file to the variable fileName.
-            leagueData = readNBAGame(fileName); //Assigns the NBA game data, compiled in the readNBAGame() method, to the leagueData variable.
+//            leagueData = readNBAGame(fileName); //Assigns the NBA game data, compiled in the readNBAGame() method, to the leagueData variable.
         }
         if(league.contentEquals("MLB")) { //Determines if the league variable passed into the method is "MLB"
             fileName = "MLB Games.csv"; //Assigns the MLB csv file to the variable fileName.
-            leagueData = readMLBGame(fileName); //Assigns the MLB game data, compiled in the readMLBGame() method, to the leagueData variable.
+//            leagueData = readMLBGame(fileName); //Assigns the MLB game data, compiled in the readMLBGame() method, to the leagueData variable.
         }
         else {//Returns an error message if the parameter "league" is none of the leagues.
             System.out.println("Error. Please enter a valid league search term: NBA, NFL, MLB, or NHL.");//Error message for invalid argument.

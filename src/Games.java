@@ -39,19 +39,14 @@ public class Games {
         this.awayScore = awayScore;
         this.homeScore = homeScore;
     }
-/*
- * Getter methods below return the indicated value for each Game object.
- */
 
     public String getSeason() {
         return season;
     }
 
-
     public String getGameType() {
         return gameType;
     }
-
 
     public LocalDate getGameDate() {
         DateTimeFormatter dmy = DateTimeFormatter.ofPattern("dd-MM-yy");
@@ -60,21 +55,17 @@ public class Games {
         
     }
 
-
     public String getAwayTeam() {
         return awayTeam;
     }
-
 
     public String getHomeTeam() {
         return homeTeam;
     }
 
-
     public String getAwayScore() {
         return awayScore;
     }
-
 
     public String getHomeScore() {
         return homeScore;

@@ -25,42 +25,42 @@ public class GameWinLossVSCrimeRate {
         return gameWins;
     }
     
-    private ArrayList<Crime> makeViolentCrimeArray(){
-        ArrayList<Crime> crimeArray = getCrime();
-        ArrayList<Crime> violentCrimeArray = new ArrayList<Crime>();
-        String[] violentCodes = new String[] {"100", "200", "300", "400", "800", "900", "1500"};
-        
-        for(String code : violentCodes) {
-            for(Crime crime : crimeArray) {
-                if(code.equals(crime.getUcrGeneral())) {
-                    violentCrimeArray.add(crime);
-                }
-            }
-        }
-        return violentCrimeArray;
-    }
+//    private ArrayList<Crime> makeViolentCrimeArray(){
+//        ArrayList<Crime> crimeArray = getCrime();
+//        ArrayList<Crime> violentCrimeArray = new ArrayList<Crime>();
+//        String[] violentCodes = new String[] {"100", "200", "300", "400", "800", "900", "1500"};
+//        
+//        for(String code : violentCodes) {
+//            for(Crime crime : crimeArray) {
+//                if(code.equals(crime.getUcrGeneral())) {
+//                    violentCrimeArray.add(crime);
+//                }
+//            }
+//        }
+//        return violentCrimeArray;
+//    }
     
-    private int NHLWinVSViolentCrime() throws FileNotFoundException, IOException {
-        ArrayList<Games> NHLWins = createGameWins("NHL");
-        ArrayList<Crime> violentCrimeArray = makeViolentCrimeArray();
-        int count = 0;
-        for(Games game : NHLWins) {
-            for(Crime crime : violentCrimeArray) {
-                if(game.getGameDate().equals(crime.getDispatchDate())) {
-                    count++;
-                }
-            }
-        }
-        return count;
-        
-    }
+//    private int NHLWinVSViolentCrime() throws FileNotFoundException, IOException {
+//        ArrayList<Games> NHLWins = createGameWins("NHL");
+//        ArrayList<Crime> violentCrimeArray = makeViolentCrimeArray();
+//        int count = 0;
+//        for(Games game : NHLWins) {
+//            for(Crime crime : violentCrimeArray) {
+//                if(game.getGameDate().equals(crime.getDispatchDate())) {
+//                    count++;
+//                }
+//            }
+//        }
+//        return count;
+//        
+//    }
     
 
- private ArrayList<Crime> getCrime() {
-     CrimeReader cr = new CrimeReader();
-     ArrayList<Crime> testArray = cr.readCrimes();
-    return testArray;
- }
+// private ArrayList<Crime> getCrime() {
+//     CrimeReader cr = new CrimeReader();
+////     ArrayList<Crime> testArray = cr.readCrimes();
+//    return testArray;
+// }
    // public static void main(String[] args) throws FileNotFoundException, IOException {
      //   GameWinLossVSCrimeRate GWLVWR = new GameWinLossVSCrimeRate();
        // System.out.println(Integer.toString(GWLVWR.NHLWinVSViolentCrime()));
