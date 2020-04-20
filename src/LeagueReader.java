@@ -14,14 +14,22 @@ import java.util.Scanner;
  * 
  */
 public class LeagueReader {
+    
+    public final ArrayList<Games> MLBArray;
+    public final ArrayList<Games> NBAArray;
+    public final ArrayList<Games> NHLArray;
+    public final ArrayList<Games> NFLArray;
 
     /**
      * Constructor for the class. Creates an ArrayList of Games objects for the desired league.
      * @param league Parameter determines the league for which data is being requested. NHL, NFL, MLB, or NBA.
      * @throws FileNotFoundException
      */
-    public LeagueReader() throws FileNotFoundException {
-       
+    public LeagueReader() throws FileNotFoundException, IOException {
+        MLBArray = readMLBGame();
+        NBAArray = readNBAGame();
+        NHLArray = readNHLGame();
+        NFLArray = readNFLGame();
     }
     
     /**
@@ -90,8 +98,8 @@ public class LeagueReader {
      * @return Returns an ArrayList of NFL game objects.
      * @throws IOException 
      */
-    private ArrayList<Games> readNFLGame(String fileName) throws IOException{
-        ArrayList<String[]> leagueData = compileLeagueData(fileName); //Creates an ArrayList of String[]'s populated by the compileLeagueData() method and passing the csv fileName as an argument.
+    private ArrayList<Games> readNFLGame() throws IOException{
+        ArrayList<String[]> leagueData = compileLeagueData("NFL Games.csv"); //Creates an ArrayList of String[]'s populated by the compileLeagueData() method and passing the csv fileName as an argument.
         ArrayList<Games> NFLArray = new ArrayList<Games>();//Creates an ArrayList of Game objects that will be populated by the following functions.
         for(String[] gameData : leagueData) { //Enhanced for loop to iterate through each String[] of data in the leagueData ArrayList 
             String gameDate = gameData[0]; //Assigns the Game object's gameDate value.
@@ -125,8 +133,8 @@ public class LeagueReader {
      * AwayScore: Listed as an int
      * HomeScore: Listed as an int
      */
-    private ArrayList<Games> readNHLGame(String fileName) throws FileNotFoundException, IOException{
-        ArrayList<String[]> leagueData = compileLeagueData(fileName);//Creates an ArrayList of String[]'s populated by the compileLeagueData() method and passing the csv fileName as an argument.
+    private ArrayList<Games> readNHLGame() throws FileNotFoundException, IOException{
+        ArrayList<String[]> leagueData = compileLeagueData("NHL Games.csv");//Creates an ArrayList of String[]'s populated by the compileLeagueData() method and passing the csv fileName as an argument.
         ArrayList<Games> NHLArray = new ArrayList<Games>();//Creates an ArrayList of Game objects that will be populated by the following functions.
         for(String[] gameData : leagueData) {//Enhanced for loop to iterate through each String[] of data in the leagueData ArrayList 
             String gameDate = gameData[3]; //Assigns the Game objects gameDate value.
@@ -152,8 +160,8 @@ public class LeagueReader {
      * @return Returns an ArrayList of NBA game objects.
      * @throws IOException 
      */
-    private ArrayList<Games> readNBAGame(String fileName) throws IOException{
-        ArrayList<String[]> leagueData = compileLeagueData(fileName); //Creates an ArrayList of String[]'s populated by the compileLeagueData() method and passing the csv fileName as an argument.
+    private ArrayList<Games> readNBAGame() throws IOException{
+        ArrayList<String[]> leagueData = compileLeagueData("NBA Games.csv"); //Creates an ArrayList of String[]'s populated by the compileLeagueData() method and passing the csv fileName as an argument.
         ArrayList<Games> NBAArray = new ArrayList<Games>(); //Creates an ArrayList of Game objects that will be populated by the following functions.
         for(String[] gameData : leagueData) { //Enhanced for loop to iterate through each String[] of data in the leagueData ArrayList 
             String gameDate = gameData[5]; //Assigns the Game object's gameDate value.
@@ -179,8 +187,8 @@ public class LeagueReader {
      * @return Returns an ArrayList of MLB game objects.
      * @throws IOException 
      */
-    private ArrayList<Games> readMLBGame(String fileName) throws IOException{
-        ArrayList<String[]> leagueData = compileLeagueData(fileName);//Creates an ArrayList of String[]'s populated by the compileLeagueData() method and passing the csv fileName as an argument.
+    private ArrayList<Games> readMLBGame() throws IOException{
+        ArrayList<String[]> leagueData = compileLeagueData("MLB Games.csv");//Creates an ArrayList of String[]'s populated by the compileLeagueData() method and passing the csv fileName as an argument.
         ArrayList<Games> MLBArray = new ArrayList<Games>();//Creates an ArrayList of Game objects that will be populated by the following functions.
         for(String[] gameData : leagueData) {//Enhanced for loop to iterate through each String[] of data in the leagueData ArrayList 
             String gameDate = gameData[0];//Assigns the Game object's gameDate value.
