@@ -16,14 +16,25 @@ public class CrimeReader {
 
 	private ArrayList<Crime> allCrimeArray = new ArrayList<Crime>();
 
-	public ArrayList<Crime> violentCrimeArray = new ArrayList<Crime>();
-	public ArrayList<Crime> genDisturbanceArray = new ArrayList<Crime>();
+	public static ArrayList<Crime> violentCrimeArray = new ArrayList<Crime>();
+	public static ArrayList<Crime> genDisturbanceArray = new ArrayList<Crime>();
 
 	public CrimeReader() throws FileNotFoundException {
 		this.allCrimeArray = makeAllCrimeArray();
 		makePublicCrimeArrays(allCrimeArray);
 
 	}
+	
+
+	public static ArrayList<Crime> getViolentCrimeArray() {
+		return violentCrimeArray;
+	}
+
+
+	public static ArrayList<Crime> getGenDisturbanceArray() {
+		return genDisturbanceArray;
+	}
+
 
 	/**
 	 * makeAllCrimeArray will read csv and return an Array of Crimes
