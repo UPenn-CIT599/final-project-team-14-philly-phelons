@@ -7,8 +7,8 @@ import java.util.Map.Entry;
 /**
  * This class is to establish certain
  *  rates that can be used for comparison purposes. For example, to 
- *  determine whether the crime rate was higher on a certain or not, we must first determine
- *  what the base crime rate is.
+ *  determine whether the crime rate was higher on a certain day or not, we must first determine
+ *  what the base crime rate is for any given day, on average, during our study period.
  * @author Robby Ballard
  *
  */
@@ -21,9 +21,6 @@ public class EstablishDataRates {
     
     
     public EstablishDataRates() throws FileNotFoundException {
-   
-    
-    
     }
    
     /**
@@ -34,8 +31,6 @@ public class EstablishDataRates {
      * over the study period in the included police districts.
      * @return
      */
-     
-    
     public double establishDailyViolentCrimeRate(){
         ArrayList<LocalDate> dateArray = new ArrayList<LocalDate>();//Creates an ArrayList to hold all the unique dates of the period studied
 
@@ -108,7 +103,7 @@ public class EstablishDataRates {
     }
     /**
      * This method establishes the daily violent crime rate for a specified district, passed to the method as an argument when the method is called
-     * @return The return value is average number of violent crimes that occurred in our chosen district per day. Values are as follows:
+     * @return The return value is the average number of violent crimes that occurred in our chosen district per day. Values are as follows:
      * District 1 = ****3.143****, with a total of 4774 violent crimes
      * District 3 = ****3.421****, with a total of 4838 violent crimes
      * District 6 = ****3.854****, with a total of 6132 violent crimes
@@ -132,7 +127,7 @@ public class EstablishDataRates {
     }
     /**
      * This method establishes the daily general disturbance crime rate for a specified district, passed to the method as an argument when the method is called
-     * @return The return value is average number of general disturbance crimes that occurred in our chosen district per day. Values are as follows:
+     * @return The return value is the average number of general disturbance crimes that occurred in our chosen district per day. Values are as follows:
      * District 1 = ****1.46****, with a total of 1142 general disturbance crimes
      * District 3 = ****2.134****, with a total of 2155 general disturbance crimes
      * District 6 = ****2.748****, with a total of 3627 general disturbance crimes
@@ -154,7 +149,7 @@ public class EstablishDataRates {
         return districtGenDisturbanceCrimeRate; //Returns the per day average number of general disturbance crimes
     }
     /**
-     * This number returns the number of violent crimes that occurred on a given day in a given district, both of which are 
+     * This method returns the number of violent crimes that occurred on a given day in a given district, both of which are 
      * passed into the method as arguments.
      * @param districtNum The district Number we are searching for data on
      * @param date The date we are concerned with finding crime statistics for
@@ -188,6 +183,9 @@ public class EstablishDataRates {
     /**
      * This method calculates the average number of crimes of a given crime code that occurred in each 
      * district per day. The results are:
+     * 
+     *                                      **** See "Crime" class for code descriptions.****
+     * 
      * District 1: Code 100 -> .019, Code 200 -> .045, Code 300 -> .577, Code 400 -> .638, Code 800 -> 1.743, Code 900 -> .030, Code 1500 -> .090 
      * District 3: Code 100 -> .017, Code 200 -> .043, Code 300 -> .826, Code 400 -> .617, Code 800 -> 1.771, Code 900 -> .022, Code 1500 -> .125 
      * District 6: Code 100 -> .018, Code 200 -> .067, Code 300 -> .901, Code 400 -> .621, Code 800 -> 2.146, Code 900 -> .019, Code 1500 -> .080 
@@ -201,6 +199,7 @@ public class EstablishDataRates {
      * District 25: Code 100 -> .083, Code 200 -> .208, Code 300 -> 1.826, Code 400 -> 1.895, Code 800 -> 5.627, Code 900 -> .153, Code 1500 -> .462 
      * District 26: Code 100 -> .041, Code 200 -> .121, Code 300 -> .904, Code 400 -> .936, Code 800 -> 2.198, Code 900 -> .090, Code 1500 -> .171 
      * 
+     *                          
      * 
      * @param crimeCode  The crime code we are searching for the number of occurrences of
      * @param districtNum The district we are searching in where the crime code occurred
