@@ -38,7 +38,7 @@ public class LeagueReader {
      * @return After calling on the league's appropriate reader method, this method returns an ArrayList of Games objects for said league.
      * @throws FileNotFoundException
      */
-    public ArrayList<Games> readLeagueData(String league) throws FileNotFoundException, IOException{
+    private ArrayList<Games> readLeagueData(String league) throws FileNotFoundException, IOException{
         ArrayList<Games> leagueData = new ArrayList<Games>();//Creates an ArrayList that will hold all of the Game objects for the requested league.
         String fileName = ""; //Creates a String variable that will take the value of the csv file associated with the requested league.
         if(league.equals("NHL")) { //Determines if the league variable passed into the method is "NHL"
