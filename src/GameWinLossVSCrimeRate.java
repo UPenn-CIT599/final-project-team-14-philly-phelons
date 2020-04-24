@@ -1,14 +1,20 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
+<<<<<<< HEAD
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
+=======
+import java.util.ArrayList;
+import java.util.HashMap;
+>>>>>>> master
 
 /**
  * @author Robby Ballard
  *
+<<<<<<< HEAD
  *The purpose of this class is to establish whether there was a change in the crime rate on a day when a team
  *either won or lost their home game. The class uses the established crime rate from the EstablishDataRates class
  *of ****64**** violent crimes per day, on average, in the districts studied over the time period included.
@@ -270,5 +276,50 @@ public static void main(String[] args) throws IOException {
 */
 
 
+=======
+ */
+public class GameWinLossVSCrimeRate {
+
+	/**
+	 * createGameWins
+	 * 
+	 * @param league
+	 * @return
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
+	private ArrayList<Games> createGameWins(String league) throws FileNotFoundException, IOException {
+		LeagueReader lr = new LeagueReader();
+
+		ArrayList<Games> leagueData;
+		ArrayList<Games> gameWins = new ArrayList<Games>();
+
+		if (league.equals("NHL")) {
+			leagueData = lr.getNHLArray();
+			for (Games game : leagueData) {
+				if (Integer.parseInt(game.getHomeScore()) > Integer.parseInt(game.getAwayScore())) {
+					gameWins.add(game);
+				}
+			}
+		}
+
+		return gameWins;
+	}
+
+	private int NHLWinVSViolentCrime() throws FileNotFoundException, IOException {
+		ArrayList<Games> NHLWins = createGameWins("NHL");
+		ArrayList<Crime> violentCrimeArray = CrimeReader.violentCrimeArray;
+		int count = 0;
+		for (Games game : NHLWins) {
+			for (Crime crime : violentCrimeArray) {
+				if (game.getGameDate().equals(crime.getDate())) {
+					count++;
+				}
+			}
+		}
+		return count;
+
+	}
+>>>>>>> master
 
 }
