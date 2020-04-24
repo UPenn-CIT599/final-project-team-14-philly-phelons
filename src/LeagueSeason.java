@@ -9,159 +9,125 @@ import java.util.ArrayList;
  *thus creating an ArrayList composed entirely of the specified season's games for the specified league.
  */
 public class LeagueSeason {
-    ArrayList<Games> MLBSeason;//An ArrayList of Phillies games for a specified season
-    ArrayList<Games> NHLSeason;//An ArrayList of Flyers games for a specified season
-    ArrayList<Games> NFLSeason;//An ArrayList of Eagles games for a specified season
-    ArrayList<Games> NBASeason;//An ArrayList of 76ers games for a specified season
-    
-    /**
-     * Class constructor allows for a specified team's season ArrayList to be returned without having to call the method.
-     * @param season A parameter determining the season for which games are being sought
-     * @throws FileNotFoundException
-     * @throws IOException
-     */
-    public LeagueSeason(String season) throws FileNotFoundException, IOException {
-        MLBSeason = makeMLBSeason(season);
-        NHLSeason = makeNHLSeason(season);
-        NFLSeason = makeNFLSeason(season);
-        NBASeason = makeNBASeason(season);
-    }
 
-    /**
-     * This class creates an ArrayList of Phillies games for a specified season. It returns the ArrayList 
-     * as a collection of Games objects.
-     * @param season The season for which games are being sought
-     * @return Returns an ArrayList of Games objects for the specified season
-     * @throws FileNotFoundException
-     * @throws IOException
-     */
-    private ArrayList<Games> makeMLBSeason(String season) throws FileNotFoundException, IOException {
-        LeagueReader lr = new LeagueReader();//Creates an instance of the LeagueReader class
-        ArrayList<Games> gameArray = lr.MLBArray;//Creates an instance of the MLBArray from the LeagueReader Class
-        ArrayList<Games> returnArray = new ArrayList<Games>();//Creates an ArrayList that will be returned once it has been populated with the specified Games objects
-        for(Games game : gameArray) {//AN enhanced for loop to iterate over the games in the MLB game ArrayList called from the LeagueReader class
-            if(season.equals("2007")) {//If the specified season is "2007"...
-                if(game.getGameDate().getYear() == 2007) {//Boolean to determine whether the Game object currently being scanned was played in 2007
-                    returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                }
-            }
-            else if(season.equals("2008")) {//If the specified season is "2008"...
-                if(game.getGameDate().getYear() == 2008) {//Boolean to determine whether the Game object currently being scanned was played in 2008
-                    returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                }
-            }
-            else if(season.contentEquals("2009")) {//If the specified season is "2009"...
-                if(game.getGameDate().getYear() == 2009) {//Boolean to determine whether the Game object currently being scanned was played in 2009
-                    returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                }
-            }
-            else if(season.equals("2010")) {//If the specified season is "2010"...
-                if(game.getGameDate().getYear() == 2010) {//Boolean to determine whether the Game object currently being scanned was played in 2010
-                    returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                }
-            }
-            else if(season.equals("2011")) {//If the specified season is "2011"...
-                if(game.getGameDate().getYear() == 2011) {//Boolean to determine whether the Game object currently being scanned was played in 2011
-                    returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                }
-            }
-        }
-        return returnArray;
-    }
-    private ArrayList<Games> makeNHLSeason(String season) throws FileNotFoundException, IOException{
-        LeagueReader lr = new LeagueReader();//Creates an instance of the LeagueReader class
-        ArrayList<Games> gameArray = lr.NHLArray;//Creates an instance of the NHLArray from the LeagueReader Class
-        ArrayList<Games> returnArray = new ArrayList<Games>();//Creates an ArrayList that will be returned once it has been populated with the specified Games objects
-        for(Games game : gameArray) {//AN enhanced for loop to iterate over the games in the NHL game ArrayList called from the LeagueReader class
-            if(season.equals("2007")) {//If the specified season is "2008"...
-                if((game.getGameDate().getYear() == 2007 && game.getGameDate().getMonthValue() > 8)
-                        || (game.getGameDate().getYear() == 2008 && game.getGameDate().getMonthValue() < 5)) {//Boolean to determine if the game was played the season start and end dates (September '07 and April '09)    
-                    returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                    }
-                }
-                else if(season.equals("2008")) {//If the specified season is "2008"...
-                    if((game.getGameDate().getYear() == 2008 && game.getGameDate().getMonthValue() > 8)
-                    || (game.getGameDate().getYear() == 2009 && game.getGameDate().getMonthValue() < 5)) {//Boolean to determine if the game was played the season start and end dates (September '08 and April '09)
-                returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                    }
-                }
-                else if(season.equals("2009")) {//If the specified season is "2008"...
-                    if((game.getGameDate().getYear() == 2009 && game.getGameDate().getMonthValue() > 8)
-                    || (game.getGameDate().getYear() == 2010 && game.getGameDate().getMonthValue() < 5)) {//Boolean to determine if the game was played the season start and end dates (September '09 and April '10)
-                returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                    }
-                }
-                else if(season.equals("2010")) {//If the specified season is "2008"...
-                    if((game.getGameDate().getYear() == 2010 && game.getGameDate().getMonthValue() > 8)
-                    || (game.getGameDate().getYear() == 2011 && game.getGameDate().getMonthValue() < 5)) {//Boolean to determine if the game was played the season start and end dates (September '10 and April '11)
-                returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                     }
-                }
-           }  
-        return returnArray;
-    }
-    private ArrayList<Games> makeNFLSeason(String season) throws FileNotFoundException, IOException{
-        LeagueReader lr = new LeagueReader();//Creates an instance of the LeagueReader class
-        ArrayList<Games> gameArray = lr.NFLArray;//Creates an instance of the NFLArray from the LeagueReader Class
-        ArrayList<Games> returnArray = new ArrayList<Games>();//Creates an ArrayList that will be returned once it has been populated with the specified Games objects
-        for(Games game : gameArray) {//AN enhanced for loop to iterate over the games in the NFL game ArrayList called from the LeagueReader class
-            if(season.equals("2007")) {//If the specified season is "2008"...
-                if((game.getGameDate().getYear() == 2007 && game.getGameDate().getMonthValue() > 8)
-                        || (game.getGameDate().getYear() == 2008 && game.getGameDate().getMonthValue() < 3)) {//Boolean to determine if the game was played the season start and end dates (September '07 and February '08)
-                    returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                    }
-                }
-                else if(season.equals("2008")) {//If the specified season is "2008"...
-                    if((game.getGameDate().getYear() == 2008 && game.getGameDate().getMonthValue() > 8)
-                    || (game.getGameDate().getYear() == 2009 && game.getGameDate().getMonthValue() < 3)) {//Boolean to determine if the game was played the season start and end dates (September '08 and February '09)
-                returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                    }
-                }
-                else if(season.equals("2009")) {//If the specified season is "2008"...
-                    if((game.getGameDate().getYear() == 2009 && game.getGameDate().getMonthValue() > 8)
-                    || (game.getGameDate().getYear() == 2010 && game.getGameDate().getMonthValue() < 3)) {//Boolean to determine if the game was played the season start and end dates (September '09 and February '10)
-                returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                    }
-                }
-                else if(season.equals("2010")) {//If the specified season is "2008"...
-                    if((game.getGameDate().getYear() == 2010 && game.getGameDate().getMonthValue() > 8)
-                    || (game.getGameDate().getYear() == 2011 && game.getGameDate().getMonthValue() < 3)) {//Boolean to determine if the game was played the season start and end dates (September '10 and February '11)
-                returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                     }
-                }
-           }  
-        return returnArray;
-    }
-    private ArrayList<Games> makeNBASeason(String season) throws FileNotFoundException, IOException{
-        LeagueReader lr = new LeagueReader();//Creates an instance of the LeagueReader class
-        ArrayList<Games> gameArray = lr.NBAArray;//Creates an instance of the NBAArray from the LeagueReader Class
-        ArrayList<Games> returnArray = new ArrayList<Games>();//Creates an ArrayList that will be returned once it has been populated with the specified Games objects
-        for(Games game : gameArray) {//AN enhanced for loop to iterate over the games in the NBA game ArrayList called from the LeagueReader class
-            if(season.equals("2007")) {//If the specified season is "2008"...
-                if((game.getGameDate().getYear() == 2007 && game.getGameDate().getMonthValue() > 9)
-                        || (game.getGameDate().getYear() == 2008 && game.getGameDate().getMonthValue() < 7)) {//Boolean to determine if the game was played the season start and end dates (October '07 and June '08)
-                    returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                    }
-                }
-                else if(season.equals("2008")) {//If the specified season is "2008"...
-                    if((game.getGameDate().getYear() == 2008 && game.getGameDate().getMonthValue() > 9)
-                    || (game.getGameDate().getYear() == 2009 && game.getGameDate().getMonthValue() < 7)) {//Boolean to determine if the game was played the season start and end dates (October '08 and June '09)
-                returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                    }
-                }
-                else if(season.equals("2009")) {//If the specified season is "2008"...
-                    if((game.getGameDate().getYear() == 2009 && game.getGameDate().getMonthValue() > 9)
-                    || (game.getGameDate().getYear() == 2010 && game.getGameDate().getMonthValue() < 7)) {//Boolean to determine if the game was played the season start and end dates (October '09 and June '10)
-                returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                    }
-                }
-                else if(season.equals("2010")) {//If the specified season is "2008"...
-                    if((game.getGameDate().getYear() == 2010 && game.getGameDate().getMonthValue() > 9)
-                    || (game.getGameDate().getYear() == 2011 && game.getGameDate().getMonthValue() < 7)) {//Boolean to determine if the game was played the season start and end dates (October '10 and June '11)
-                returnArray.add(game);//Added to returnArray if the game is part of the 2007 season
-                     }
-                }
-           }  
-        return returnArray;
-    }
+	private static ArrayList<Games> MLBSeason;
+	private static ArrayList<Games> NHLSeason;
+	private static ArrayList<Games> NFLSeason;
+	private static ArrayList<Games> NBASeason;
+
+	private LeagueReader lr = new LeagueReader();
+
+	private ArrayList<Games> MLBGameArray = lr.MLBArray;
+	private ArrayList<Games> NHLGameArray = lr.NHLArray;
+	private ArrayList<Games> NFLGameArray = lr.NFLArray;
+	private ArrayList<Games> NBAGameArray = lr.NBAArray;
+
+	/**
+	 * Constructor will load League's Season Array Lists
+	 * @param season (year for the season, 2007-2011)
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
+
+	public LeagueSeason(String season) throws FileNotFoundException, IOException {
+		MLBSeason = LoadSeasonArrays(season, MLBGameArray, "MLB");
+		NHLSeason = LoadSeasonArrays(season, NHLGameArray, "NHL");
+		NFLSeason = LoadSeasonArrays(season, NFLGameArray, "NFL");
+		NBASeason = LoadSeasonArrays(season, NBAGameArray, "NBA");
+	}
+
+	/**
+	 * getters
+	 * @return ArrayList of Games for each league's season
+	 */
+	
+	public static ArrayList<Games> getMLBSeason() {
+		return MLBSeason;
+	}
+
+
+	public static ArrayList<Games> getNHLSeason() {
+		return NHLSeason;
+	}
+
+
+	public static ArrayList<Games> getNFLSeason() {
+		return NFLSeason;
+	}
+
+
+	public static ArrayList<Games> getNBASeason() {
+		return NBASeason;
+	}
+
+
+	/**
+	 * LoadSeasonArrays will check for the league's season's parameters to build an arraylist of Games
+	 * @param season
+	 * @param LeagueGameArray
+	 * @param league
+	 * @return ArrayList of Games for the season for the league
+	 */
+
+	private ArrayList<Games> LoadSeasonArrays(String season, ArrayList<Games> LeagueGameArray, String league) {
+		ArrayList<Games> returnArray = new ArrayList<Games>();
+		int seasonYear = 2011;
+
+		if (season.equals("2007")) {
+			seasonYear = 2007;
+		} else if (season.equals("2008")) {
+			seasonYear = 2008;
+		} else if (season.equals("2009")) {
+			seasonYear = 2009;
+		} else if (season.equals("2010")) {
+			seasonYear = 2010;
+		}
+
+		for (Games game : LeagueGameArray) {
+			int gameYear = game.getGameDate().getYear();
+			int gameMonth = game.getGameDate().getMonthValue();
+
+			if (gameYear == seasonYear)
+				if (league.equals("MLB")) {
+					returnArray.add(game);
+				} else if (isInSeason(league, seasonYear, gameYear, gameMonth)) {
+					returnArray.add(game);
+				}
+		}
+		return returnArray;
+	}
+
+	/**
+	 * isInSeason will check to see if a particular game matches league's season parameters to be added
+	 * @param league
+	 * @param seasonYear
+	 * @param gameYear
+	 * @param gameMonth
+	 * @return true if all parameters match
+	 */
+	
+	private boolean isInSeason(String league, int seasonYear, int gameYear, int gameMonth) {
+		boolean isInSeasonValue = false;
+		// NHL Season Dates
+		if (league.equals("NHL")) {
+			if ((gameYear == seasonYear && gameMonth > 8) || (gameYear == (seasonYear + 1) && gameMonth < 5)) {
+				isInSeasonValue = true;
+			}
+		}
+		// NFL Season Dates
+		else if (league.equals("NFL")) {
+			if ((gameYear == seasonYear && gameMonth > 8) || (gameYear == (seasonYear + 1) && gameMonth < 3)) {
+				isInSeasonValue = true;
+			}
+
+		}
+		// NBA Season Dates
+		else if (league.equals("NBA")) {
+			if ((gameYear == seasonYear && gameMonth > 9) || (gameYear == (seasonYear + 1) && gameMonth < 7)) {
+				isInSeasonValue = true;
+			}
+
+		}
+		return isInSeasonValue;
+	}
 }
