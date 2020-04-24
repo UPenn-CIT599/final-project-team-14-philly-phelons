@@ -3,14 +3,23 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 /**
  * 
  * @author Robby Ballard
  * 
+<<<<<<< HEAD
  * Leagues class reads the csv file for the requested team and returns an ArrayList of 
  * Game objects based on the Games class. Data from the csv file is parsed into the different
  * values required in a Game object. Each league's csv has the data listed in a different manner,
  * therefore each league has a different method to retrieve its data.
+=======
+ *         Leagues class reads the csv file for the requested team returns an
+ *         ArrayList of Game objects
+>>>>>>> master
  * 
  */
 public class LeagueReader {
@@ -211,6 +220,7 @@ public class LeagueReader {
 		}
 		return MLBGameArray;
 	}
+<<<<<<< HEAD
 }
 =======
 >>>>>>> Stashed changes
@@ -421,3 +431,6 @@ public class LeagueReader {
     }
 >>>>>>> Stashed changes
 >>>>>>> Stashed changes
+=======
+}
+>>>>>>> master
