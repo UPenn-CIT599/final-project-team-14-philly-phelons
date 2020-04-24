@@ -10,7 +10,7 @@ import java.util.Map;
  *
  */
 
-public class Questions {
+public abstract class Questions {
 	ArrayList<Crime> crime = new ArrayList<Crime>();
 
 	public Questions(ArrayList<Crime> crime) {
