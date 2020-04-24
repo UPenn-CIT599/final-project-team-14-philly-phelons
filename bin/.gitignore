@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /ButtonListener.class
 /Crime.class
 /CrimeRateChangeVsLeague.class
@@ -19,3 +20,10 @@
 /RegionWithHighestViolentCrime.class
 /Season.class
 /nhl.class
+=======
+/MostFrequentCrimeOfEachRegion.class
+/MostFrequentCrimeOfEachYear.class
+/Questions.class
+/RegionWithHighestDisturbanceRate.class
+/RegionWithHighestViolentRate.class
+>>>>>>> master
