@@ -27,8 +27,8 @@ public class App extends JFrame {
 
 	// labels where answers will go
 	private JLabel resultLabel = new JLabel("result goes here");
-	private JLabel radioLabel = new JLabel("radio button selected goes here");
-	private JLabel comboBoxLabel = new JLabel("combo box selection goes here");
+//	private JLabel radioLabel = new JLabel("radio button selected goes here");
+//	private JLabel comboBoxLabel = new JLabel("combo box selection goes here");
 
 	private JComboBox crimeStatList;
 
@@ -70,8 +70,8 @@ public class App extends JFrame {
 		centerPanel.add(createComboBox());
 		centerPanel.add(createButtonGroup());
 		centerPanel.add(resultLabel);
-		centerPanel.add(radioLabel);
-		centerPanel.add(comboBoxLabel);
+//		centerPanel.add(radioLabel);
+//		centerPanel.add(comboBoxLabel);
 
 		return centerPanel;
 	}
@@ -190,10 +190,15 @@ public class App extends JFrame {
 		 */
 		public void actionPerformed(ActionEvent e) {
 			String comboBoxString = (String) crimeStatList.getSelectedItem();
+			String radioSelectedString = getRadioSelected();
 
-			resultLabel.setText("It changed to this!");
-			comboBoxLabel.setText(comboBoxString);
-			radioLabel.setText(getRadioSelected());
+			AppQuery.setComboBox(comboBoxString);
+			AppQuery.setRadioBox(radioSelectedString);
+			
+			resultLabel.setText(AppQuery.queryAnswer());
+			
+//			comboBoxLabel.setText(comboBoxString);
+//			radioLabel.setText(getRadioSelected());
 		}
 	}
 }
