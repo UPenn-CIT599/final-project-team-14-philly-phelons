@@ -179,54 +179,9 @@ public class EstablishDataRates {
 	 *         ****1.924****, with a total of 2074 general disturbance crimes
 	 */
 	public double calculateDistrictGeneralDisturbanceCrimeRate(int districtNum) {
-		ArrayList<Crime> districtCrimeArray = makeDistrictCrimeArray(districtNum, genDisturbanceArray); // Calls the
-																										// makeDistrictCrimeArray
-																										// method using
-																										// the district
-																										// and specified
-																										// type of crime
-																										// as arguments
-																										// so we can
-																										// count the
-																										// number of
-																										// crimes that
-																										// occurred in
-																										// our chosen
-																										// district.
-		ArrayList<LocalDate> districtDateArray = makeDistrictDateArray(districtNum, genDisturbanceArray);// Calls the
-																											// makeDistrictDateArray
-																											// method
-																											// using the
-																											// district
-																											// and
-																											// specified
-																											// crime
-																											// type as
-																											// arguments
-																											// so we can
-																											// count how
-																											// many days
-																											// there
-																											// were on
-																											// which a
-																											// crime
-																											// occurred
-																											// in our
-																											// chosen
-																											// district.
-
-		double districtGenDisturbanceCrimeRate = (double) districtCrimeArray.size() / (double) districtDateArray.size(); // Divides
-																															// the
-																															// number
-																															// of
-																															// general
-																															// disturbance
-																															// crimes
-																															// by
-																															// the
-																															// number
-																															// of
-																															// dates
+		ArrayList<Crime> districtCrimeArray = makeDistrictCrimeArray(districtNum, genDisturbanceArray); // Calls the makeDistrictCrimeArray method using the district and specified type of crime as arguments so we can count the number of crimes that occurred in our chosen district.
+		ArrayList<LocalDate> districtDateArray = makeDistrictDateArray(districtNum, genDisturbanceArray);// Calls the makeDistrictDateArray method using the district and specified crime type as arguments so we can count how many dates there were on which a crime occurred in our chosen district.
+		double districtGenDisturbanceCrimeRate = (double) districtCrimeArray.size() / (double) districtDateArray.size(); 
 		return districtGenDisturbanceCrimeRate; // Returns the per day average number of general disturbance crimes
 	}
 
@@ -245,14 +200,7 @@ public class EstablishDataRates {
 									// the district passed into the method as an argument
 		for (Crime crime : violentCrimeArray) { // An enhanced for loop to iterate over all of the crime objects in the
 												// violentCrimeArray
-			if (Integer.parseInt(crime.getDistrict()) == districtNum && crime.getDate().equals(date)) { // If the date
-																										// of a given
-																										// crime object
-																										// matches the
-																										// district
-																										// number and
-																										// the date
-																										// arguments...
+			if (Integer.parseInt(crime.getDistrict()) == districtNum && crime.getDate().equals(date)) { 
 				crimesPerDay++;// ...then increase the crimeCount variable
 			}
 		}
@@ -276,14 +224,7 @@ public class EstablishDataRates {
 		for (Crime crime : genDisturbanceArray) {// An enhanced for loop to iterate over all of the crime objects in the
 													// genDisturbanceArray
 			if (Integer.parseInt(crime.getDistrict()) == districtNum && crime.getDate().equals(date)) {// If the date of
-																										// a given crime
-																										// object
-																										// matches the
-																										// district
-																										// number and
-																										// the date
-																										// arguments...
-				crimesPerDay++;// ...then increase the crimeCount variable
+				crimesPerDay++;
 			}
 		}
 		return crimesPerDay;// Return the number of crimes that occurred on a given day
@@ -291,29 +232,19 @@ public class EstablishDataRates {
 
 	/**
 	 * This method calculates the average number of crimes of a given crime code
-	 * that occurred in each district per day. The results are: District 1: Code 100
-	 * -> .019, Code 200 -> .045, Code 300 -> .577, Code 400 -> .638, Code 800 ->
-	 * 1.743, Code 900 -> .030, Code 1500 -> .090 District 3: Code 100 -> .017, Code
-	 * 200 -> .043, Code 300 -> .826, Code 400 -> .617, Code 800 -> 1.771, Code 900
-	 * -> .022, Code 1500 -> .125 District 6: Code 100 -> .018, Code 200 -> .067,
-	 * Code 300 -> .901, Code 400 -> .621, Code 800 -> 2.146, Code 900 -> .019, Code
-	 * 1500 -> .080 District 9: Code 100 -> .006, Code 200 -> .051, Code 300 ->
-	 * .882, Code 400 -> .381, Code 800 -> 1.842, Code 900 -> .025, Code 1500 ->
-	 * .081 District 12: Code 100 -> .08, Code 200 -> .182, Code 300 -> 1.381, Code
-	 * 400 -> 1.895, Code 800 -> 3.702, Code 900 -> .07, Code 1500 -> .346 District
-	 * 16: Code 100 -> .047, Code 200 -> .114, Code 300 -> .738, Code 400 -> 1.011,
-	 * Code 800 -> 1.964, Code 900 -> .06, Code 1500 -> .175 District 17: Code 100
-	 * -> .047, Code 200 -> .085, Code 300 -> .812, Code 400 -> 1.06, Code 800 ->
-	 * 2.34, Code 900 -> .037, Code 1500 -> .175 District 18: Code 100 -> .043, Code
-	 * 200 -> .134, Code 300 -> 1.487, Code 400 -> 1.332, Code 800 -> 3.029, Code
-	 * 900 -> .068, Code 1500 -> .271 District 22: Code 100 -> .090, Code 200 ->
-	 * .171, Code 300 -> 1.466, Code 400 -> 1.642, Code 800 -> 3.657, Code 900 ->
-	 * .084, Code 1500 -> .389 District 24: Code 100 -> .051, Code 200 -> .203, Code
-	 * 300 -> 1.663, Code 400 -> 1.531, Code 800 -> 4.027, Code 900 -> .116, Code
-	 * 1500 -> .229 District 25: Code 100 -> .083, Code 200 -> .208, Code 300 ->
-	 * 1.826, Code 400 -> 1.895, Code 800 -> 5.627, Code 900 -> .153, Code 1500 ->
-	 * .462 District 26: Code 100 -> .041, Code 200 -> .121, Code 300 -> .904, Code
-	 * 400 -> .936, Code 800 -> 2.198, Code 900 -> .090, Code 1500 -> .171
+	 * that occurred in each district per day. The results are: 
+	 * District 1: Code 100 -> .019, Code 200 -> .045, Code 300 -> .577, Code 400 -> .638, Code 800 -> 1.743, Code 900 -> .030, Code 1500 -> .090 
+	 * District 3: Code 100 -> .017, Code 200 -> .043, Code 300 -> .826, Code 400 -> .617, Code 800 -> 1.771, Code 900 -> .022, Code 1500 -> .125 
+	 * District 6: Code 100 -> .018, Code 200 -> .067, Code 300 -> .901, Code 400 -> .621, Code 800 -> 2.146, Code 900 -> .019, Code 1500 -> .080 
+	 * District 9: Code 100 -> .006, Code 200 -> .051, Code 300 -> .882, Code 400 -> .381, Code 800 -> 1.842, Code 900 -> .025, Code 1500 -> .081 
+	 * District 12: Code 100 -> .08, Code 200 -> .182, Code 300 -> 1.381, Code 400 -> 1.895, Code 800 -> 3.702, Code 900 -> .07, Code 1500 -> .346 
+	 * District 16: Code 100 -> .047, Code 200 -> .114, Code 300 -> .738, Code 400 -> 1.011, Code 800 -> 1.964, Code 900 -> .06, Code 1500 -> .175 
+	 * District 17: Code 100 -> .047, Code 200 -> .085, Code 300 -> .812, Code 400 -> 1.06, Code 800 -> 2.34, Code 900 -> .037, Code 1500 -> .175 
+	 * District 18: Code 100 -> .043, Code 200 -> .134, Code 300 -> 1.487, Code 400 -> 1.332, Code 800 -> 3.029, Code 900 -> .068, Code 1500 -> .271 
+	 * District 22: Code 100 -> .090, Code 200 -> .171, Code 300 -> 1.466, Code 400 -> 1.642, Code 800 -> 3.657, Code 900 -> .084, Code 1500 -> .389 
+	 * District 24: Code 100 -> .051, Code 200 -> .203, Code 300 -> 1.663, Code 400 -> 1.531, Code 800 -> 4.027, Code 900 -> .116, Code 1500 -> .229 
+	 * District 25: Code 100 -> .083, Code 200 -> .208, Code 300 -> 1.826, Code 400 -> 1.895, Code 800 -> 5.627, Code 900 -> .153, Code 1500 -> .462 
+	 * District 26: Code 100 -> .041, Code 200 -> .121, Code 300 -> .904, Code 400 -> .936, Code 800 -> 2.198, Code 900 -> .090, Code 1500 -> .171
 	 * 
 	 * 
 	 * @param crimeCode   The crime code we are searching for the number of
@@ -328,23 +259,12 @@ public class EstablishDataRates {
 										// district
 		double crimeCodeRate = 0.0;// A variable to hold the result of dividing the crimecodecount by the number of
 									// days being studied in the given district
-		ArrayList<LocalDate> districtDateArray = makeDistrictDateArray(districtNum, violentCrimeArray); // Calls on the
-																										// districtDateArray()
-																										// helper method
-																										// to create an
-																										// array of all
-																										// the dates
-																										// being studied
-																										// for the
-																										// specified
-																										// district
+		ArrayList<LocalDate> districtDateArray = makeDistrictDateArray(districtNum, violentCrimeArray);
 		for (Crime crime : violentCrimeArray) {// An enhanced for loop to iterate over all of the crime objects in the
 												// violentCrimeArray
 			if ((Integer.parseInt(crime.getDistrict()) == districtNum)
-					&& (Integer.parseInt(crime.getCrimeCode()) == crimeCode)) {// If the district and the crime code of
-																				// the current crime object match the
-																				// parameters supplied...
-				crimeCodeCount++;// ...then increment the crimecodecount variable
+					&& (Integer.parseInt(crime.getCrimeCode()) == crimeCode)) {
+				crimeCodeCount++;// 
 			}
 		}
 		crimeCodeRate = (crimeCodeCount / (double) districtDateArray.size());// Divide the crimeCodeCount by the number
