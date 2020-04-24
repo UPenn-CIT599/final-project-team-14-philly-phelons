@@ -8,43 +8,26 @@ import java.util.ArrayList;
 
 /**
  * 
-<<<<<<< HEAD
  * @author Robby Ballard
  * 
  * Class to read "Crime.csv" file and input data into 2 usable ArrayLists.
  * ViolentCrimeArray includes only crimes deemed "violent" (See Crime class for specific code enumeration).
  * General Social Disturbances, non-violent in nature, are included in the genDisturbanceArray.
-=======
  * @author Robby Ballard CrimeReader collaborates with ____ reads csv and stores
  *         crime data in ArrayList of Crime objects
->>>>>>> master
  *
  */
 public class CrimeReader {
-private ArrayList<Crime> allCrimeArray = new ArrayList<Crime>();
-
-<<<<<<< HEAD
-public ArrayList<Crime> violentCrimeArray = new ArrayList<Crime>();
-
-public ArrayList<Crime> genDisturbanceArray = new ArrayList<Crime>();
-=======
-	private ArrayList<Crime> allCrimeArray = new ArrayList<Crime>();
->>>>>>> master
-
+    private ArrayList<Crime> allCrimeArray = new ArrayList<Crime>();
 	public static ArrayList<Crime> violentCrimeArray = new ArrayList<Crime>();
 	public static ArrayList<Crime> genDisturbanceArray = new ArrayList<Crime>();
 
 	public CrimeReader() throws FileNotFoundException {
 		this.allCrimeArray = makeAllCrimeArray();
 		makePublicCrimeArrays(allCrimeArray);
+	}
 
-<<<<<<< HEAD
 
-public CrimeReader() throws FileNotFoundException {
-    allCrimeArray = makeAllCrimeArray();
-    violentCrimeArray = makeViolentArray(allCrimeArray);
-    genDisturbanceArray = makeGenDisturbanceArray(allCrimeArray);
-}
 
 private ArrayList<Crime> makeAllCrimeArray() throws FileNotFoundException{
     FileInputStream fis = new FileInputStream("Crime.csv");
@@ -94,8 +77,7 @@ private ArrayList<Crime> makeGenDisturbanceArray(ArrayList<Crime> crimeArray){//
     return this.genDisturbanceArray;
 
 }
-=======
-	}
+	
 	
 
 	public static ArrayList<Crime> getViolentCrimeArray() {
@@ -108,40 +90,7 @@ private ArrayList<Crime> makeGenDisturbanceArray(ArrayList<Crime> crimeArray){//
 	}
 
 
-	/**
-	 * makeAllCrimeArray will read csv and return an Array of Crimes
-	 * 
-	 * @return
-	 * @throws FileNotFoundException
-	 */
-	private ArrayList<Crime> makeAllCrimeArray() throws FileNotFoundException {
-		FileInputStream fis = new FileInputStream("Crime.csv");
-		InputStreamReader isr = new InputStreamReader(fis);
-		BufferedReader br = new BufferedReader(isr);
-
-		ArrayList<Crime> crimeArray = new ArrayList<Crime>();
-		String dataLine;
-
-		try {
-			while ((dataLine = br.readLine()) != null) {
-				String[] dataLineSplit = dataLine.split(",");
-				String district = dataLineSplit[0];
-				String date = dataLineSplit[1];
-				String crimeCode = dataLineSplit[2];
-
-				Crime crime = new Crime(district, date, crimeCode);
-
-				crimeArray.add(crime);
-			}
-			br.close();
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
-		return crimeArray;
-
-	}
-
+	
 	/**
 	 * Will filter out violent and disturbance only codes and populate
 	 * ViolentCrimeArray and genDisturbanceArray
@@ -166,5 +115,4 @@ private ArrayList<Crime> makeGenDisturbanceArray(ArrayList<Crime> crimeArray){//
 		}
 
 	}
->>>>>>> master
 }
