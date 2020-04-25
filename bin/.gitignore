@@ -1,5 +1,12 @@
+/EstablishDataRates.class
+/GameWinLossVSCrimeRate.class
+/Games.class
+/LeagueReader.class
+/LeagueSeason.class
 /MostFrequentCrimeOfEachRegion.class
 /MostFrequentCrimeOfEachYear.class
 /Questions.class
+/RegionQuestions.class
 /RegionWithHighestDisturbanceRate.class
 /RegionWithHighestViolentRate.class
+/MostFrequentCrimeOfLeagueEachYear.class

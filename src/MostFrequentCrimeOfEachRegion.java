@@ -19,8 +19,7 @@ public class MostFrequentCrimeOfEachRegion extends Questions {
 	 * @return the most frequent crime type of the given region
 	 */
 	public String calculateMostFrequentCrimeOfEachRegion(ArrayList<Crime> crimeArray, String region) {
-		HashMap<String, Integer> thisQuestionCount = TotalCrimeCount(crimeArray); //create a hashmap to store crime count
-		
+		HashMap<String, Integer> thisQuestionCount = TotalCrimeCount(crimeArray); //create a HashMap to store crime count
 		for(Crime crime: crimeArray) {
 			String crimeType = crime.getCrimeCode();
 			if(crime.getCrimeCode().equalsIgnoreCase(crimeType) && crime.getDistrict().contains(region)) { //count the number of crime based of region

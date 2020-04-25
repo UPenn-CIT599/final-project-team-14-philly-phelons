@@ -1,14 +1,11 @@
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
-/**
- * Find answer to question "Most Frequent Crime Type of Each Year 2007 - 2011"
- * @author Tian Xue
- * create a child class of Questions
- */
-public class MostFrequentCrimeOfEachYear extends Questions {
-	public MostFrequentCrimeOfEachYear(ArrayList<Crime> crime){
+public class MostFrequentCrimeOfLeagueEachYear extends Questions {
+	public MostFrequentCrimeOfLeagueEachYear(ArrayList<Crime> crime){
 		super(crime);
 	}
 	
@@ -18,11 +15,12 @@ public class MostFrequentCrimeOfEachYear extends Questions {
 	 * @param year
 	 * @return most frequent crime type of a given year
 	 */
-	public String calculateMostFrequentCrimeOfEachYear(ArrayList<Crime> crimeArray, String year) {
+	public String calculateMostFrequentCrimeOfEachYear(ArrayList<Crime> crimeArray, String year, String league) {
 		HashMap<String, Integer> thisQuestionCount = TotalCrimeCount(crimeArray); //create a HashMap to store count
+		ArrayList<LocalDate> leagueGameDate = getLeagueGameDate(league);
 		for(Crime crime: crimeArray) {
 			String crimeType = crime.getCrimeCode();
-			if(crime.getCrimeCode().equalsIgnoreCase(crimeType) && crime.getDate().toString().contains(year)) { //count number of crime based of type
+			if(crime.getCrimeCode().equalsIgnoreCase(crimeType) && crime.getDate().toString().contains(year) && leagueGameDate.contains(crime.getDate())) { //count number of crime based of type
 				int temp = thisQuestionCount.get(crimeType) + 1;
 				thisQuestionCount.put(crimeType,temp); //put the type and associated count into the HashMap
 			}
@@ -36,12 +34,13 @@ public class MostFrequentCrimeOfEachYear extends Questions {
 	 * @param crimeArray
 	 * @return annual report
 	 */
-	public HashMap <String, String> MostFrequentCrimeOfEachYearOf2007To2011(ArrayList<Crime> crimeArray) {
+	public HashMap <String, String> MostFrequentCrimeOfLeagueEachYearOf2007To2011(ArrayList<Crime> crimeArray, String league) {
 		HashMap<String, String> annualReport = new HashMap<String, String>();
 		for(int i = 2007; i < 2012; i++) {
-			String annualData = calculateMostFrequentCrimeOfEachYear(crimeArray, Integer.toString(i).substring(2, 3));
+			String annualData = calculateMostFrequentCrimeOfEachYear(crimeArray, Integer.toString(i).substring(2, 3), league);
 			annualReport.put(Integer.toString(i), annualData);
 		}
 		return annualReport;
 	}
+
 }
