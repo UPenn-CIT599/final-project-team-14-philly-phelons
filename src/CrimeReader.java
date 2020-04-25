@@ -14,17 +14,22 @@ import java.util.ArrayList;
  */
 public class CrimeReader {
 
-	private ArrayList<Crime> allCrimeArray = new ArrayList<Crime>();
+	public static ArrayList<Crime> allCrimeArray = new ArrayList<Crime>();
 
 	public static ArrayList<Crime> violentCrimeArray = new ArrayList<Crime>();
 	public static ArrayList<Crime> genDisturbanceArray = new ArrayList<Crime>();
 
 	public CrimeReader() throws FileNotFoundException {
-		this.allCrimeArray = makeAllCrimeArray();
+		allCrimeArray = makeAllCrimeArray();
 		makePublicCrimeArrays(allCrimeArray);
 
 	}
 	
+
+	public static ArrayList<Crime> getAllCrimeArray() {
+		return allCrimeArray;
+	}
+
 
 	public static ArrayList<Crime> getViolentCrimeArray() {
 		return violentCrimeArray;
