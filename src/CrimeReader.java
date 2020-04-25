@@ -1,4 +1,5 @@
 
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
  *
  */
 public class CrimeReader {
-    private ArrayList<Crime> allCrimeArray = new ArrayList<Crime>();
+    public static ArrayList<Crime> allCrimeArray = new ArrayList<Crime>();
 	public static ArrayList<Crime> violentCrimeArray = new ArrayList<Crime>();
 	public static ArrayList<Crime> genDisturbanceArray = new ArrayList<Crime>();
 
