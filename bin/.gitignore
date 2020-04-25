@@ -1,7 +1,7 @@
-<<<<<<< HEAD
-/ButtonListener.class
+/App$ButtonListener.class
+/App.class
+/AppViewer.class
 /Crime.class
-/CrimeRateChangeVsLeague.class
 /CrimeReader.class
 /CrimeReaderTest2.class
 /EstablishDataRates.class
@@ -9,23 +9,17 @@
 /Games.class
 /LeagueReader.class
 /LeagueSeason.class
-/MostFrequentCrimeOfMLBSeason.class
-/MostFrequentCrimeOfNBASeason.class
-/MostFrequentCrimeOfNFLSeason.class
-/MostFrequentCrimeOfNHLSeason.class
-/MostFrequentCrimeTypeOf2016.class
-/MostFrequentCrimeTypeOfEachRegion.class
-/MostFrequentCrimeTypeOfEachYear.class
-/RegionWithHighestBulRate.class
-/RegionWithHighestViolentCrime.class
-/Season.class
-/nhl.class
-=======
 /MostFrequentCrimeOfEachRegion.class
 /MostFrequentCrimeOfEachYear.class
 /Questions.class
+/RegionQuestions.class
 /RegionWithHighestDisturbanceRate.class
 /RegionWithHighestViolentRate.class
->>>>>>> master
-/App$ButtonListener.class
-/RegionQuestions.class
+/Season.class
+/commons-beanutils-1.9.4.jar
+/commons-collections4-4.4.jar
+/commons-lang3-3.10.jar
+/commons-logging-1.2.jar
+/commons-text-1.8.jar
+/nhl.class
+/opencsv-5.1.jar
