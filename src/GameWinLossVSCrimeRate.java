@@ -1,20 +1,16 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
-<<<<<<< HEAD
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
-=======
 import java.util.ArrayList;
 import java.util.HashMap;
->>>>>>> master
 
 /**
  * @author Robby Ballard
  *
-<<<<<<< HEAD
  *The purpose of this class is to establish whether there was a change in the crime rate on a day when a team
  *either won or lost their home game. The class uses the established crime rate from the EstablishDataRates class
  *of ****64**** violent crimes per day, on average, in the districts studied over the time period included.
@@ -25,14 +21,14 @@ public class GameWinLossVSCrimeRate {
     ArrayList<Games> totalMLBArray = lr.MLBArray;//Calls the LeagueReader Class to create an ArrayList of all MLB games
     ArrayList<Games> totalNBAArray = lr.NBAArray;//Calls the LeagueReader Class to create an ArrayList of all NBA games
     ArrayList<Games> totalNFLArray = lr.NFLArray;//Calls the LeagueReader Class to create an ArrayList of all NFL games
-    ArrayList<Games> totalNHLArray = lr.NHLArray;//Calls the LeagueReader Class to create an ArrayList of all NHL games
+    ArrayList<Games> totalNHLArray = lr.getNHLArray();//Calls the LeagueReader Class to create an ArrayList of all NHL games
     ArrayList<Games> gameLosses = new ArrayList<Games>();//Creates a variable to hold the game losses for a given team
     ArrayList<Games> gameWins = new ArrayList<Games>();//Creates a variable to hold the game wins for a given team
-    ArrayList<Crime> violentCrimeArray = cr.violentCrimeArray;//Calls the CrimeReader class to create an ArrayList of all violent crimes
-    ArrayList<Crime> genDisturbanceArray = cr.genDisturbanceArray;//Calls the CrimeReader class to create an ArrayList of all general disturbance crimes
+    ArrayList<Crime> violentCrimeArray = CrimeReader.violentCrimeArray;//Calls the CrimeReader class to create an ArrayList of all violent crimes
+    ArrayList<Crime> genDisturbanceArray = CrimeReader.genDisturbanceArray;//Calls the CrimeReader class to create an ArrayList of all general disturbance crimes
     
     public GameWinLossVSCrimeRate() throws IOException{
-       
+        
     }
     
     private LocalDate stringToLocalDate(String stringDate) {
@@ -133,10 +129,10 @@ public class GameWinLossVSCrimeRate {
      * @return Returns an ArrayList of crime objects, all of which occurred on the same day
      */
     private ArrayList<Crime> makeArrayListOfDaysCrimes(LocalDate date) {
-        ArrayList<Crime> daysCrimesArray = new ArrayList<Crime>();//Creates an Arraylist variable to hold all of the crime objects
-        for(Crime crime : violentCrimeArray) {//An enhanced for loop to iterate over all fo the crime objects in the violentCrimeArray as created by the makeViolentCrimeArray method in the CrimeReader class
-            if(crime.getDate().equals(date)) {//If the Crime object's date matches the date supplied to the method as an argument...
-                daysCrimesArray.add(crime);//...then add the crime to the ArrayList of all the crimes that occurred on the given date
+        ArrayList<Crime> daysCrimesArray = new ArrayList<Crime>();
+        for(Crime crime : violentCrimeArray) {
+            if(crime.getDate().equals(date)) {
+                daysCrimesArray.add(crime);
             }
         }
         return daysCrimesArray;//Return an ArrayList holding all of the violent crimes that occurred ona given date
@@ -179,29 +175,26 @@ public class GameWinLossVSCrimeRate {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public HashMap<String, Double> makeLeagueWinLossVsCrimeMap(String league, String winOrLose) throws FileNotFoundException, IOException{
+    public HashMap<String, Double> makeLeagueWinVsCrimeMap(String league) throws FileNotFoundException, IOException{
         //ArrayList<Games> winList = createGameWins(league);//Calls the createGameWins() method to make an ArrayList of all of the team's wins
         //ArrayList<Games> loseList = createGameLosses(league);//Calls the createGameLosses() method to make an ArrayList of all of the team's losses
-        HashMap<String, Double> winLossVsCrimeMap = new HashMap<String, Double>();//Creates a variable to hold a HashMap of key, value pairs. Keys are the dates, values are the number of wins or losses on that date
-        if(winOrLose.equals("Win")) {//If the supplied parameter winOrLose is "Win"...
+        HashMap<String, Double> winVsCrimeMap = new HashMap<String, Double>();//Creates a variable to hold a HashMap of key, value pairs. Keys are the dates, values are the number of wins or losses on that date
             ArrayList<Games> winList = createGameWins(league);//Calls the createGameLosses() method to make an ArrayList of all of the team's losses
             for(Games game : winList) {//...then we iterate over all of the games in the winList ArrayList
-                ArrayList<Crime> winDayCrimeArray = makeArrayListOfDaysCrimes(game.getGameDate());//Makes an ArrayList of only the crimes that occurred on a given date
                 Double winDayCrimeCount = winLoseDayCrimeCount(game.getGameDate());
-                winLossVsCrimeMap.put(game.getGameDate().toString(), (double) winDayCrimeArray.size());//Adds the date of a given Crime object to the winLossVsCrimeMap as a key and the number of crimes that occurred ont hat date as a value 
-                winLossVsCrimeMap.put(game.getGameDate().toString(), winDayCrimeCount);
+                winVsCrimeMap.put(game.getGameDate().toString(), winDayCrimeCount);
             }
-        }
-        if(winOrLose.equals("Lose")) {//If the supplied parameter winOrLose is "Lose"...
-            ArrayList<Games> loseList = createGameLosses(league);//Calls the createGameLosses() method to make an ArrayList of all of the team's losses
+            return winVsCrimeMap;
+    }
+    
+    public HashMap<String, Double> makeLeagueLossVsCrimeMap(String league) throws FileNotFoundException, IOException{
+        HashMap<String, Double> lossVsCrimeMap = new HashMap<String, Double>();
+        ArrayList<Games> loseList = createGameLosses(league);//Calls the createGameLosses() method to make an ArrayList of all of the team's losses
             for(Games game : loseList) {//...then we iterate over all of the games in the loseList ArrayList
-                ArrayList<Crime> loseDayCrimeArray = makeArrayListOfDaysCrimes(game.getGameDate());//Makes an ArrayList of only the crimes that occurred on a given date
                 Double loseDayCrimeCount = winLoseDayCrimeCount(game.getGameDate());
-                winLossVsCrimeMap.put(game.getGameDate().toString(), loseDayCrimeCount);
-                winLossVsCrimeMap.put(localDateToString(game.getGameDate()), (double) loseDayCrimeArray.size());//Adds the date of a given Crime object to the winLossVsCrimeMap as a key and the number of crimes that occurred ont hat date as a value 
+                lossVsCrimeMap.put(game.getGameDate().toString(), loseDayCrimeCount);
             }
-        }
-        return winLossVsCrimeMap;//Returns the winLossVsCrimeMap HashMap
+            return lossVsCrimeMap;
     }
     
     /**
@@ -214,8 +207,8 @@ public class GameWinLossVSCrimeRate {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    public HashMap<String, Double> makeCrimeRateChangeMap(String league, String winOrLose) throws FileNotFoundException, IOException {
-        HashMap<String, Double> winLossVsCrimeMap = makeLeagueWinLossVsCrimeMap(league, winOrLose);//Calls the makeLeagueWinLossVsCrimeMap() method to make a HashMap
+    public HashMap<String, Double> makeCrimeRateChangeMapForWins(String league) throws FileNotFoundException, IOException {
+        HashMap<String, Double> winLossVsCrimeMap = makeLeagueWinVsCrimeMap(league);//Calls the makeLeagueWinLossVsCrimeMap() method to make a HashMap
         HashMap<String, Double> crimeRateChangeMap = new HashMap<String, Double>();//Creates a HashMap variable to hold the HashMap as defined in the method description above
         for(Entry<String, Double> mapEntry : winLossVsCrimeMap.entrySet()) {//An enhanced for loope to iterate over all of the entries in the winLossVsCrimeMap HashMap
                 Double compareValue = (double) mapEntry.getValue() / 64;//A Double variable that holds the value corresponding to the change in violent crime rate on a given date. Computed by using the compareTo() method to compare the number of violent crimes in the winLossVsCrimeMap to the base crime rate of ****64**** violent crimes per day, on average
@@ -245,7 +238,7 @@ public class GameWinLossVSCrimeRate {
         }
         return crimeRateChange;//Returns the crimeRateChange variable that represents the change in crime rate ona  given day
     }
-    
+}
     //                                                            //
    //Main method to test functionality of above methods.         //
   // Kept, but removed from build path, in case further testing //
@@ -276,50 +269,4 @@ public static void main(String[] args) throws IOException {
 */
 
 
-=======
- */
-public class GameWinLossVSCrimeRate {
 
-	/**
-	 * createGameWins
-	 * 
-	 * @param league
-	 * @return
-	 * @throws FileNotFoundException
-	 * @throws IOException
-	 */
-	private ArrayList<Games> createGameWins(String league) throws FileNotFoundException, IOException {
-		LeagueReader lr = new LeagueReader();
-
-		ArrayList<Games> leagueData;
-		ArrayList<Games> gameWins = new ArrayList<Games>();
-
-		if (league.equals("NHL")) {
-			leagueData = lr.getNHLArray();
-			for (Games game : leagueData) {
-				if (Integer.parseInt(game.getHomeScore()) > Integer.parseInt(game.getAwayScore())) {
-					gameWins.add(game);
-				}
-			}
-		}
-
-		return gameWins;
-	}
-
-	private int NHLWinVSViolentCrime() throws FileNotFoundException, IOException {
-		ArrayList<Games> NHLWins = createGameWins("NHL");
-		ArrayList<Crime> violentCrimeArray = CrimeReader.violentCrimeArray;
-		int count = 0;
-		for (Games game : NHLWins) {
-			for (Crime crime : violentCrimeArray) {
-				if (game.getGameDate().equals(crime.getDate())) {
-					count++;
-				}
-			}
-		}
-		return count;
-
-	}
->>>>>>> master
-
-}
