@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * Class to read "Crime.csv" file and input data into 2 usable ArrayLists.
  * ViolentCrimeArray includes only crimes deemed "violent" (See Crime class for specific code enumeration).
  * General Social Disturbances, non-violent in nature, are included in the genDisturbanceArray.
- * @author Robby Ballard CrimeReader collaborates with ____ reads csv and stores
+ * @author Robby Ballard CrimeReader collaborates with  reads csv and stores
  *         crime data in ArrayList of Crime objects
  *
  */
@@ -56,7 +56,7 @@ private ArrayList<Crime> makeAllCrimeArray() throws FileNotFoundException{
     
     
 }
-private ArrayList<Crime> makeViolentArray(ArrayList<Crime> crimeArray){
+public ArrayList<Crime> makeViolentArray(ArrayList<Crime> crimeArray){
     for(Crime crime : crimeArray) {
         if(crime.getCrimeCode().equals("100") || crime.getCrimeCode().equals("200") ||
                 crime.getCrimeCode().equals("300") || crime.getCrimeCode().equals("400") ||
@@ -65,16 +65,16 @@ private ArrayList<Crime> makeViolentArray(ArrayList<Crime> crimeArray){
             violentCrimeArray.add(crime);
         }
     }
-    return this.violentCrimeArray;
+    return violentCrimeArray;
 }
-private ArrayList<Crime> makeGenDisturbanceArray(ArrayList<Crime> crimeArray){//General disturbances include public drunkenness, vandalism, and other crimes that could be associated with reckless celebration or dejection fueled debauchery brought about by either an important win or loss, respectively
+public ArrayList<Crime> makeGenDisturbanceArray(ArrayList<Crime> crimeArray){//General disturbances include public drunkenness, vandalism, and other crimes that could be associated with reckless celebration or dejection fueled debauchery brought about by either an important win or loss, respectively
     for(Crime crime : crimeArray) {
         if(crime.getCrimeCode().equals("1400") || crime.getCrimeCode().equals("2100") ||
                 crime.getCrimeCode().equals("2300") || crime.getCrimeCode().equals("2400")) {
             genDisturbanceArray.add(crime);//Filters crimes for only those containing general disturbance codes
         }
     }
-    return this.genDisturbanceArray;
+    return genDisturbanceArray;
 
 }
 	
@@ -97,7 +97,7 @@ private ArrayList<Crime> makeGenDisturbanceArray(ArrayList<Crime> crimeArray){//
 	 * 
 	 * @param crimeArray
 	 */
-	private void makePublicCrimeArrays(ArrayList<Crime> crimeArray) {
+	public void makePublicCrimeArrays(ArrayList<Crime> crimeArray) {
 		for (Crime crime : crimeArray) {
 			// Filters Crime objects for those containing Violent Codes
 			if (crime.getCrimeCode().equals("100") || crime.getCrimeCode().equals("200")
