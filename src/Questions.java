@@ -137,16 +137,9 @@ public abstract class Questions {
 	
 	public ArrayList<LocalDate> getLeagueGameDate(String league){
 		ArrayList<LocalDate> leagueGameDate = new ArrayList<LocalDate>();
-		LeagueReader newLeague = null;
+		
 		try {
-			newLeague = new LeagueReader();
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			LeagueReader newLeague = new LeagueReader();
 		
 		if (league.equals("NBA")) {
 			for(Games game : newLeague.getNBAArray()) {
@@ -167,6 +160,11 @@ public abstract class Questions {
 			for(Games game : newLeague.NHLArray) {
 				leagueGameDate.add(game.getGameDate());
 			}
+		}
+		
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return leagueGameDate;
 	}

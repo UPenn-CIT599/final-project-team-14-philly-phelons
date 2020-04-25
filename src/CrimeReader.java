@@ -56,6 +56,7 @@ public class CrimeReader {
 		String dataLine;
 
 		try {
+			br.readLine();
 			while ((dataLine = br.readLine()) != null) {
 				String[] dataLineSplit = dataLine.split(",");
 				String district = dataLineSplit[0];

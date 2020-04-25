@@ -1,17 +1,3 @@
-/EstablishDataRates.class
-/GameWinLossVSCrimeRate.class
-/Games.class
-/LeagueReader.class
-/LeagueSeason.class
-/MostFrequentCrimeOfEachRegion.class
-/MostFrequentCrimeOfEachYear.class
-/Questions.class
-/RegionQuestions.class
-/RegionWithHighestDisturbanceRate.class
-/RegionWithHighestViolentRate.class
-<<<<<<< HEAD
-/MostFrequentCrimeOfLeagueEachYear.class
-=======
-/RegionQuestions.class
 /AppQuery.class
->>>>>>> 5049f75fd19c80597a07bb855c9875bd4dcffee3
+/QuestionTest.class
+/RegionQuestionsLeague.class
