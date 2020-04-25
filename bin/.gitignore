@@ -3,7 +3,6 @@
 /AppViewer.class
 /Crime.class
 /CrimeReader.class
-/CrimeReaderTest2.class
 /EstablishDataRates.class
 /GameWinLossVSCrimeRate.class
 /Games.class
@@ -16,10 +15,4 @@
 /RegionWithHighestDisturbanceRate.class
 /RegionWithHighestViolentRate.class
 /Season.class
-/commons-beanutils-1.9.4.jar
-/commons-collections4-4.4.jar
-/commons-lang3-3.10.jar
-/commons-logging-1.2.jar
-/commons-text-1.8.jar
 /nhl.class
-/opencsv-5.1.jar
