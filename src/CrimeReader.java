@@ -29,57 +29,6 @@ public class CrimeReader {
 		makePublicCrimeArrays(allCrimeArray);
 	}
 
-
-
-private ArrayList<Crime> makeAllCrimeArray() throws FileNotFoundException{
-    FileInputStream fis = new FileInputStream("Crime.csv");
-    InputStreamReader isr = new InputStreamReader(fis);
-    BufferedReader br = new BufferedReader(isr);
-    
-    String dataLine;
-    try {
-        while((dataLine = br.readLine()) != null) {
-           String[] dataLineSplit = dataLine.split(",");
-           String district = dataLineSplit[0];
-           String date = dataLineSplit[1];
-           String crimeCode = dataLineSplit[2];
-           
-           Crime crime = new Crime(district, date, crimeCode);
-           
-           allCrimeArray.add(crime);
-        }
-        br.close();
-    } catch (IOException e) {
-        // TODO Auto-generated catch block
-        e.printStackTrace();
-    }
-    return allCrimeArray;
-    
-    
-    
-}
-public ArrayList<Crime> makeViolentArray(ArrayList<Crime> crimeArray){
-    for(Crime crime : crimeArray) {
-        if(crime.getCrimeCode().equals("100") || crime.getCrimeCode().equals("200") ||
-                crime.getCrimeCode().equals("300") || crime.getCrimeCode().equals("400") ||
-                crime.getCrimeCode().equals("800") || crime.getCrimeCode().equals("900") ||
-                crime.getCrimeCode().equals("1500")) {//Filters Crime objects for only those containing Violent Crime codes
-            violentCrimeArray.add(crime);
-        }
-    }
-    return violentCrimeArray;
-}
-public ArrayList<Crime> makeGenDisturbanceArray(ArrayList<Crime> crimeArray){//General disturbances include public drunkenness, vandalism, and other crimes that could be associated with reckless celebration or dejection fueled debauchery brought about by either an important win or loss, respectively
-    for(Crime crime : crimeArray) {
-        if(crime.getCrimeCode().equals("1400") || crime.getCrimeCode().equals("2100") ||
-                crime.getCrimeCode().equals("2300") || crime.getCrimeCode().equals("2400")) {
-            genDisturbanceArray.add(crime);//Filters crimes for only those containing general disturbance codes
-        }
-    }
-    return genDisturbanceArray;
-
-}
-	
 	
 
 	public static ArrayList<Crime> getAllCrimeArray() {
@@ -97,7 +46,42 @@ public ArrayList<Crime> makeGenDisturbanceArray(ArrayList<Crime> crimeArray){//G
 	}
 
 
-	
+
+	/**
+	 * makeAllCrimeArray will read csv and return an Array of Crimes
+	 * 
+	 * @return
+	 * @throws FileNotFoundException
+	 */
+	private ArrayList<Crime> makeAllCrimeArray() throws FileNotFoundException {
+		FileInputStream fis = new FileInputStream("Crime.csv");
+		InputStreamReader isr = new InputStreamReader(fis);
+		BufferedReader br = new BufferedReader(isr);
+
+		ArrayList<Crime> crimeArray = new ArrayList<Crime>();
+		String dataLine;
+
+		try {
+			br.readLine();
+			while ((dataLine = br.readLine()) != null) {
+				String[] dataLineSplit = dataLine.split(",");
+				String district = dataLineSplit[0];
+				String date = dataLineSplit[1];
+				String crimeCode = dataLineSplit[2];
+
+				Crime crime = new Crime(district, date, crimeCode);
+
+				crimeArray.add(crime);
+			}
+			br.close();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+		return crimeArray;
+
+	}
+
 	/**
 	 * Will filter out violent and disturbance only codes and populate
 	 * ViolentCrimeArray and genDisturbanceArray

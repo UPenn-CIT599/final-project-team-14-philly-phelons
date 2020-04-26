@@ -1,6 +1,9 @@
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class RegionQuestionsLeague extends Questions {
 	public RegionQuestionsLeague(ArrayList<Crime> crime){
@@ -85,7 +88,7 @@ public class RegionQuestionsLeague extends Questions {
 		
 		for(Crime crime: crimeArray) {
 			String crimeType = crime.getCrimeCode();
-			if(crime.getCrimeCode().equalsIgnoreCase(crimeType) && crime.getDistrict().contains(region) && leagueGameDate.contains(crime.getDate())) { //count the number of crime based of region
+			if(crime.getCrimeCode().equalsIgnoreCase(crimeType) && crime.getDistrict().equals(region) && leagueGameDate.contains(crime.getDate())) { //count the number of crime based of region
 				int temp = thisQuestionCount.get(crimeType) + 1;
 				thisQuestionCount.put(crimeType,temp); //update the HashMap with crime type and count
 			}
@@ -101,11 +104,10 @@ public class RegionQuestionsLeague extends Questions {
 	 */
 	public HashMap<String, String> mostFrequentCrimeOfEachRegionReport(ArrayList<Crime> crimeArray, String league){ //create a HashMap to store region and associated crime type
 		HashMap<String, String> crimeRegionReport = new HashMap<String, String>();
-		for (Crime crime: crimeArray) {
-			String region = crime.getDistrict(); // loop through each region
-			if(crime.getDistrict().equals(region)) {
-				crimeRegionReport.put(region, calculateMostFrequentCrimeOfEachRegionPerLeague(crimeArray, region, league));//update the HashMap with region and associated most frequent crime type
-			}
+		Set<String> districtArray = crimeArray.stream().map(v -> v.getDistrict()).collect(Collectors.toSet()); // create a set of regions to traverse
+		for(String region: districtArray) {
+			String crimeRegion = calculateMostFrequentCrimeOfEachRegionPerLeague(crimeArray, region, league);
+			crimeRegionReport.put(region, crimeRegion);//update the HashMap with region and associated most frequent crime type
 		}
 		return crimeRegionReport;
 	}
