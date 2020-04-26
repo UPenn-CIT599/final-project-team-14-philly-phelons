@@ -1,3 +1,4 @@
+import org.jfree.ui.RefineryUtilities;
 
 public class AppQuery {
 
@@ -23,6 +24,14 @@ public class AppQuery {
 	public static void setRadioBox(String radioBoxOption) {
 		radioBox = radioBoxOption;
 	}
-	
+
+	public static PieChart getChart(String pieChartTitle) {
+		PieChart pieChartResult = new PieChart(pieChartTitle);
+		pieChartResult.setSize(560, 367);
+		RefineryUtilities.centerFrameOnScreen(pieChartResult);
+		pieChartResult.setVisible(true);
+		return pieChartResult;
+	}
+
 	
 }
