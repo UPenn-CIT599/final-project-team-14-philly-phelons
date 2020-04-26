@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry excluding="CrimeReaderOld.java|nba.java|nfl.java|mlb.java|CrimeOld.java|EstablishDataRatesTest.java" kind="src" path="src"/>
-	<classpathentry kind="lib" path="src/commons-beanutils-1.9.4.jar"/>
-	<classpathentry kind="lib" path="src/commons-collections4-4.4.jar"/>
-	<classpathentry kind="lib" path="src/commons-lang3-3.10.jar"/>
-	<classpathentry kind="lib" path="src/commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="src/commons-text-1.8.jar"/>
-	<classpathentry kind="lib" path="src/opencsv-5.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="/Users/claudiaromano/Downloads/jfreechart-1.0.1/lib/jfreechart-1.0.1.jar"/>
+	<classpathentry kind="lib" path="/Users/claudiaromano/Downloads/jfreechart-1.0.1/lib/jcommon-1.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
