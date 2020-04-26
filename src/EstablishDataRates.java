@@ -1,8 +1,6 @@
 import java.io.FileNotFoundException;
-import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Map.Entry;
 
 /**
  * This class is to establish certain
@@ -276,3 +274,4 @@ public class EstablishDataRates {
 		return crimeCodeRate;// Returns the probability that a given crime code occurred on a given day in
 								// the supplied district
 	}
+}

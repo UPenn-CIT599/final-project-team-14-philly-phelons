@@ -1,4 +1,3 @@
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -157,7 +156,7 @@ public abstract class Questions {
 			}
 		}
 		if (league.equals("NHL")) {
-			for(Games game : newLeague.NHLArray) {
+			for(Games game : LeagueReader.NHLArray) {
 				leagueGameDate.add(game.getGameDate());
 			}
 		}
