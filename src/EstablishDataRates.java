@@ -1,11 +1,15 @@
 import java.io.FileNotFoundException;
+import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Map.Entry;
 
 /**
- * This class establishes certain base rates that can be used for comparison
- * purposes.
- * 
+ * This class is to establish certain
+ *  rates that can be used for comparison purposes. For example, to 
+ *  determine whether the crime rate was higher on a certain day or not, we must first determine
+ *  what the base crime rate is for any given day, on average, during our study period.
+ *
  * @author Robby Ballard
  *
  */
@@ -272,4 +276,3 @@ public class EstablishDataRates {
 		return crimeCodeRate;// Returns the probability that a given crime code occurred on a given day in
 								// the supplied district
 	}
-}

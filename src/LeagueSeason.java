@@ -1,17 +1,17 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-
 /**
  * 
- * 		   This class iterates through an ArrayList of games
- *         created by the LeagueReader class and matches a parameterized season
- *         value to the season in which a game was played, adding the game to an
- *         ArrayList, thus creating an ArrayList composed entirely of the
- *         specified season's games for the specified league.
+ * @author Robby Ballard
+ *This class iterates through an ArrayList of games created by the LeagueReader class and matches a 
+ *parameterized season value to the season in which a game was played, adding the game to an ArrayList,
+ *thus creating an ArrayList composed entirely of the specified season's games for the specified league.
  */
-
 public class LeagueSeason {
+
+
+
 	private static ArrayList<Games> MLBSeason;
 	private static ArrayList<Games> NHLSeason;
 	private static ArrayList<Games> NFLSeason;
@@ -133,3 +133,4 @@ public class LeagueSeason {
 		return isInSeasonValue;
 	}
 }
+

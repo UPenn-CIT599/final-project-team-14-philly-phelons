@@ -11,7 +11,6 @@ import java.util.HashMap;
 /**
  * @author Robby Ballard
  *
-<<<<<<< HEAD
  *The purpose of this class is to establish whether there was a change in the crime rate on a day when a team
  *either won or lost their home game. The class uses the established crime rate from the EstablishDataRates class
  *of ****64**** violent crimes per day, on average, in the districts studied over the time period included.
@@ -19,17 +18,84 @@ import java.util.HashMap;
 public class GameWinLossVSCrimeRate {
     LeagueReader lr = new LeagueReader();//Creates an instance of the LeagueReader class
     CrimeReader cr = new CrimeReader();//Creates an instance of the CrimeReader class
-    ArrayList<Games> totalMLBArray = lr.MLBArray;//Calls the LeagueReader Class to create an ArrayList of all MLB games
-    ArrayList<Games> totalNBAArray = lr.NBAArray;//Calls the LeagueReader Class to create an ArrayList of all NBA games
-    ArrayList<Games> totalNFLArray = lr.NFLArray;//Calls the LeagueReader Class to create an ArrayList of all NFL games
-    ArrayList<Games> totalNHLArray = lr.NHLArray;//Calls the LeagueReader Class to create an ArrayList of all NHL games
-    ArrayList<Games> gameLosses = new ArrayList<Games>();//Creates a variable to hold the game losses for a given team
-    ArrayList<Games> gameWins = new ArrayList<Games>();//Creates a variable to hold the game wins for a given team
-    ArrayList<Crime> violentCrimeArray = cr.violentCrimeArray;//Calls the CrimeReader class to create an ArrayList of all violent crimes
-    ArrayList<Crime> genDisturbanceArray = cr.genDisturbanceArray;//Calls the CrimeReader class to create an ArrayList of all general disturbance crimes
-    
+
+    public static ArrayList<Games> totalMLBArray = LeagueReader.MLBArray;//Calls the LeagueReader Class to create an ArrayList of all MLB games
+    public static ArrayList<Games> totalMLBLosses = makeTotalLosses(totalMLBArray);
+    public static ArrayList<Games> totalMLBWins = makeTotalWins(totalMLBArray);
+    public static ArrayList<Games> totalNBAArray = LeagueReader.NBAArray;//Calls the LeagueReader Class to create an ArrayList of all NBA games
+    public static ArrayList<Games> totalNBALosses = makeTotalLosses(totalNBAArray);
+    public static ArrayList<Games> totalNBAWins = makeTotalWins(totalNBAArray);
+    public static ArrayList<Games> totalNFLArray = LeagueReader.NFLArray;//Calls the LeagueReader Class to create an ArrayList of all NFL games
+    public static ArrayList<Games> totalNFLLosses =makeTotalLosses(totalNFLArray);
+    public static ArrayList<Games> totalNFLWins = makeTotalWins(totalNFLArray);
+    public static ArrayList<Games> totalNHLArray = LeagueReader.NHLArray;//Calls the LeagueReader Class to create an ArrayList of all NHL games
+    public static ArrayList<Games> totalNHLLosses = makeTotalLosses(totalNHLArray);//Creates a variable to hold the game losses for a given team
+    public static ArrayList<Games> totalNHLWins = makeTotalWins(totalNHLArray);//Creates a variable to hold the game wins for a given team
+     //
+    // The following HashMaps return maps that set a team's win or loss date      //
+   //  as a key and the total number of crimes for the date of that win/loss     //
+  //   as a value. Maps are ordered as violent crimes first, followed by        //
+ //    General Disturbance, and finally All crimes                             //
+//                                                                            //
+    public static HashMap<String, Double> NHLLossVsViolentCrimeMap;
+    public static HashMap<String, Double> NHLWinVsViolentCrimeMap;
+    public static HashMap<String, Double> NFLLossVsViolentCrimeMap;
+    public static HashMap<String, Double> NFLWinVsViolentCrimeMap;
+    public static HashMap<String, Double> NBALossVsViolentCrimeMap;
+    public static HashMap<String, Double> NBAWinVsViolentCrimeMap;
+    public static HashMap<String, Double> MLBLossVsViolentCrimeMap;
+    public static HashMap<String, Double> MLBWinVsViolentCrimeMap;
+    public static HashMap<String, Double> NHLLossVsGDCrimeMap;
+    public static HashMap<String, Double> NHLWinVsGDCrimeMap;
+    public static HashMap<String, Double> NFLLossVsGDCrimeMap;
+    public static HashMap<String, Double> NFLWinVsGDCrimeMap;
+    public static HashMap<String, Double> NBALossVsGDCrimeMap;
+    public static HashMap<String, Double> NBAWinVsGDCrimeMap;
+    public static HashMap<String, Double> MLBLossVsGDCrimeMap;
+    public static HashMap<String, Double> MLBWinVsGDCrimeMap;    
+    public static HashMap<String, Double> NHLLossVsAllCrimeMap;
+    public static HashMap<String, Double> NHLWinVsAllCrimeMap;
+    public static HashMap<String, Double> NFLLossVsAllCrimeMap;
+    public static HashMap<String, Double> NFLWinVsAllCrimeMap;
+    public static HashMap<String, Double> NBALossVsAllCrimeMap;
+    public static HashMap<String, Double> NBAWinVsAllCrimeMap;
+    public static HashMap<String, Double> MLBLossVsAllCrimeMap;
+    public static HashMap<String, Double> MLBWinVsAllCrimeMap;
+    //
+   // The following HashMaps return maps that set a team's win or loss date      //
+  //  as a key and the change in crime rate for the date of that win/loss       //
+ //   as a value. Crime rate changes are represented as percentages (e.g.18.75)//
+//                                                                            //
+    public static HashMap<String, Double> NHLWinVsVCrimeRateChangeMap;
+    public static HashMap<String, Double> NHLLossVsVCrimeRateChangeMap;
+    public static HashMap<String, Double> NFLWinVsVCrimeRateChangeMap;
+    public static HashMap<String, Double> NFLLossVsVCrimeRateChangeMap;
+    public static HashMap<String, Double> NBAWinVsVCrimeRateChangeMap;
+    public static HashMap<String, Double> NBALossVsVCrimeRateChangeMap;
+    public static HashMap<String, Double> MLBWinVsVCrimeRateChangeMap;
+    public static HashMap<String, Double> MLBLossVsVCrimeRateChangeMap;
+    public static HashMap<String, Double> NHLWinVsGDCrimeRateChangeMap;
+    public static HashMap<String, Double> NHLLossVsGDCrimeRateChangeMap;
+    public static HashMap<String, Double> NFLWinVsGDCrimeRateChangeMap;
+    public static HashMap<String, Double> NFLLossVsGDCrimeRateChangeMap;
+    public static HashMap<String, Double> NBAWinVsGDCrimeRateChangeMap;
+    public static HashMap<String, Double> NBALossVsGDCrimeRateChangeMap;
+    public static HashMap<String, Double> MLBWinVsGDCrimeRateChangeMap;
+    public static HashMap<String, Double> MLBLossVsGDCrimeRateChangeMap;
+    public static HashMap<String, Double> NHLWinVsAllCrimeRateChangeMap;
+    public static HashMap<String, Double> NHLLossVsAllCrimeRateChangeMap;
+    public static HashMap<String, Double> NFLWinVsAllCrimeRateChangeMap;
+    public static HashMap<String, Double> NFLLossVsAllCrimeRateChangeMap;
+    public static HashMap<String, Double> NBAWinVsAllCrimeRateChangeMap;
+    public static HashMap<String, Double> NBALossVsAllCrimeRateChangeMap;
+    public static HashMap<String, Double> MLBWinVsAllCrimeRateChangeMap;
+    public static HashMap<String, Double> MLBLossVsAllCrimeRateChangeMap;
+    ArrayList<Crime> violentCrimeArray = CrimeReader.violentCrimeArray;//Calls the CrimeReader class to create an ArrayList of all violent crimes
+    ArrayList<Crime> genDisturbanceArray = CrimeReader.genDisturbanceArray;//Calls the CrimeReader class to create an ArrayList of all general disturbance crimes
+    ArrayList<Crime> allCrimeArray = CrimeReader.allCrimeArray;
+  
     public GameWinLossVSCrimeRate() throws IOException{
-       
+        
     }
     
     private LocalDate stringToLocalDate(String stringDate) {
@@ -42,86 +108,7 @@ public class GameWinLossVSCrimeRate {
         return localDate.toString();
     }
     
-    /*
-     * This class needs to make an arraylist of games that the team either 
-     * won or lost. It then needs to use the dates from the games objects
-     * and fins the number of violent crimes that occurred on that day. It then needs to 
-     * divide the number of violent crimes by ****64****, which is the 
-     * average number of violent crimes that occurred per day over the 
-     * study period. It then need to return a result that shows how much the crime 
-     * rate increased or decreased
-     */
-    /**
-     * This method creates an ArrayList of Games objects composed only of the games that the supplied team won
-     * (team supplied as a parameter). 
-     * @param league The league of the team we are compiling data for. 
-     * @return Returns an ArrayList of Games objects composed only of games that the supplied team won
-     * @throws FileNotFoundException
-     * @throws IOException
-     */
-    private ArrayList<Games> createGameWins(String league) throws FileNotFoundException, IOException{
-       
-       ArrayList<Games> totalArray = new ArrayList<Games>();//Creates a variable to hold the Games objects of all of the teams' wins
 
-           if(league.equals("NHL")) {//If the supplied parameter is "NHL"...
-               totalArray = totalNHLArray;//...then the ArrayList will be composed of Flyers games.
-           }
-           if(league.equals("NFL")) {//If the supplied parameter is "NFL"...
-               totalArray = totalNFLArray;//...then the ARrayList will be composed of Eagles games
-           }
-           if(league.equals("NBA")) {//If the supplied parameter is "NBA"...
-               totalArray = totalNBAArray;//...then the ArrayList will be composed only of 76ers games.
-           }
-           if(league.equals("MLB")) {//If the supplied parameter is "MLB...
-               totalArray = totalMLBArray;//...Then the ArrayList will be composed only of Phillies games.
-           }
-           else if(!(league.equals("MLB") || league.equals("NBA") || league.equals("NFL") || league.equals("NHL"))) {//If the supplied parameter equals none of the above...
-               System.out.println("Invalid entry.");//...then an error message will be returned.
-           }
-           for(Games game : totalArray) {//An enhanced for loop to iterate over all of the games in the ArrayList
-               if(Integer.parseInt(game.getHomeScore()) > Integer.parseInt(game.getAwayScore())) {//If the HomeScore (Philadelphia) is more than the AwayScore (visiting team)...
-                   gameWins.add(game);//...then add the game to the ArrayList composed only of the team's wins
-               }
-           }
-           return gameWins;//Return the ARrayList of only the team's wins
-    }
-    
-    /**
-     * This method creates an ArrayList of Games objects composed only of the games that the supplied team lost
-     * (team supplied as a parameter). 
-     * @param league The league of the team we are compiling data for. 
-     * @return Returns an ArrayList of Games objects composed only of games that the supplied team lost
-     * @throws FileNotFoundException
-     * @throws IOException
-     */
-    private ArrayList<Games> createGameLosses(String league) throws FileNotFoundException, IOException{
-        
-        ArrayList<Games> totalArray = new ArrayList<Games>();//Creates a variable to hold the Games objects of all of the teams' wins
-
-        if(league.equals("NHL")) {//If the supplied parameter is "NHL"...
-            totalArray = totalNHLArray;//...then the ArrayList will be composed of Flyers games.
-        }
-        if(league.equals("NFL")) {//If the supplied parameter is "NFL"...
-            totalArray = totalNFLArray;//...then the ARrayList will be composed of Eagles games
-        }
-        if(league.equals("NBA")) {//If the supplied parameter is "NBA"...
-            totalArray = totalNBAArray;//...then the ArrayList will be composed only of 76ers games.
-        }
-        if(league.equals("MLB")) {//If the supplied parameter is "MLB...
-            totalArray = totalMLBArray;//...Then the ArrayList will be composed only of Phillies games.
-        }
-        else if(!(league.equals("MLB") || league.equals("NBA") || league.equals("NFL") || league.equals("NHL"))) {//If the supplied parameter equals none of the above...
-            System.out.println("Invalid entry.");//...then an error message will be returned.
-        }
-        
-            
-            for(Games game : totalArray) {//An enhanced for loop to iterate over all of the games in the ArrayList
-                if(Integer.parseInt(game.getHomeScore()) < Integer.parseInt(game.getAwayScore())) {//If the HomeScore (Philadelphia) is less than the AwayScore (visiting team)...
-                    gameLosses.add(game);//Return the ARrayList of only the team's losses
-                }
-            }
-            return gameLosses;//Return the ARrayList of only the team's losses
-     }
    
     /**
      * This method's function is to make an ArrayList of all the crimes that occurred on a given day, as defined
@@ -138,139 +125,312 @@ public class GameWinLossVSCrimeRate {
         }
         return daysCrimesArray;//Return an ArrayList holding all of the violent crimes that occurred ona given date
     }
-    /**
-     * This method serves to count the number of violent crimes that occurred on a supplied date. The method takes a 
-     * LocalDate argument and counts the number of violent crimes in the violentCrimeArray that occurred on that date
-     * @param date The date for which we are searching for violent crimes.
-     * @return The method returns a Double representing the # of violent crimes. 
-     */
-    private Double winLoseDayCrimeCount(LocalDate date) {
-        Double crimeCount = 0.0;//Establishes a variable to hold the total crime count for a given day
-        for(Crime crime : violentCrimeArray) {//An enhanced for loop to iterate over all of the crimes in the violentCrimeArray
-            if(crime.getDate().equals(date)) {//If the parameter date matches the date of the crime...
-                crimeCount++;//...then increment the counter
+
+
+    private static ArrayList<Games> makeTotalWins(ArrayList<Games> leagueGames){
+        ArrayList<Games> totalLeagueWins = new ArrayList<Games>();
+        for(Games game : leagueGames) {
+            if(Integer.parseInt(game.getHomeScore()) > Integer.parseInt(game.getAwayScore())) {
+                totalLeagueWins.add(game);
             }
         }
-        return crimeCount;//Returns the total number of crimes on the given date
-    }
-    /**
-     * This method calculates the change in crime rate on a given day from the established baseline of 64 violent crimes per day.
-     * The result is returned as a percent in Double format. ((crimeCount / 64) - 1.0) * 100 
-     * @param Date The date for which we are calculating the change in crime rate
-     * @return The method returns a Double representing the percent change in violent crime for the given day.
-     */
-    private Double calculateCrimeRateChange(LocalDate Date) {
-        Double crimeCount = winLoseDayCrimeCount(Date); //Establishes a variable to hold the crime count returned from the winLoseDayCrimeCount() method
-        Double change = (double) (((crimeCount / 64.0) - 1.0) * 100.0);//Calculates the change in crime rate.
-        return change;//Returns a percent representing the change in crime rate for the given day
+        return totalLeagueWins;
     }
 
-    /**
-     *  This method is to map the Date(String) of the game win or game loss to the number of crimes that
-     * occurred on that day. The HashMap the method returns should only be of 
-     * wins or losses, but not both. Might be necessary, might not be. It takes a good bit of time to process (~1 minute),
-     * but may be useful. 
-     * @param league A parameter to determine which league we are dealing with. Supplied to the method as an argument passed from the makeCrimeRateChangeMap() method 
-     * @param winOrLose A parameter passed into the method that tells the method whether we are creating a HashMap of the team's losses or their wins
-     * @return Returns a HashMap of String keys that represent a date, and integer values that represent the number of games won or lost on that date
-     * @throws FileNotFoundException
-     * @throws IOException
-     */
-    public HashMap<String, Double> makeLeagueWinLossVsCrimeMap(String league, String winOrLose) throws FileNotFoundException, IOException{
-        //ArrayList<Games> winList = createGameWins(league);//Calls the createGameWins() method to make an ArrayList of all of the team's wins
-        //ArrayList<Games> loseList = createGameLosses(league);//Calls the createGameLosses() method to make an ArrayList of all of the team's losses
+    private static ArrayList<Games> makeTotalLosses(ArrayList<Games> leagueGames){
+        ArrayList<Games> totalLeagueLosses = new ArrayList<Games>();
+        for(Games game : leagueGames) {
+            if(Integer.parseInt(game.getHomeScore()) < Integer.parseInt(game.getAwayScore())) {
+                totalLeagueLosses.add(game);
+            }
+        }
+        return totalLeagueLosses;
+    }
+                                                         //
+    private Double winLoseDayCrimeCount(LocalDate date, ArrayList<Crime> crimeArray) {
+        Double crimeCount = 0.0;
+        for(Crime crime : crimeArray) {
+            if(crime.getDate().equals(date)) {
+                crimeCount++;
+            }
+        }
+        return crimeCount;
+    }
+
+
+    public HashMap<String, Double> makeLeagueWinLossVsCrimeMap(ArrayList<Games> winLossArray, ArrayList<Crime> crimeArray) throws FileNotFoundException, IOException{
         HashMap<String, Double> winLossVsCrimeMap = new HashMap<String, Double>();//Creates a variable to hold a HashMap of key, value pairs. Keys are the dates, values are the number of wins or losses on that date
-        if(winOrLose.equals("Win")) {//If the supplied parameter winOrLose is "Win"...
-            ArrayList<Games> winList = createGameWins(league);//Calls the createGameLosses() method to make an ArrayList of all of the team's losses
-            for(Games game : winList) {//...then we iterate over all of the games in the winList ArrayList
-                ArrayList<Crime> winDayCrimeArray = makeArrayListOfDaysCrimes(game.getGameDate());//Makes an ArrayList of only the crimes that occurred on a given date
-                Double winDayCrimeCount = winLoseDayCrimeCount(game.getGameDate());
-                winLossVsCrimeMap.put(game.getGameDate().toString(), (double) winDayCrimeArray.size());//Adds the date of a given Crime object to the winLossVsCrimeMap as a key and the number of crimes that occurred ont hat date as a value 
+            for(Games game : winLossArray) {//...then we iterate over all of the games in the winList ArrayList
+                Double winDayCrimeCount = winLoseDayCrimeCount(game.getGameDate(), crimeArray);
                 winLossVsCrimeMap.put(game.getGameDate().toString(), winDayCrimeCount);
             }
-        }
-        if(winOrLose.equals("Lose")) {//If the supplied parameter winOrLose is "Lose"...
-            ArrayList<Games> loseList = createGameLosses(league);//Calls the createGameLosses() method to make an ArrayList of all of the team's losses
-            for(Games game : loseList) {//...then we iterate over all of the games in the loseList ArrayList
-                ArrayList<Crime> loseDayCrimeArray = makeArrayListOfDaysCrimes(game.getGameDate());//Makes an ArrayList of only the crimes that occurred on a given date
-                Double loseDayCrimeCount = winLoseDayCrimeCount(game.getGameDate());
-                winLossVsCrimeMap.put(game.getGameDate().toString(), loseDayCrimeCount);
-                winLossVsCrimeMap.put(localDateToString(game.getGameDate()), (double) loseDayCrimeArray.size());//Adds the date of a given Crime object to the winLossVsCrimeMap as a key and the number of crimes that occurred ont hat date as a value 
-            }
-        }
-        return winLossVsCrimeMap;//Returns the winLossVsCrimeMap HashMap
+            return winLossVsCrimeMap;
+    }
+   
+    public HashMap<String, Double> getNHLLossVsViolentCrimeMap() throws FileNotFoundException, IOException{
+        NHLLossVsViolentCrimeMap = makeLeagueWinLossVsCrimeMap(totalNHLLosses, violentCrimeArray);
+        return NHLLossVsViolentCrimeMap;
+    }
+
+    public HashMap<String, Double> getNHLWinVsViolentCrimeMap() throws FileNotFoundException, IOException{
+        NHLWinVsViolentCrimeMap = makeLeagueWinLossVsCrimeMap(totalNHLWins, violentCrimeArray);
+        return NHLWinVsViolentCrimeMap;
     }
     
-    /**
-     * This method makes a HashMap of values representing the change in the crime rate on a given day matched to that day's key.
-     * Might be necessary, might not be. It takes a good bit of time to process (~1 minute),
-     * but may be useful.
-     * @param league A parameter representing the league we are seeking data for
-     * @param winOrLose A parameter representing whether or not we want to know whether a team's wins affected the crime rate or their losses
-     * @return Returns a HashMap of key value pairs, keys being dates, and values being the change int he crime rate on the date, relative to the established base crime rate of ****64**** violent crimes per day, on average, as computed in the EstablishDataRates class
-     * @throws FileNotFoundException
-     * @throws IOException
-     */
-    public HashMap<String, Double> makeCrimeRateChangeMap(String league, String winOrLose) throws FileNotFoundException, IOException {
-        HashMap<String, Double> winLossVsCrimeMap = makeLeagueWinLossVsCrimeMap(league, winOrLose);//Calls the makeLeagueWinLossVsCrimeMap() method to make a HashMap
-        HashMap<String, Double> crimeRateChangeMap = new HashMap<String, Double>();//Creates a HashMap variable to hold the HashMap as defined in the method description above
-        for(Entry<String, Double> mapEntry : winLossVsCrimeMap.entrySet()) {//An enhanced for loope to iterate over all of the entries in the winLossVsCrimeMap HashMap
-                Double compareValue = (double) mapEntry.getValue() / 64;//A Double variable that holds the value corresponding to the change in violent crime rate on a given date. Computed by using the compareTo() method to compare the number of violent crimes in the winLossVsCrimeMap to the base crime rate of ****64**** violent crimes per day, on average
-                crimeRateChangeMap.put(mapEntry.getKey(), compareValue);//Populates the crimeRateChangeMap with dates as the key, and the change in crime rate as the value
-        }
-        return crimeRateChangeMap;//Returns the crimeRateChangeMap HashMap
+    public HashMap<String, Double> getNFLLossVsViolentCrimeMap() throws FileNotFoundException, IOException{
+        NFLLossVsViolentCrimeMap = makeLeagueWinLossVsCrimeMap(totalNFLLosses, violentCrimeArray);
+        return NFLLossVsViolentCrimeMap;
     }
     
-    /**
-     * This method uses the HashMap created in the makeCrimeRateChangeMap() method and allows for 
-     * one value representing the change in the crime rate on one given day to be extracted from the map.
-     * Using the calculateCrimeRateChange() method is more functional requires far less processing time. 
-     * @param date A parameter that represents what exact date we are looking for the crime rate change one
-     * @param league A parameter that determines what team's win or loss we are seeking to correlate to a change in the crime rate
-     * @param winOrLose A parameter that indicates whether we are seeking to establish whether or not the given team's win or loss had an effect on the crime rate
-     * @return Returns a Double variable that represents the change in the crime rate on a given date
-     * @throws FileNotFoundException
-     * @throws IOException
-     */
-    public Double getIndividualCrimeRateChange(String date, String league, String winOrLose) throws FileNotFoundException, IOException {
-        HashMap<String, Double> crimeRateChangeMap = makeCrimeRateChangeMap(league, winOrLose);//Calls the makeCrimeRateChange() map to make a HashMap using the league and winOrLoss arguments as parameters
-        Double crimeRateChange = 0.0;//Creates a variable to hold the value that this method will return
-        for(Entry<String, Double> entry : crimeRateChangeMap.entrySet()) {//An enhanced for loop to iterate over all of the entries in the crimeRateChangeMap entry set
-            if(date.equals(entry.getKey())) {//If the key value (date) is equal to the date supplied to this method as a parameter argument...
-                crimeRateChange = entry.getValue();//...then get the value associated with that key and assign its value to the crimeRateChange variable
-            }
+    public HashMap<String, Double> getNFLWinVsViolentCrimeMap() throws FileNotFoundException, IOException{
+         NFLWinVsViolentCrimeMap = makeLeagueWinLossVsCrimeMap(totalNFLWins, violentCrimeArray);
+         return NFLWinVsViolentCrimeMap;
+    }
+
+    public HashMap<String, Double> getNBALossVsViolentCrimeMap() throws FileNotFoundException, IOException{
+        NBALossVsViolentCrimeMap = makeLeagueWinLossVsCrimeMap(totalNBALosses, violentCrimeArray);
+        return NBAWinVsViolentCrimeMap;
+    }
+    
+    public HashMap<String, Double> getNBAWinVsViolentCrimeMap() throws FileNotFoundException, IOException{
+        NBAWinVsViolentCrimeMap = makeLeagueWinLossVsCrimeMap(totalNBAWins, violentCrimeArray);
+        return NBAWinVsViolentCrimeMap;
+    }
+   
+    public HashMap<String, Double> getMLBLossVsViolentCrimeMap() throws FileNotFoundException, IOException{
+        MLBLossVsViolentCrimeMap = makeLeagueWinLossVsCrimeMap(totalMLBLosses, violentCrimeArray);
+        return MLBLossVsViolentCrimeMap;
+    }
+    
+    public HashMap<String, Double> getMLBWinVsViolentCrimeMap() throws FileNotFoundException, IOException{
+        MLBWinVsViolentCrimeMap = makeLeagueWinLossVsCrimeMap(totalMLBWins, violentCrimeArray);
+        return MLBWinVsViolentCrimeMap;
+    }
+   
+    public HashMap<String, Double> getNHLLossVsGDCrimeMap() throws FileNotFoundException, IOException{
+        NHLLossVsGDCrimeMap = makeLeagueWinLossVsCrimeMap(totalNHLLosses, genDisturbanceArray);
+        return NHLLossVsViolentCrimeMap;
+    }
+
+    public HashMap<String, Double> getNHLWinVsGDCrimeMap() throws FileNotFoundException, IOException{
+        NHLWinVsGDCrimeMap = makeLeagueWinLossVsCrimeMap(totalNHLWins, genDisturbanceArray);
+        return NHLWinVsViolentCrimeMap;
+    }
+    
+    public HashMap<String, Double> getNFLLossVsGDCrimeMap() throws FileNotFoundException, IOException{
+        NFLLossVsGDCrimeMap = makeLeagueWinLossVsCrimeMap(totalNFLLosses, genDisturbanceArray);
+        return NFLLossVsGDCrimeMap;
+    }
+    
+    public HashMap<String, Double> getNFLWinVsGDCrimeMap() throws FileNotFoundException, IOException{
+         NFLWinVsGDCrimeMap = makeLeagueWinLossVsCrimeMap(totalNFLWins, genDisturbanceArray);
+         return NFLWinVsGDCrimeMap;
+    }
+
+    public HashMap<String, Double> getNBALossVsGDCrimeMap() throws FileNotFoundException, IOException{
+        NBALossVsGDCrimeMap = makeLeagueWinLossVsCrimeMap(totalNBALosses, genDisturbanceArray);
+        return NBAWinVsGDCrimeMap;
+    }
+    
+    public HashMap<String, Double> getNBAWinVsGDCrimeMap() throws FileNotFoundException, IOException{
+        NBAWinVsGDCrimeMap = makeLeagueWinLossVsCrimeMap(totalNBAWins, genDisturbanceArray);
+        return NBAWinVsGDCrimeMap;
+    }
+   
+    public HashMap<String, Double> getMLBLossVsGDCrimeMap() throws FileNotFoundException, IOException{
+        MLBLossVsGDCrimeMap = makeLeagueWinLossVsCrimeMap(totalMLBLosses, genDisturbanceArray);
+        return MLBLossVsGDCrimeMap;
+    }
+    
+    public HashMap<String, Double> getMLBWinVsGDCrimeMap() throws FileNotFoundException, IOException{
+        MLBWinVsViolentCrimeMap = makeLeagueWinLossVsCrimeMap(totalMLBWins, genDisturbanceArray);
+        return MLBWinVsViolentCrimeMap;
+    }    
+    
+    public HashMap<String, Double> getNHLLossVsAllCrimeMap() throws FileNotFoundException, IOException{
+        NHLLossVsAllCrimeMap = makeLeagueWinLossVsCrimeMap(totalNHLLosses, allCrimeArray);
+        return NHLLossVsAllCrimeMap;
+    }
+    
+    public HashMap<String, Double> getNHLWinVsAllCrimeMap() throws FileNotFoundException, IOException{
+        NHLWinVsAllCrimeMap = makeLeagueWinLossVsCrimeMap(totalNHLWins, allCrimeArray);
+        return NHLWinVsAllCrimeMap;
+    }
+    public HashMap<String, Double> getNFLLossVsAllCrimeMap() throws FileNotFoundException, IOException{
+        NFLLossVsAllCrimeMap = makeLeagueWinLossVsCrimeMap(totalNFLLosses, allCrimeArray);
+        return NFLLossVsAllCrimeMap;
+    }
+    
+    public HashMap<String, Double> getNFLWinVsAllCrimeMap() throws FileNotFoundException, IOException{
+        NFLWinVsAllCrimeMap = makeLeagueWinLossVsCrimeMap(totalNFLWins, allCrimeArray);
+        return NFLWinVsAllCrimeMap;
+    }
+    public HashMap<String, Double> getNBALossVsAllCrimeMap() throws FileNotFoundException, IOException{
+        NBALossVsAllCrimeMap = makeLeagueWinLossVsCrimeMap(totalNBALosses, allCrimeArray);
+        return NBALossVsAllCrimeMap;
+    }
+    
+    public HashMap<String, Double> getNBAWinVsAllCrimeMap() throws FileNotFoundException, IOException{
+        NBAWinVsAllCrimeMap = makeLeagueWinLossVsCrimeMap(totalNBAWins, allCrimeArray);
+        return NBAWinVsAllCrimeMap;
+    }
+    public HashMap<String, Double> getMLBLossVsAllCrimeMap() throws FileNotFoundException, IOException{
+        MLBLossVsAllCrimeMap = makeLeagueWinLossVsCrimeMap(totalMLBLosses, allCrimeArray);
+        return MLBLossVsAllCrimeMap;
+    }
+    
+    public HashMap<String, Double> getMLBWinVsAllCrimeMap() throws FileNotFoundException, IOException{
+        MLBWinVsAllCrimeMap = makeLeagueWinLossVsCrimeMap(totalMLBWins, allCrimeArray);
+        return MLBWinVsAllCrimeMap;
+    }
+    private Double calculateVCrimeRateChange(LocalDate Date) {
+        Double crimeCount = winLoseDayCrimeCount(Date, violentCrimeArray); 
+        Double change = (double) (((crimeCount / 64.0) - 1.0) * 100.0);
+        return change;
+    }
+    
+    private Double calculateGDCrimeRateChange(LocalDate Date) {
+        Double crimeCount = winLoseDayCrimeCount(Date, genDisturbanceArray); 
+        Double change = (double) (((crimeCount / 17.0) - 1.0) * 100.0);
+        return change;
+    }
+    
+    private Double calculateAllCrimeRateChange(LocalDate Date) {
+        Double crimeCount = winLoseDayCrimeCount(Date, allCrimeArray); 
+        Double change = (double) (((crimeCount / 81.0) - 1.0) * 100.0);
+        return change;
+    }
+  
+    private HashMap<String, Double> makeWinLossDayVsVCrimeRateChangeMap(HashMap<String, Double> leagueWinDayVsVCrimeCountMap){
+        HashMap<String, Double> leagueWinDayVsVCrimeRateChangeMap = new HashMap<String, Double>();
+        for(Entry<String, Double> entry: leagueWinDayVsVCrimeCountMap.entrySet()) {
+            leagueWinDayVsVCrimeRateChangeMap.put(entry.getKey(), calculateVCrimeRateChange(stringToLocalDate(entry.getKey())));
         }
-        return crimeRateChange;//Returns the crimeRateChange variable that represents the change in crime rate ona  given day
+        return leagueWinDayVsVCrimeRateChangeMap;
+    }
+    
+    private HashMap<String, Double> makeWinLossDayVsGDCrimeRateChangeMap(HashMap<String, Double> leagueWinLossDayVsGDCrimeCountMap){
+        HashMap<String, Double> leagueLossDayVsGDCrimeRateChangeMap = new HashMap<String, Double>();
+        for(Entry<String, Double> entry: leagueWinLossDayVsGDCrimeCountMap.entrySet()) {
+            leagueLossDayVsGDCrimeRateChangeMap.put(entry.getKey(), calculateGDCrimeRateChange(stringToLocalDate(entry.getKey())));
+        }
+        return leagueLossDayVsGDCrimeRateChangeMap;
+    }
+    
+    private HashMap<String, Double> makeWinLossDayVsAllCrimeRateChangeMap(HashMap<String, Double> leagueWinLossDayVsAllCrimeCountMap){
+        HashMap<String, Double> leagueLossDayVsAllCrimeRateChangeMap = new HashMap<String, Double>();
+        for(Entry<String, Double> entry: leagueWinLossDayVsAllCrimeCountMap.entrySet()) {
+            leagueLossDayVsAllCrimeRateChangeMap.put(entry.getKey(), calculateAllCrimeRateChange(stringToLocalDate(entry.getKey())));
+        }
+        return leagueLossDayVsAllCrimeRateChangeMap;
+    }  
+
+    public HashMap<String, Double> getNHLWinVsVCrimeRateChangeMap(){
+        NHLWinVsVCrimeRateChangeMap = makeWinLossDayVsVCrimeRateChangeMap(NHLWinVsViolentCrimeMap);
+        return NHLWinVsVCrimeRateChangeMap;
+    }
+
+    public HashMap<String, Double> getNHLLossVsVCrimeRateChangeMap(){
+        NHLLossVsVCrimeRateChangeMap = makeWinLossDayVsVCrimeRateChangeMap(NHLLossVsViolentCrimeMap);
+        return NHLLossVsVCrimeRateChangeMap;
+    }
+    public HashMap<String, Double> getNFLWinVsVCrimeRateChangeMap(){
+        NFLWinVsVCrimeRateChangeMap = makeWinLossDayVsVCrimeRateChangeMap(NFLWinVsViolentCrimeMap);
+        return NFLWinVsVCrimeRateChangeMap;
+    }
+
+    public HashMap<String, Double> getNFLLossVsVCrimeRateChangeMap(){
+        NFLLossVsVCrimeRateChangeMap = makeWinLossDayVsVCrimeRateChangeMap(NFLLossVsViolentCrimeMap);
+        return NFLLossVsVCrimeRateChangeMap;
+    }
+    public HashMap<String, Double> getNBAWinVsVCrimeRateChangeMap(){
+        NBAWinVsVCrimeRateChangeMap = makeWinLossDayVsVCrimeRateChangeMap(NBAWinVsViolentCrimeMap);
+        return NBAWinVsVCrimeRateChangeMap;
+    }
+
+    public HashMap<String, Double> getNBALossVsVCrimeRateChangeMap(){
+        NBALossVsVCrimeRateChangeMap = makeWinLossDayVsVCrimeRateChangeMap(NBALossVsViolentCrimeMap);
+        return NBALossVsVCrimeRateChangeMap;
+    }
+    public HashMap<String, Double> getMLBWinVsVCrimeRateChangeMap(){
+        MLBWinVsVCrimeRateChangeMap = makeWinLossDayVsVCrimeRateChangeMap(MLBWinVsViolentCrimeMap);
+        return MLBWinVsVCrimeRateChangeMap;
+    }
+
+    public HashMap<String, Double> getMLBLossVsVCrimeRateChangeMap(){
+        MLBLossVsVCrimeRateChangeMap = makeWinLossDayVsVCrimeRateChangeMap(MLBLossVsViolentCrimeMap);
+        return MLBLossVsVCrimeRateChangeMap;
+    }
+    public HashMap<String, Double> getNHLWinVsGDCrimeRateChangeMap(){
+        NHLWinVsGDCrimeRateChangeMap = makeWinLossDayVsVCrimeRateChangeMap(NHLWinVsGDCrimeMap);
+        return NHLWinVsGDCrimeRateChangeMap;
+    }
+
+    public HashMap<String, Double> getNHLLossVsGDCrimeRateChangeMap(){
+        NHLLossVsGDCrimeRateChangeMap = makeWinLossDayVsGDCrimeRateChangeMap(NHLLossVsGDCrimeMap);
+        return NHLLossVsGDCrimeRateChangeMap;
+    }
+    public HashMap<String, Double> getNFLWinVsGDCrimeRateChangeMap(){
+        NFLWinVsGDCrimeRateChangeMap = makeWinLossDayVsGDCrimeRateChangeMap(NFLWinVsGDCrimeMap);
+        return NFLWinVsGDCrimeRateChangeMap;
+    }
+
+    public HashMap<String, Double> getNFLLossVsGDCrimeRateChangeMap(){
+        NFLLossVsGDCrimeRateChangeMap = makeWinLossDayVsGDCrimeRateChangeMap(NFLLossVsGDCrimeMap);
+        return NFLLossVsGDCrimeRateChangeMap;
+    }
+    public HashMap<String, Double> getNBAWinVsGDCrimeRateChangeMap(){
+        NBAWinVsGDCrimeRateChangeMap = makeWinLossDayVsGDCrimeRateChangeMap(NBAWinVsGDCrimeMap);
+        return NBAWinVsGDCrimeRateChangeMap;
+    }
+
+    public HashMap<String, Double> getNBALossVsGDCrimeRateChangeMap(){
+        NBALossVsGDCrimeRateChangeMap = makeWinLossDayVsGDCrimeRateChangeMap(NBALossVsGDCrimeMap);
+        return NBALossVsGDCrimeRateChangeMap;
+    }
+    public HashMap<String, Double> getMLBWinVsGDCrimeRateChangeMap(){
+        MLBWinVsGDCrimeRateChangeMap = makeWinLossDayVsGDCrimeRateChangeMap(MLBWinVsGDCrimeMap);
+        return MLBWinVsGDCrimeRateChangeMap;
+    }
+
+    public HashMap<String, Double> getMLBLossVsGDCrimeRateChangeMap(){
+        MLBLossVsGDCrimeRateChangeMap = makeWinLossDayVsGDCrimeRateChangeMap(MLBLossVsGDCrimeMap);
+        return MLBLossVsGDCrimeRateChangeMap;
+    }
+    public HashMap<String, Double> getNHLWinVsAllCrimeRateChangeMap(){
+        NHLWinVsVCrimeRateChangeMap = makeWinLossDayVsAllCrimeRateChangeMap(NHLWinVsAllCrimeMap);
+        return NHLWinVsVCrimeRateChangeMap;
+    }
+
+    public HashMap<String, Double> getNHLLossVsAllCrimeRateChangeMap(){
+        NHLLossVsAllCrimeRateChangeMap = makeWinLossDayVsVCrimeRateChangeMap(NHLLossVsViolentCrimeMap);
+        return NHLLossVsAllCrimeRateChangeMap;
+    }
+    public HashMap<String, Double> getNFLWinVsAllCrimeRateChangeMap(){
+        NFLWinVsAllCrimeRateChangeMap = makeWinLossDayVsAllCrimeRateChangeMap(NFLWinVsAllCrimeMap);
+        return NFLWinVsAllCrimeRateChangeMap;
+    }
+
+    public HashMap<String, Double> getNFLLossVsAllCrimeRateChangeMap(){
+        NFLLossVsVCrimeRateChangeMap = makeWinLossDayVsVCrimeRateChangeMap(NFLLossVsViolentCrimeMap);
+        return NFLLossVsVCrimeRateChangeMap;
+    }
+    public HashMap<String, Double> getNBAWinVsAllCrimeRateChangeMap(){
+        NBAWinVsAllCrimeRateChangeMap = makeWinLossDayVsVCrimeRateChangeMap(NBAWinVsAllCrimeMap);
+        return NBAWinVsAllCrimeRateChangeMap;
+    }
+
+    public HashMap<String, Double> getNBALossVsAllCrimeRateChangeMap(){
+        NBALossVsVCrimeRateChangeMap = makeWinLossDayVsVCrimeRateChangeMap(NBALossVsViolentCrimeMap);
+        return NBALossVsVCrimeRateChangeMap;
+    }
+    public HashMap<String, Double> getMLBWinVsAllCrimeRateChangeMap(){
+        MLBWinVsAllCrimeRateChangeMap = makeWinLossDayVsAllCrimeRateChangeMap(MLBWinVsAllCrimeMap);
+        return MLBWinVsVCrimeRateChangeMap;
+    }
+
+    public HashMap<String, Double> getMLBLossVsAllCrimeRateChangeMap(){
+        MLBLossVsAllCrimeRateChangeMap = makeWinLossDayVsAllCrimeRateChangeMap(MLBLossVsAllCrimeMap);
+        return MLBLossVsAllCrimeRateChangeMap;
     }
 }
-    //                                                            //
-   //Main method to test functionality of above methods.         //
-  // Kept, but removed from build path, in case further testing //
- //  is necessary.                                             //
-//                                                            //
-
-    
-/**   
-public static void main(String[] args) throws IOException {
-    GameWinLossVSCrimeRate GWLCR = new GameWinLossVSCrimeRate();
-    ArrayList<Games> losses = new ArrayList<Games>();
-    losses = GWLCR.createGameWins("NHL");
-    DateTimeFormatter dmy = DateTimeFormatter.ofPattern("dd-MM-yy");
-    //ArrayList<Crime> crimeDayArray = GWLCR.makeArrayListOfDaysCrimes("08-08-08");
-    System.out.println("NHL " + GWLCR.totalNHLArray.size());
-    System.out.println("NBA " +GWLCR.totalNBAArray.size());
-    System.out.println("MLB " + GWLCR.totalMLBArray.size());
-    System.out.println("NFL "+ GWLCR.totalNFLArray.size());
-    System.out.println(losses.size());
-    System.out.println(GWLCR.violentCrimeArray.size());
-    System.out.println(GWLCR.genDisturbanceArray.size());
-    System.out.println(GWLCR.makeArrayListOfDaysCrimes(LocalDate.parse("08-08-08", dmy)).size());//This works
-    System.out.println(GWLCR.winLoseDayCrimeCount(LocalDate.parse("08-08-08", dmy)));//This works
-    System.out.println(GWLCR.calculateCrimeRateChange(LocalDate.parse("08-08-08", dmy)));
-    //System.out.println(GWLCR.makeLeagueWinLossVsCrimeMap("MLB", "Lose").size());//Here's where the processing is taking forever
-//Instead of the above method, why don't I just get the date of the game, iterate over all of the crime objects, and count how many times the date pops up
-}
-*/
-
-
-

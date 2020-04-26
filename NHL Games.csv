@@ -1,0 +1,617 @@
+GP,Date,,Opponent,GF,GA,,,W,L,OL,Streak,Postseason,Season
+1,04-10-07,@,Calgary Flames,3,2,W,,1,0,0,W 1,0,2007
+2,06-10-07,@,Edmonton Oilers,3,5,L,,1,1,0,L 1,0,2007
+3,10-10-07,@,Vancouver Canucks,8,2,W,,2,1,0,W 1,0,2007
+4,13-10-07,,New York Islanders,3,1,W,,3,1,0,W 2,0,2007
+5,16-10-07,,Atlanta Thrashers,4,0,W,,4,1,0,W 3,0,2007
+6,18-10-07,,New Jersey Devils,4,0,W,,5,1,0,W 4,0,2007
+7,20-10-07,,Carolina Hurricanes,3,2,W,OT,6,1,0,W 5,0,2007
+8,24-10-07,@,Florida Panthers,3,4,L,,6,2,0,L 1,0,2007
+9,25-10-07,@,Tampa Bay Lightning,2,5,L,,6,3,0,L 2,0,2007
+10,27-10-07,@,Boston Bruins,2,1,W,,7,3,0,W 1,0,2007
+11,01-11-07,@,Montreal Canadiens,2,5,L,,7,4,0,L 1,0,2007
+12,02-11-07,@,Washington Capitals,3,2,W,,8,4,0,W 1,0,2007
+13,05-11-07,@,New York Rangers,0,2,L,,8,5,0,L 1,0,2007
+14,07-11-07,@,Pittsburgh Penguins,3,1,W,,9,5,0,W 1,0,2007
+15,08-11-07,@,New Jersey Devils,1,4,L,,9,6,0,L 1,0,2007
+16,10-11-07,,Pittsburgh Penguins,5,2,W,,10,6,0,W 1,0,2007
+17,12-11-07,,New York Islanders,3,2,W,,11,6,0,W 2,0,2007
+18,15-11-07,,New York Rangers,3,4,L,SO,11,6,1,L 1,0,2007
+19,17-11-07,,New Jersey Devils,2,6,L,,11,7,1,L 2,0,2007
+20,21-11-07,@,Carolina Hurricanes,6,3,W,,12,7,1,W 1,0,2007
+21,23-11-07,,Washington Capitals,3,4,L,OT,12,7,2,L 1,0,2007
+22,24-11-07,@,Ottawa Senators,4,3,W,,13,7,2,W 1,0,2007
+23,26-11-07,,Boston Bruins,3,6,L,,13,8,2,L 1,0,2007
+24,28-11-07,@,Carolina Hurricanes,3,1,W,,14,8,2,W 1,0,2007
+25,01-12-07,,Dallas Stars,1,4,L,,14,9,2,L 1,0,2007
+26,05-12-07,@,Minnesota Wild,3,1,W,,15,9,2,W 1,0,2007
+27,07-12-07,@,Colorado Avalanche,1,2,L,,15,10,2,L 1,0,2007
+28,11-12-07,,Pittsburgh Penguins,8,2,W,,16,10,2,W 1,0,2007
+29,13-12-07,,Montreal Canadiens,1,4,L,,16,11,2,L 1,0,2007
+30,15-12-07,,Carolina Hurricanes,5,6,L,SO,16,11,3,L 2,0,2007
+31,16-12-07,@,New Jersey Devils,2,4,L,,16,12,3,L 3,0,2007
+32,18-12-07,,Phoenix Coyotes,2,3,L,,16,13,3,L 4,0,2007
+33,21-12-07,@,Buffalo Sabres,2,3,L,,16,14,3,L 5,0,2007
+34,22-12-07,,Buffalo Sabres,5,6,L,SO,16,14,4,L 6,0,2007
+35,27-12-07,,Toronto Maple Leafs,4,1,W,,17,14,4,W 1,0,2007
+36,29-12-07,@,Tampa Bay Lightning,4,2,W,,18,14,4,W 2,0,2007
+37,30-12-07,@,Florida Panthers,1,0,W,,19,14,4,W 3,0,2007
+38,04-01-08,@,New Jersey Devils,0,3,L,,19,15,4,L 1,0,2007
+39,05-01-08,@,Toronto Maple Leafs,3,2,W,,20,15,4,W 1,0,2007
+40,08-01-08,@,Atlanta Thrashers,4,1,W,,21,15,4,W 2,0,2007
+41,10-01-08,@,New York Rangers,6,2,W,,22,15,4,W 3,0,2007
+42,12-01-08,,Boston Bruins,3,4,L,OT,22,15,5,L 1,0,2007
+43,13-01-08,@,Washington Capitals,6,4,W,,23,15,5,W 1,0,2007
+44,16-01-08,,Florida Panthers,5,3,W,,24,15,5,W 2,0,2007
+45,19-01-08,@,New York Islanders,5,3,W,,25,15,5,W 3,0,2007
+46,20-01-08,,Ottawa Senators,6,1,W,,26,15,5,W 4,0,2007
+47,22-01-08,,New Jersey Devils,3,7,L,,26,16,5,L 1,0,2007
+48,24-01-08,,Pittsburgh Penguins,4,3,W,,27,16,5,W 1,0,2007
+49,29-01-08,,Los Angeles Kings,3,2,W,OT,28,16,5,W 2,0,2007
+50,31-01-08,,New York Rangers,0,4,L,,28,17,5,L 1,0,2007
+51,02-02-08,,Anaheim Ducks,3,0,W,,29,17,5,W 1,0,2007
+52,05-02-08,@,Atlanta Thrashers,3,2,W,,30,17,5,W 2,0,2007
+53,06-02-08,,Washington Capitals,3,4,L,,30,18,5,L 1,0,2007
+54,09-02-08,,New York Rangers,0,2,L,,30,19,5,L 2,0,2007
+55,10-02-08,@,Pittsburgh Penguins,3,4,L,,30,20,5,L 3,0,2007
+56,12-02-08,@,New York Islanders,3,4,L,,30,21,5,L 4,0,2007
+57,14-02-08,,Tampa Bay Lightning,3,5,L,,30,22,5,L 5,0,2007
+58,16-02-08,@,Montreal Canadiens,0,1,L,,30,23,5,L 6,0,2007
+59,17-02-08,,Montreal Canadiens,3,5,L,,30,24,5,L 7,0,2007
+60,19-02-08,@,Ottawa Senators,2,3,L,SO,30,24,6,L 8,0,2007
+61,21-02-08,,San Jose Sharks,1,3,L,,30,25,6,L 9,0,2007
+62,23-02-08,,Florida Panthers,1,2,L,OT,30,25,7,L 10,0,2007
+63,25-02-08,@,Buffalo Sabres,4,3,W,SO,31,25,7,W 1,0,2007
+64,28-02-08,,Ottawa Senators,3,1,W,,32,25,7,W 2,0,2007
+65,01-03-08,@,New York Islanders,4,1,W,,33,25,7,W 3,0,2007
+66,02-03-08,@,New York Rangers,4,5,L,SO,33,25,8,L 1,0,2007
+67,04-03-08,,Buffalo Sabres,2,5,L,,33,26,8,L 2,0,2007
+68,06-03-08,,Tampa Bay Lightning,3,2,W,,34,26,8,W 1,0,2007
+69,08-03-08,,New York Islanders,4,1,W,,35,26,8,W 2,0,2007
+70,11-03-08,@,Toronto Maple Leafs,3,4,L,OT,35,26,9,L 1,0,2007
+71,12-03-08,,Toronto Maple Leafs,2,3,L,,35,27,9,L 2,0,2007
+72,15-03-08,@,Boston Bruins,2,3,L,OT,35,27,10,L 3,0,2007
+73,16-03-08,@,Pittsburgh Penguins,1,7,L,,35,28,10,L 4,0,2007
+74,18-03-08,,Atlanta Thrashers,3,2,W,,36,28,10,W 1,0,2007
+75,21-03-08,,New York Rangers,4,3,W,SO,37,28,10,W 2,0,2007
+76,23-03-08,,New York Islanders,4,1,W,,38,28,10,W 3,0,2007
+77,25-03-08,@,New York Rangers,2,1,W,OT,39,28,10,W 4,0,2007
+78,28-03-08,@,New Jersey Devils,4,5,L,SO,39,28,11,L 1,0,2007
+79,29-03-08,@,New York Islanders,4,3,W,SO,40,28,11,W 1,0,2007
+80,02-04-08,@,Pittsburgh Penguins,2,4,L,,40,29,11,L 1,0,2007
+81,04-04-08,,New Jersey Devils,3,0,W,,41,29,11,W 1,0,2007
+82,06-04-08,,Pittsburgh Penguins,2,0,W,,42,29,11,W 2,0,2007
+1,11-04-08,@,Washington Capitals,4,5,L,,0,1,L 1,,1,2007
+2,13-04-08,@,Washington Capitals,2,0,W,,1,1,W 1,,1,2007
+3,15-04-08,,Washington Capitals,6,3,W,,2,1,W 2,,1,2007
+4,17-04-08,,Washington Capitals,4,3,W,2OT,3,1,W 3,,1,2007
+5,19-04-08,@,Washington Capitals,2,3,L,,3,2,L 1,,1,2007
+6,21-04-08,,Washington Capitals,2,4,L,,3,3,L 2,,1,2007
+7,22-04-08,@,Washington Capitals,3,2,W,OT,4,3,W 1,,1,2007
+8,24-04-08,@,Montreal Canadiens,3,4,L,OT,4,4,L 1,,1,2007
+9,26-04-08,@,Montreal Canadiens,4,2,W,,5,4,W 1,,1,2007
+10,28-04-08,,Montreal Canadiens,3,2,W,,6,4,W 2,,1,2007
+11,30-04-08,,Montreal Canadiens,4,2,W,,7,4,W 3,,1,2007
+12,03-05-08,@,Montreal Canadiens,6,4,W,,8,4,W 4,,1,2007
+13,09-05-08,@,Pittsburgh Penguins,2,4,L,,8,5,L 1,,1,2007
+14,11-05-08,@,Pittsburgh Penguins,2,4,L,,8,6,L 2,,1,2007
+15,13-05-08,,Pittsburgh Penguins,1,4,L,,8,7,L 3,,1,2007
+16,15-05-08,,Pittsburgh Penguins,4,2,W,,9,7,W 1,,1,2007
+17,18-05-08,@,Pittsburgh Penguins,0,6,L,,9,8,L 1,,1,2007
+1,11-10-08,,New York Rangers,3,4,L,,0,1,0,L 1,0,2008
+2,13-10-08,,Montreal Canadiens,3,5,L,,0,2,0,L 2,0,2008
+3,14-10-08,@,Pittsburgh Penguins,2,3,L,OT,0,2,1,L 3,0,2008
+4,16-10-08,@,Colorado Avalanche,2,5,L,,0,3,1,L 4,0,2008
+5,18-10-08,@,San Jose Sharks,4,5,L,OT,0,3,2,L 5,0,2008
+6,22-10-08,,San Jose Sharks,6,7,L,SO,0,3,3,L 6,0,2008
+7,24-10-08,@,New Jersey Devils,6,3,W,,1,3,3,W 1,0,2008
+8,25-10-08,,New Jersey Devils,3,2,W,OT,2,3,3,W 2,0,2008
+9,28-10-08,@,Atlanta Thrashers,7,0,W,,3,3,3,W 3,0,2008
+10,30-10-08,,New York Islanders,3,2,W,OT,4,3,3,W 4,0,2008
+11,02-11-08,,Edmonton Oilers,4,5,L,,4,4,3,L 1,0,2008
+12,06-11-08,@,Ottawa Senators,1,4,L,,4,5,3,L 2,0,2008
+13,08-11-08,,Tampa Bay Lightning,1,2,L,,4,6,3,L 3,0,2008
+14,11-11-08,@,New York Islanders,3,1,W,,5,6,3,W 1,0,2008
+15,13-11-08,@,Pittsburgh Penguins,4,5,L,SO,5,6,4,L 1,0,2008
+16,15-11-08,@,Montreal Canadiens,2,1,W,,6,6,4,W 1,0,2008
+17,16-11-08,,Atlanta Thrashers,4,3,W,,7,6,4,W 2,0,2008
+18,21-11-08,@,Buffalo Sabres,3,0,W,,8,6,4,W 3,0,2008
+19,22-11-08,,Phoenix Coyotes,4,3,W,OT,9,6,4,W 4,0,2008
+20,24-11-08,,Dallas Stars,4,3,W,,10,6,4,W 5,0,2008
+21,26-11-08,@,Carolina Hurricanes,3,1,W,,11,6,4,W 6,0,2008
+22,28-11-08,,Carolina Hurricanes,2,3,L,OT,11,6,5,L 1,0,2008
+23,29-11-08,@,Toronto Maple Leafs,2,4,L,,11,7,5,L 2,0,2008
+24,02-12-08,,Tampa Bay Lightning,4,3,W,OT,12,7,5,W 1,0,2008
+25,04-12-08,,New Jersey Devils,2,3,L,OT,12,7,6,L 1,0,2008
+26,06-12-08,@,Carolina Hurricanes,2,1,W,OT,13,7,6,W 1,0,2008
+27,09-12-08,,New York Islanders,4,3,W,,14,7,6,W 2,0,2008
+28,11-12-08,,Carolina Hurricanes,6,5,W,SO,15,7,6,W 3,0,2008
+29,13-12-08,,Pittsburgh Penguins,6,3,W,,16,7,6,W 4,0,2008
+30,16-12-08,,Colorado Avalanche,5,2,W,,17,7,6,W 5,0,2008
+31,18-12-08,@,Montreal Canadiens,2,5,L,,17,8,6,L 1,0,2008
+32,20-12-08,,Washington Capitals,7,1,W,,18,8,6,W 1,0,2008
+33,21-12-08,@,New Jersey Devils,2,3,L,SO,18,8,7,L 1,0,2008
+34,23-12-08,,Ottawa Senators,6,4,W,,19,8,7,W 1,0,2008
+35,26-12-08,@,Chicago Blackhawks,1,5,L,,19,9,7,L 1,0,2008
+36,27-12-08,@,Columbus Blue Jackets,0,3,L,,19,10,7,L 2,0,2008
+37,30-12-08,@,Vancouver Canucks,3,2,W,,20,10,7,W 1,0,2008
+38,02-01-09,@,Anaheim Ducks,5,4,W,SO,21,10,7,W 2,0,2008
+39,03-01-09,@,Los Angeles Kings,1,2,L,SO,21,10,8,L 1,0,2008
+40,06-01-09,@,Washington Capitals,1,2,L,SO,21,10,9,L 2,0,2008
+41,08-01-09,,Minnesota Wild,3,1,W,,22,10,9,W 1,0,2008
+42,10-01-09,,Toronto Maple Leafs,4,1,W,,23,10,9,W 2,0,2008
+43,13-01-09,,Pittsburgh Penguins,2,4,L,,23,11,9,L 1,0,2008
+44,15-01-09,@,Tampa Bay Lightning,1,4,L,,23,12,9,L 2,0,2008
+45,16-01-09,@,Florida Panthers,3,2,W,SO,24,12,9,W 1,0,2008
+46,21-01-09,,Atlanta Thrashers,5,3,W,,25,12,9,W 2,0,2008
+47,27-01-09,@,Florida Panthers,2,3,L,,25,13,9,L 1,0,2008
+48,30-01-09,@,Tampa Bay Lightning,6,1,W,,26,13,9,W 1,0,2008
+49,31-01-09,@,St. Louis Blues,0,4,L,,26,14,9,L 1,0,2008
+50,04-02-09,,Boston Bruins,1,3,L,,26,15,9,L 2,0,2008
+51,07-02-09,@,Boston Bruins,4,3,W,OT,27,15,9,W 1,0,2008
+52,08-02-09,@,Atlanta Thrashers,3,2,W,,28,15,9,W 2,0,2008
+53,12-02-09,,Ottawa Senators,2,5,L,,28,16,9,L 1,0,2008
+54,14-02-09,,New York Islanders,5,1,W,,29,16,9,W 1,0,2008
+55,15-02-09,@,New York Rangers,5,2,W,,30,16,9,W 2,0,2008
+56,19-02-09,,Buffalo Sabres,6,3,W,,31,16,9,W 3,0,2008
+57,21-02-09,,Pittsburgh Penguins,4,5,L,,31,17,9,L 1,0,2008
+58,24-02-09,@,Washington Capitals,4,2,W,,32,17,9,W 1,0,2008
+59,25-02-09,,Los Angeles Kings,2,0,W,,33,17,9,W 2,0,2008
+60,27-02-09,,Montreal Canadiens,3,4,L,OT,33,17,10,L 1,0,2008
+61,01-03-09,@,New Jersey Devils,0,3,L,,33,18,10,L 2,0,2008
+62,03-03-09,@,Boston Bruins,4,2,W,,34,18,10,W 1,0,2008
+63,05-03-09,,Calgary Flames,1,5,L,,34,19,10,L 1,0,2008
+64,07-03-09,,Nashville Predators,4,1,W,,35,19,10,W 1,0,2008
+65,10-03-09,,Buffalo Sabres,5,2,W,,36,19,10,W 2,0,2008
+66,12-03-09,,Washington Capitals,1,2,L,,36,20,10,L 1,0,2008
+67,14-03-09,,New York Rangers,4,2,W,,37,20,10,W 1,0,2008
+68,15-03-09,@,New York Rangers,1,4,L,,37,21,10,L 1,0,2008
+69,17-03-09,@,Detroit Red Wings,2,3,L,,37,22,10,L 2,0,2008
+70,20-03-09,@,Buffalo Sabres,6,4,W,,38,22,10,W 1,0,2008
+71,22-03-09,@,Pittsburgh Penguins,3,1,W,,39,22,10,W 2,0,2008
+72,23-03-09,,New Jersey Devils,4,2,W,,40,22,10,W 3,0,2008
+73,26-03-09,,Florida Panthers,2,4,L,,40,23,10,L 1,0,2008
+74,28-03-09,@,New York Islanders,4,3,W,SO,41,23,10,W 1,0,2008
+75,29-03-09,,Boston Bruins,3,4,L,,41,24,10,L 1,0,2008
+76,01-04-09,@,Toronto Maple Leafs,2,3,L,,41,25,10,L 2,0,2008
+77,03-04-09,,Toronto Maple Leafs,8,5,W,,42,25,10,W 1,0,2008
+78,04-04-09,@,Ottawa Senators,3,4,L,SO,42,25,11,L 1,0,2008
+79,07-04-09,,Florida Panthers,2,1,W,,43,25,11,W 1,0,2008
+80,09-04-09,@,New York Rangers,1,2,L,,43,26,11,L 1,0,2008
+81,11-04-09,@,New York Islanders,3,2,W,,44,26,11,W 1,0,2008
+82,12-04-09,,New York Rangers,3,4,L,,44,27,11,L 1,0,2008
+1,15-04-09,@,Pittsburgh Penguins,1,4,L,,0,1,L 1,,1,2008
+2,17-04-09,@,Pittsburgh Penguins,2,3,L,OT,0,2,L 2,,1,2008
+3,19-04-09,,Pittsburgh Penguins,6,3,W,,1,2,W 1,,1,2008
+4,21-04-09,,Pittsburgh Penguins,1,3,L,,1,3,L 1,,1,2008
+5,23-04-09,@,Pittsburgh Penguins,3,0,W,,2,3,W 1,,1,2008
+6,25-04-09,,Pittsburgh Penguins,3,5,L,,2,4,L 1,,1,2008
+1,02-10-09,@,Carolina Hurricanes,2,0,W,,1,0,0,W 1,0,2009
+2,03-10-09,@,New Jersey Devils,5,2,W,,2,0,0,W 2,0,2009
+3,06-10-09,,Washington Capitals,6,5,W,OT,3,0,0,W 3,0,2009
+4,08-10-09,,Pittsburgh Penguins,4,5,L,,3,1,0,L 1,0,2009
+5,10-10-09,,Anaheim Ducks,2,3,L,SO,3,1,1,L 2,0,2009
+6,16-10-09,@,Florida Panthers,2,4,L,,3,2,1,L 3,0,2009
+7,22-10-09,,Boston Bruins,4,3,W,SO,4,2,1,W 1,0,2009
+8,24-10-09,,Florida Panthers,5,1,W,,5,2,1,W 2,0,2009
+9,25-10-09,,San Jose Sharks,1,4,L,,5,3,1,L 1,0,2009
+10,27-10-09,@,Washington Capitals,2,4,L,,5,4,1,L 2,0,2009
+11,31-10-09,,Carolina Hurricanes,6,1,W,,6,4,1,W 1,0,2009
+12,02-11-09,,Tampa Bay Lightning,6,2,W,,7,4,1,W 2,0,2009
+13,06-11-09,@,Buffalo Sabres,5,2,W,,8,4,1,W 3,0,2009
+14,07-11-09,,St. Louis Blues,2,1,W,SO,9,4,1,W 4,0,2009
+15,12-11-09,,Ottawa Senators,5,1,W,,10,4,1,W 5,0,2009
+16,14-11-09,,Buffalo Sabres,2,3,L,,10,5,1,L 1,0,2009
+17,16-11-09,,New Jersey Devils,3,2,W,,11,5,1,W 1,0,2009
+18,18-11-09,@,Los Angeles Kings,3,2,W,,12,5,1,W 2,0,2009
+19,20-11-09,@,San Jose Sharks,3,6,L,,12,6,1,L 1,0,2009
+20,21-11-09,@,Phoenix Coyotes,1,3,L,,12,7,1,L 2,0,2009
+21,23-11-09,@,Colorado Avalanche,4,5,L,,12,8,1,L 3,0,2009
+22,25-11-09,@,New York Islanders,2,1,W,,13,8,1,W 1,0,2009
+23,27-11-09,,Buffalo Sabres,2,4,L,,13,9,1,L 1,0,2009
+24,28-11-09,@,Atlanta Thrashers,0,1,L,,13,10,1,L 2,0,2009
+25,03-12-09,,Vancouver Canucks,0,3,L,,13,11,1,L 3,0,2009
+26,05-12-09,,Washington Capitals,2,8,L,,13,12,1,L 4,0,2009
+27,07-12-09,@,Montreal Canadiens,1,3,L,,13,13,1,L 5,0,2009
+28,08-12-09,,New York Islanders,6,2,W,,14,13,1,W 1,0,2009
+29,10-12-09,,Ottawa Senators,0,2,L,,14,14,1,L 1,0,2009
+30,12-12-09,@,New Jersey Devils,1,4,L,,14,15,1,L 2,0,2009
+31,14-12-09,@,Boston Bruins,3,1,W,,15,15,1,W 1,0,2009
+32,15-12-09,@,Pittsburgh Penguins,1,6,L,,15,16,1,L 1,0,2009
+33,17-12-09,,Pittsburgh Penguins,2,3,L,SO,15,16,2,L 2,0,2009
+34,19-12-09,,New York Rangers,1,2,L,,15,17,2,L 3,0,2009
+35,21-12-09,,Florida Panthers,1,4,L,,15,18,2,L 4,0,2009
+36,23-12-09,@,Tampa Bay Lightning,5,2,W,,16,18,2,W 1,0,2009
+37,26-12-09,@,Carolina Hurricanes,4,3,W,SO,17,18,2,W 2,0,2009
+38,27-12-09,@,New York Islanders,2,1,W,,18,18,2,W 3,0,2009
+39,30-12-09,@,New York Rangers,6,0,W,,19,18,2,W 4,0,2009
+40,01-01-10,@,Boston Bruins,1,2,L,OT,19,18,3,L 1,0,2009
+41,03-01-10,@,Ottawa Senators,4,7,L,,19,19,3,L 2,0,2009
+42,06-01-10,,Toronto Maple Leafs,6,2,W,,20,19,3,W 1,0,2009
+43,07-01-10,@,Pittsburgh Penguins,7,4,W,,21,19,3,W 2,0,2009
+44,09-01-10,,Tampa Bay Lightning,4,1,W,,22,19,3,W 3,0,2009
+45,12-01-10,,Dallas Stars,6,3,W,,23,19,3,W 4,0,2009
+46,14-01-10,@,Toronto Maple Leafs,0,4,L,,23,20,3,L 1,0,2009
+47,17-01-10,@,Washington Capitals,3,5,L,,23,21,3,L 2,0,2009
+48,19-01-10,,Columbus Blue Jackets,5,3,W,,24,21,3,W 1,0,2009
+49,21-01-10,,New York Rangers,2,0,W,,25,21,3,W 2,0,2009
+50,23-01-10,,Carolina Hurricanes,4,2,W,,26,21,3,W 3,0,2009
+51,24-01-10,,Pittsburgh Penguins,1,2,L,,26,22,3,L 1,0,2009
+52,28-01-10,,Atlanta Thrashers,3,4,L,,26,23,3,L 2,0,2009
+53,30-01-10,,New York Islanders,2,1,W,,27,23,3,W 1,0,2009
+54,01-02-10,@,Calgary Flames,3,0,W,,28,23,3,W 2,0,2009
+55,03-02-10,@,Edmonton Oilers,0,1,L,,28,24,3,L 1,0,2009
+56,06-02-10,@,Minnesota Wild,1,2,L,,28,25,3,L 2,0,2009
+57,08-02-10,,New Jersey Devils,3,2,W,,29,25,3,W 1,0,2009
+58,10-02-10,@,New Jersey Devils,3,2,W,OT,30,25,3,W 2,0,2009
+59,12-02-10,,Montreal Canadiens,3,2,W,,31,25,3,W 3,0,2009
+60,13-02-10,@,Montreal Canadiens,6,2,W,,32,25,3,W 4,0,2009
+61,02-03-10,@,Tampa Bay Lightning,7,2,W,,33,25,3,W 5,0,2009
+62,03-03-10,@,Florida Panthers,4,7,L,,33,26,3,L 1,0,2009
+63,05-03-10,@,Buffalo Sabres,2,3,L,OT,33,26,4,L 2,0,2009
+64,07-03-10,,Toronto Maple Leafs,3,1,W,,34,26,4,W 1,0,2009
+65,09-03-10,,New York Islanders,3,2,W,,35,26,4,W 2,0,2009
+66,11-03-10,,Boston Bruins,1,5,L,,35,27,4,L 1,0,2009
+67,13-03-10,,Chicago Blackhawks,3,2,W,,36,27,4,W 1,0,2009
+68,14-03-10,@,New York Rangers,1,3,L,,36,28,4,L 1,0,2009
+69,16-03-10,@,Nashville Predators,3,4,L,SO,36,28,5,L 2,0,2009
+70,18-03-10,@,Dallas Stars,3,2,W,,37,28,5,W 1,0,2009
+71,20-03-10,@,Atlanta Thrashers,2,5,L,,37,29,5,L 1,0,2009
+72,21-03-10,,Atlanta Thrashers,1,3,L,,37,30,5,L 2,0,2009
+73,23-03-10,@,Ottawa Senators,0,2,L,,37,31,5,L 3,0,2009
+74,25-03-10,,Minnesota Wild,3,4,L,OT,37,31,6,L 4,0,2009
+75,27-03-10,@,Pittsburgh Penguins,1,4,L,,37,32,6,L 5,0,2009
+76,28-03-10,,New Jersey Devils,5,1,W,,38,32,6,W 1,0,2009
+77,01-04-10,@,New York Islanders,4,6,L,,38,33,6,L 1,0,2009
+78,02-04-10,,Montreal Canadiens,0,1,L,,38,34,6,L 2,0,2009
+79,04-04-10,,Detroit Red Wings,4,3,W,,39,34,6,W 1,0,2009
+80,06-04-10,@,Toronto Maple Leafs,2,0,W,,40,34,6,W 2,0,2009
+81,09-04-10,@,New York Rangers,3,4,L,,40,35,6,L 1,0,2009
+82,11-04-10,,New York Rangers,2,1,W,SO,41,35,6,W 1,0,2009
+1,14-04-10,@,New Jersey Devils,2,1,W,,1,0,W 1,,1,2009
+2,16-04-10,@,New Jersey Devils,3,5,L,,1,1,L 1,,1,2009
+3,18-04-10,,New Jersey Devils,3,2,W,OT,2,1,W 1,,1,2009
+4,20-04-10,,New Jersey Devils,4,1,W,,3,1,W 2,,1,2009
+5,22-04-10,@,New Jersey Devils,3,0,W,,4,1,W 3,,1,2009
+6,01-05-10,@,Boston Bruins,4,5,L,OT,4,2,L 1,,1,2009
+7,03-05-10,@,Boston Bruins,2,3,L,,4,3,L 2,,1,2009
+8,05-05-10,,Boston Bruins,1,4,L,,4,4,L 3,,1,2009
+9,07-05-10,,Boston Bruins,5,4,W,OT,5,4,W 1,,1,2009
+10,10-05-10,@,Boston Bruins,4,0,W,,6,4,W 2,,1,2009
+11,12-05-10,,Boston Bruins,2,1,W,,7,4,W 3,,1,2009
+12,14-05-10,@,Boston Bruins,4,3,W,,8,4,W 4,,1,2009
+13,16-05-10,,Montreal Canadiens,6,0,W,,9,4,W 5,,1,2009
+14,18-05-10,,Montreal Canadiens,3,0,W,,10,4,W 6,,1,2009
+15,20-05-10,@,Montreal Canadiens,1,5,L,,10,5,L 1,,1,2009
+16,22-05-10,@,Montreal Canadiens,3,0,W,,11,5,W 1,,1,2009
+17,24-05-10,,Montreal Canadiens,4,2,W,,12,5,W 2,,1,2009
+18,29-05-10,@,Chicago Blackhawks,5,6,L,,12,6,L 1,,1,2009
+19,31-05-10,@,Chicago Blackhawks,1,2,L,,12,7,L 2,,1,2009
+20,02-06-10,,Chicago Blackhawks,4,3,W,OT,13,7,W 1,,1,2009
+21,04-06-10,,Chicago Blackhawks,5,3,W,,14,7,W 2,,1,2009
+22,06-06-10,@,Chicago Blackhawks,4,7,L,,14,8,L 1,,1,2009
+23,09-06-10,,Chicago Blackhawks,3,4,L,OT,14,9,L 2,,1,2009
+1,07-10-10,@,Pittsburgh Penguins,3,2,W,,1,0,0,W 1,0,2010
+2,09-10-10,@,St. Louis Blues,1,2,L,OT,1,0,1,L 1,0,2010
+3,11-10-10,,Colorado Avalanche,4,2,W,,2,0,1,W 1,0,2010
+4,14-10-10,,Tampa Bay Lightning,2,3,L,,2,1,1,L 1,0,2010
+5,16-10-10,,Pittsburgh Penguins,1,5,L,,2,2,1,L 2,0,2010
+6,21-10-10,,Anaheim Ducks,2,3,L,,2,3,1,L 3,0,2010
+7,23-10-10,,Toronto Maple Leafs,5,2,W,,3,3,1,W 1,0,2010
+8,25-10-10,@,Columbus Blue Jackets,1,2,L,,3,4,1,L 1,0,2010
+9,26-10-10,,Buffalo Sabres,6,3,W,,4,4,1,W 1,0,2010
+10,29-10-10,@,Pittsburgh Penguins,3,2,W,,5,4,1,W 2,0,2010
+11,30-10-10,,New York Islanders,6,1,W,,6,4,1,W 3,0,2010
+12,01-11-10,,Carolina Hurricanes,3,2,W,,7,4,1,W 4,0,2010
+13,04-11-10,,New York Rangers,4,1,W,,8,4,1,W 5,0,2010
+14,06-11-10,@,New York Islanders,2,1,W,,9,4,1,W 6,0,2010
+15,07-11-10,@,Washington Capitals,2,3,L,OT,9,4,2,L 1,0,2010
+16,11-11-10,@,Carolina Hurricanes,8,1,W,,10,4,2,W 1,0,2010
+17,13-11-10,,Florida Panthers,5,2,W,,11,4,2,W 2,0,2010
+18,15-11-10,,Ottawa Senators,5,1,W,,12,4,2,W 3,0,2010
+19,16-11-10,@,Montreal Canadiens,0,3,L,,12,5,2,L 1,0,2010
+20,18-11-10,,Tampa Bay Lightning,7,8,L,,12,6,2,L 2,0,2010
+21,20-11-10,@,Washington Capitals,5,4,W,SO,13,6,2,W 1,0,2010
+22,22-11-10,,Montreal Canadiens,3,2,W,,14,6,2,W 2,0,2010
+23,24-11-10,@,Minnesota Wild,6,1,W,,15,6,2,W 3,0,2010
+24,26-11-10,,Calgary Flames,2,3,L,SO,15,6,3,L 1,0,2010
+25,27-11-10,@,New Jersey Devils,1,2,L,SO,15,6,4,L 2,0,2010
+26,01-12-10,,Boston Bruins,0,3,L,,15,7,4,L 3,0,2010
+27,04-12-10,,New Jersey Devils,5,3,W,,16,7,4,W 1,0,2010
+28,05-12-10,@,New York Islanders,3,2,W,,17,7,4,W 2,0,2010
+29,08-12-10,,San Jose Sharks,4,5,L,SO,17,7,5,L 1,0,2010
+30,09-12-10,@,Toronto Maple Leafs,4,1,W,,18,7,5,W 1,0,2010
+31,11-12-10,@,Boston Bruins,2,1,W,OT,19,7,5,W 2,0,2010
+32,14-12-10,,Pittsburgh Penguins,3,2,W,,20,7,5,W 3,0,2010
+33,15-12-10,@,Montreal Canadiens,5,3,W,,21,7,5,W 4,0,2010
+34,18-12-10,,New York Rangers,4,1,W,,22,7,5,W 5,0,2010
+35,20-12-10,,Florida Panthers,0,5,L,,22,8,5,L 1,0,2010
+36,28-12-10,@,Vancouver Canucks,2,6,L,,22,9,5,L 2,0,2010
+37,30-12-10,@,Los Angeles Kings,7,4,W,,23,9,5,W 1,0,2010
+38,31-12-10,@,Anaheim Ducks,2,5,L,,23,10,5,L 1,0,2010
+39,02-01-11,@,Detroit Red Wings,3,2,W,,24,10,5,W 1,0,2010
+40,06-01-11,@,New Jersey Devils,4,2,W,,25,10,5,W 2,0,2010
+41,08-01-11,,New Jersey Devils,2,1,W,,26,10,5,W 3,0,2010
+42,11-01-11,@,Buffalo Sabres,5,2,W,,27,10,5,W 4,0,2010
+43,13-01-11,@,Boston Bruins,5,7,L,,27,11,5,L 1,0,2010
+44,14-01-11,@,Atlanta Thrashers,5,2,W,,28,11,5,W 1,0,2010
+45,16-01-11,@,New York Rangers,3,2,W,,29,11,5,W 2,0,2010
+46,18-01-11,,Washington Capitals,3,2,W,OT,30,11,5,W 3,0,2010
+47,20-01-11,,Ottawa Senators,6,2,W,,31,11,5,W 4,0,2010
+48,22-01-11,,New Jersey Devils,1,3,L,,31,12,5,L 1,0,2010
+49,23-01-11,@,Chicago Blackhawks,4,1,W,,32,12,5,W 1,0,2010
+50,25-01-11,,Montreal Canadiens,5,2,W,,33,12,5,W 2,0,2010
+51,01-02-11,@,Tampa Bay Lightning,0,4,L,,33,13,5,L 1,0,2010
+52,03-02-11,,Nashville Predators,3,2,W,,34,13,5,W 1,0,2010
+53,05-02-11,,Dallas Stars,3,1,W,,35,13,5,W 2,0,2010
+54,10-02-11,,Carolina Hurricanes,2,1,W,,36,13,5,W 3,0,2010
+55,13-02-11,,Los Angeles Kings,0,1,L,,36,14,5,L 1,0,2010
+56,15-02-11,@,Tampa Bay Lightning,4,3,W,SO,37,14,5,W 1,0,2010
+57,16-02-11,@,Florida Panthers,4,2,W,,38,14,5,W 2,0,2010
+58,18-02-11,@,Carolina Hurricanes,2,3,L,,38,15,5,L 1,0,2010
+59,20-02-11,@,New York Rangers,4,2,W,,39,15,5,W 1,0,2010
+60,22-02-11,,Phoenix Coyotes,2,3,L,OT,39,15,6,L 1,0,2010
+61,24-02-11,,New York Islanders,4,3,W,OT,40,15,6,W 1,0,2010
+62,26-02-11,@,Ottawa Senators,1,4,L,,40,16,6,L 1,0,2010
+63,03-03-11,,Toronto Maple Leafs,2,3,L,,40,17,6,L 2,0,2010
+64,05-03-11,,Buffalo Sabres,3,5,L,,40,18,6,L 3,0,2010
+65,06-03-11,@,New York Rangers,0,7,L,,40,19,6,L 4,0,2010
+66,08-03-11,,Edmonton Oilers,4,1,W,,41,19,6,W 1,0,2010
+67,10-03-11,@,Toronto Maple Leafs,3,2,W,,42,19,6,W 2,0,2010
+68,12-03-11,,Atlanta Thrashers,4,5,L,OT,42,19,7,L 1,0,2010
+69,15-03-11,@,Florida Panthers,3,2,W,,43,19,7,W 1,0,2010
+70,17-03-11,@,Atlanta Thrashers,3,4,L,SO,43,19,8,L 1,0,2010
+71,19-03-11,@,Dallas Stars,3,2,W,SO,44,19,8,W 1,0,2010
+72,22-03-11,,Washington Capitals,4,5,L,SO,44,19,9,L 1,0,2010
+73,24-03-11,,Pittsburgh Penguins,1,2,L,SO,44,19,10,L 2,0,2010
+74,26-03-11,@,New York Islanders,4,1,W,,45,19,10,W 1,0,2010
+75,27-03-11,,Boston Bruins,1,2,L,,45,20,10,L 1,0,2010
+76,29-03-11,@,Pittsburgh Penguins,5,2,W,,46,20,10,W 1,0,2010
+77,31-03-11,,Atlanta Thrashers,0,1,L,,46,21,10,L 1,0,2010
+78,01-04-11,@,New Jersey Devils,2,4,L,,46,22,10,L 2,0,2010
+79,03-04-11,,New York Rangers,2,3,L,SO,46,22,11,L 3,0,2010
+80,05-04-11,@,Ottawa Senators,2,5,L,,46,23,11,L 4,0,2010
+81,08-04-11,@,Buffalo Sabres,3,4,L,OT,46,23,12,L 5,0,2010
+82,09-04-11,,New York Islanders,7,4,W,,47,23,12,W 1,0,2010
+1,14-04-11,,Buffalo Sabres,0,1,L,,0,1,L 1,,1,2010
+2,16-04-11,,Buffalo Sabres,5,4,W,,1,1,W 1,,1,2010
+3,18-04-11,@,Buffalo Sabres,4,2,W,,2,1,W 2,,1,2010
+4,20-04-11,@,Buffalo Sabres,0,1,L,,2,2,L 1,,1,2010
+5,22-04-11,,Buffalo Sabres,3,4,L,OT,2,3,L 2,,1,2010
+6,24-04-11,@,Buffalo Sabres,5,4,W,OT,3,3,W 1,,1,2010
+7,26-04-11,,Buffalo Sabres,5,2,W,,4,3,W 2,,1,2010
+8,30-04-11,,Boston Bruins,3,7,L,,4,4,L 1,,1,2010
+9,02-05-11,,Boston Bruins,2,3,L,OT,4,5,L 2,,1,2010
+10,04-05-11,@,Boston Bruins,1,5,L,,4,6,L 3,,1,2010
+11,06-05-11,@,Boston Bruins,1,5,L,,4,7,L 4,,1,2010
+1,06-10-11,@,Boston Bruins,2,1,W,,1,0,0,W 1,0,2011
+2,08-10-11,@,New Jersey Devils,3,0,W,,2,0,0,W 2,0,2011
+3,12-10-11,,Vancouver Canucks,5,4,W,,3,0,0,W 3,0,2011
+4,15-10-11,,Los Angeles Kings,2,3,L,OT,3,0,1,L 1,0,2011
+5,18-10-11,@,Ottawa Senators,7,2,W,,4,0,1,W 1,0,2011
+6,20-10-11,,Washington Capitals,2,5,L,,4,1,1,L 1,0,2011
+7,22-10-11,,St. Louis Blues,2,4,L,,4,2,1,L 2,0,2011
+8,24-10-11,,Toronto Maple Leafs,4,2,W,,5,2,1,W 1,0,2011
+9,26-10-11,@,Montreal Canadiens,1,5,L,,5,3,1,L 1,0,2011
+10,27-10-11,,Winnipeg Jets,8,9,L,,5,4,1,L 2,0,2011
+11,29-10-11,,Carolina Hurricanes,5,1,W,,6,4,1,W 1,0,2011
+12,02-11-11,@,Buffalo Sabres,3,2,W,,7,4,1,W 2,0,2011
+13,03-11-11,,New Jersey Devils,3,4,L,SO,7,4,2,L 1,0,2011
+14,05-11-11,,Columbus Blue Jackets,9,2,W,,8,4,2,W 1,0,2011
+15,09-11-11,@,Tampa Bay Lightning,1,2,L,OT,8,4,3,L 1,0,2011
+16,13-11-11,@,Florida Panthers,3,2,W,,9,4,3,W 1,0,2011
+17,14-11-11,@,Carolina Hurricanes,5,3,W,,10,4,3,W 2,0,2011
+18,17-11-11,,Phoenix Coyotes,2,1,W,,11,4,3,W 3,0,2011
+19,19-11-11,@,Winnipeg Jets,4,6,L,,11,5,3,L 1,0,2011
+20,21-11-11,,Carolina Hurricanes,2,4,L,,11,6,3,L 2,0,2011
+21,23-11-11,@,New York Islanders,4,3,W,OT,12,6,3,W 1,0,2011
+22,25-11-11,,Montreal Canadiens,3,1,W,,13,6,3,W 2,0,2011
+23,26-11-11,@,New York Rangers,0,2,L,,13,7,3,L 1,0,2011
+24,02-12-11,@,Anaheim Ducks,4,3,W,OT,14,7,3,W 1,0,2011
+25,03-12-11,@,Phoenix Coyotes,4,2,W,,15,7,3,W 2,0,2011
+26,07-12-11,@,Buffalo Sabres,5,4,W,OT,16,7,3,W 3,0,2011
+27,08-12-11,,Pittsburgh Penguins,3,2,W,,17,7,3,W 4,0,2011
+28,10-12-11,,Tampa Bay Lightning,5,2,W,,18,7,3,W 5,0,2011
+29,13-12-11,@,Washington Capitals,5,1,W,,19,7,3,W 6,0,2011
+30,15-12-11,@,Montreal Canadiens,4,3,W,,20,7,3,W 7,0,2011
+31,17-12-11,,Boston Bruins,0,6,L,,20,8,3,L 1,0,2011
+32,19-12-11,@,Colorado Avalanche,2,3,L,SO,20,8,4,L 2,0,2011
+33,21-12-11,@,Dallas Stars,4,1,W,,21,8,4,W 1,0,2011
+34,23-12-11,@,New York Rangers,2,4,L,,21,9,4,L 1,0,2011
+35,27-12-11,@,Tampa Bay Lightning,1,5,L,,21,10,4,L 2,0,2011
+36,29-12-11,@,Pittsburgh Penguins,4,2,W,,22,10,4,W 1,0,2011
+37,02-01-12,,New York Rangers,2,3,L,,22,11,4,L 1,0,2011
+38,05-01-12,,Chicago Blackhawks,5,4,W,,23,11,4,W 1,0,2011
+39,07-01-12,,Ottawa Senators,3,2,W,OT,24,11,4,W 2,0,2011
+40,08-01-12,@,Ottawa Senators,4,6,L,,24,12,4,L 1,0,2011
+41,10-01-12,@,Carolina Hurricanes,2,1,W,,25,12,4,W 1,0,2011
+42,12-01-12,@,New York Islanders,3,2,W,,26,12,4,W 2,0,2011
+43,14-01-12,@,Nashville Predators,2,4,L,,26,13,4,L 1,0,2011
+44,17-01-12,,Minnesota Wild,5,1,W,,27,13,4,W 1,0,2011
+45,19-01-12,,New York Islanders,1,4,L,,27,14,4,L 1,0,2011
+46,21-01-12,@,New Jersey Devils,4,1,W,,28,14,4,W 1,0,2011
+47,22-01-12,,Boston Bruins,5,6,L,SO,28,14,5,L 1,0,2011
+48,24-01-12,@,Florida Panthers,3,2,W,SO,29,14,5,W 1,0,2011
+49,31-01-12,,Winnipeg Jets,1,2,L,SO,29,14,6,L 1,0,2011
+50,02-02-12,,Nashville Predators,4,1,W,,30,14,6,W 1,0,2011
+51,04-02-12,,New Jersey Devils,4,6,L,,30,15,6,L 1,0,2011
+52,05-02-12,@,New York Rangers,2,5,L,,30,16,6,L 2,0,2011
+53,07-02-12,,New York Islanders,0,1,L,SO,30,16,7,L 3,0,2011
+54,09-02-12,,Toronto Maple Leafs,4,3,W,,31,16,7,W 1,0,2011
+55,11-02-12,,New York Rangers,2,5,L,,31,17,7,L 1,0,2011
+56,12-02-12,@,Detroit Red Wings,3,4,L,,31,18,7,L 2,0,2011
+57,16-02-12,,Buffalo Sabres,7,2,W,,32,18,7,W 1,0,2011
+58,18-02-12,,Pittsburgh Penguins,4,6,L,,32,19,7,L 1,0,2011
+59,21-02-12,@,Winnipeg Jets,5,4,W,OT,33,19,7,W 1,0,2011
+60,23-02-12,@,Edmonton Oilers,0,2,L,,33,20,7,L 1,0,2011
+61,25-02-12,@,Calgary Flames,5,4,W,SO,34,20,7,W 1,0,2011
+62,28-02-12,@,San Jose Sharks,0,1,L,,34,21,7,L 1,0,2011
+63,01-03-12,,New York Islanders,6,3,W,,35,21,7,W 1,0,2011
+64,04-03-12,@,Washington Capitals,1,0,W,,36,21,7,W 2,0,2011
+65,06-03-12,,Detroit Red Wings,3,2,W,,37,21,7,W 3,0,2011
+66,08-03-12,,Florida Panthers,5,0,W,,38,21,7,W 4,0,2011
+67,10-03-12,@,Toronto Maple Leafs,1,0,W,SO,39,21,7,W 5,0,2011
+68,11-03-12,@,New Jersey Devils,1,4,L,,39,22,7,L 1,0,2011
+69,13-03-12,,New Jersey Devils,3,0,W,,40,22,7,W 1,0,2011
+70,15-03-12,@,New York Islanders,3,2,W,,41,22,7,W 2,0,2011
+71,17-03-12,@,Boston Bruins,2,3,L,SO,41,22,8,L 1,0,2011
+72,18-03-12,,Pittsburgh Penguins,3,2,W,OT,42,22,8,W 1,0,2011
+73,20-03-12,,Florida Panthers,1,2,L,,42,23,8,L 1,0,2011
+74,22-03-12,,Washington Capitals,2,1,W,SO,43,23,8,W 1,0,2011
+75,24-03-12,,Montreal Canadiens,4,1,W,,44,23,8,W 2,0,2011
+76,26-03-12,,Tampa Bay Lightning,3,5,L,,44,24,8,L 1,0,2011
+77,29-03-12,@,Toronto Maple Leafs,7,1,W,,45,24,8,W 1,0,2011
+78,31-03-12,,Ottawa Senators,3,4,L,SO,45,24,9,L 1,0,2011
+79,01-04-12,@,Pittsburgh Penguins,6,4,W,,46,24,9,W 1,0,2011
+80,03-04-12,,New York Rangers,3,5,L,,46,25,9,L 1,0,2011
+81,05-04-12,,Buffalo Sabres,2,1,W,,47,25,9,W 1,0,2011
+82,07-04-12,@,Pittsburgh Penguins,2,4,L,,47,26,9,L 1,0,2011
+1,11-04-12,@,Pittsburgh Penguins,4,3,W,OT,1,0,W 1,,1,2011
+2,13-04-12,@,Pittsburgh Penguins,8,5,W,,2,0,W 2,,1,2011
+3,15-04-12,,Pittsburgh Penguins,8,4,W,,3,0,W 3,,1,2011
+4,18-04-12,,Pittsburgh Penguins,3,10,L,,3,1,L 1,,1,2011
+5,20-04-12,@,Pittsburgh Penguins,2,3,L,,3,2,L 2,,1,2011
+6,22-04-12,,Pittsburgh Penguins,5,1,W,,4,2,W 1,,1,2011
+7,29-04-12,,New Jersey Devils,4,3,W,OT,5,2,W 2,,1,2011
+8,01-05-12,,New Jersey Devils,1,4,L,,5,3,L 1,,1,2011
+9,03-05-12,@,New Jersey Devils,3,4,L,OT,5,4,L 2,,1,2011
+10,06-05-12,@,New Jersey Devils,2,4,L,,5,5,L 3,,1,2011
+11,08-05-12,,New Jersey Devils,1,3,L,,5,6,L 4,,1,2011
+1,19-01-13,,Pittsburgh Penguins,1,3,L,,0,1,0,L 1,0,2012
+2,20-01-13,@,Buffalo Sabres,2,5,L,,0,2,0,L 2,0,2012
+3,22-01-13,@,New Jersey Devils,0,3,L,,0,3,0,L 3,0,2012
+4,24-01-13,,New York Rangers,2,1,W,,1,3,0,W 1,0,2012
+5,26-01-13,@,Florida Panthers,7,1,W,,2,3,0,W 2,0,2012
+6,27-01-13,@,Tampa Bay Lightning,1,5,L,,2,4,0,L 1,0,2012
+7,29-01-13,@,New York Rangers,1,2,L,,2,5,0,L 2,0,2012
+8,01-02-13,@,Washington Capitals,2,3,L,,2,6,0,L 3,0,2012
+9,02-02-13,,Carolina Hurricanes,5,3,W,,3,6,0,W 1,0,2012
+10,05-02-13,,Tampa Bay Lightning,2,1,W,,4,6,0,W 2,0,2012
+11,07-02-13,,Florida Panthers,2,3,L,SO,4,6,1,L 1,0,2012
+12,09-02-13,,Carolina Hurricanes,4,3,W,OT,5,6,1,W 1,0,2012
+13,11-02-13,@,Toronto Maple Leafs,2,5,L,,5,7,1,L 1,0,2012
+14,12-02-13,@,Winnipeg Jets,3,2,W,,6,7,1,W 1,0,2012
+15,15-02-13,@,New Jersey Devils,3,5,L,,6,8,1,L 1,0,2012
+16,16-02-13,@,Montreal Canadiens,1,4,L,,6,9,1,L 2,0,2012
+17,18-02-13,@,New York Islanders,7,0,W,,7,9,1,W 1,0,2012
+18,20-02-13,@,Pittsburgh Penguins,6,5,W,,8,9,1,W 2,0,2012
+19,21-02-13,,Florida Panthers,2,5,L,,8,10,1,L 1,0,2012
+20,23-02-13,,Winnipeg Jets,5,3,W,,9,10,1,W 1,0,2012
+21,25-02-13,,Toronto Maple Leafs,2,4,L,,9,11,1,L 1,0,2012
+22,27-02-13,,Washington Capitals,4,1,W,,10,11,1,W 1,0,2012
+23,02-03-13,,Ottawa Senators,2,1,W,,11,11,1,W 2,0,2012
+24,05-03-13,@,New York Rangers,2,4,L,,11,12,1,L 1,0,2012
+25,07-03-13,,Pittsburgh Penguins,4,5,L,,11,13,1,L 2,0,2012
+26,09-03-13,@,Boston Bruins,0,3,L,,11,14,1,L 3,0,2012
+27,10-03-13,,Buffalo Sabres,3,2,W,,12,14,1,W 1,0,2012
+28,13-03-13,@,New Jersey Devils,2,5,L,,12,15,1,L 1,0,2012
+29,15-03-13,,New Jersey Devils,2,1,W,SO,13,15,1,W 1,0,2012
+30,18-03-13,@,Tampa Bay Lightning,2,4,L,,13,16,1,L 1,0,2012
+31,24-03-13,@,Pittsburgh Penguins,1,2,L,OT,13,16,2,L 2,0,2012
+32,26-03-13,,New York Rangers,2,5,L,,13,17,2,L 3,0,2012
+33,28-03-13,,New York Islanders,3,4,L,SO,13,17,3,L 4,0,2012
+34,30-03-13,,Boston Bruins,3,1,W,,14,17,3,W 1,0,2012
+35,31-03-13,,Washington Capitals,5,4,W,OT,15,17,3,W 2,0,2012
+36,03-04-13,,Montreal Canadiens,5,3,W,,16,17,3,W 3,0,2012
+37,04-04-13,@,Toronto Maple Leafs,5,3,W,,17,17,3,W 4,0,2012
+38,06-04-13,@,Winnipeg Jets,1,4,L,,17,18,3,L 1,0,2012
+39,09-04-13,@,New York Islanders,1,4,L,,17,19,3,L 2,0,2012
+40,11-04-13,,Ottawa Senators,1,3,L,,17,20,3,L 3,0,2012
+41,13-04-13,@,Buffalo Sabres,0,1,L,,17,21,3,L 4,0,2012
+42,15-04-13,@,Montreal Canadiens,7,3,W,,18,21,3,W 1,0,2012
+43,16-04-13,,New York Rangers,4,2,W,,19,21,3,W 2,0,2012
+44,18-04-13,,New Jersey Devils,0,3,L,,19,22,3,L 1,0,2012
+45,20-04-13,@,Carolina Hurricanes,5,3,W,,20,22,3,W 1,0,2012
+46,23-04-13,,Boston Bruins,5,2,W,,21,22,3,W 2,0,2012
+47,25-04-13,,New York Islanders,2,1,W,,22,22,3,W 3,0,2012
+48,27-04-13,@,Ottawa Senators,2,1,W,,23,22,3,W 4,0,2012
+1,02-10-13,,Toronto Maple Leafs,1,3,L,,0,1,0,L 1,0,2013
+2,05-10-13,@,Montreal Canadiens,1,4,L,,0,2,0,L 2,0,2013
+3,06-10-13,@,Carolina Hurricanes,1,2,L,,0,3,0,L 3,0,2013
+4,08-10-13,,Florida Panthers,2,1,W,,1,3,0,W 1,0,2013
+5,11-10-13,,Phoenix Coyotes,1,2,L,,1,4,0,L 1,0,2013
+6,12-10-13,@,Detroit Red Wings,2,5,L,,1,5,0,L 2,0,2013
+7,15-10-13,,Vancouver Canucks,2,3,L,,1,6,0,L 3,0,2013
+8,17-10-13,,Pittsburgh Penguins,1,4,L,,1,7,0,L 4,0,2013
+9,24-10-13,,New York Rangers,2,1,W,,2,7,0,W 1,0,2013
+10,26-10-13,@,New York Islanders,5,2,W,,3,7,0,W 2,0,2013
+11,29-10-13,,Anaheim Ducks,2,3,L,,3,8,0,L 1,0,2013
+12,01-11-13,,Washington Capitals,0,7,L,,3,9,0,L 2,0,2013
+13,02-11-13,@,New Jersey Devils,1,0,W,,4,9,0,W 1,0,2013
+14,05-11-13,@,Carolina Hurricanes,1,2,L,OT,4,9,1,L 1,0,2013
+15,07-11-13,,New Jersey Devils,0,3,L,,4,10,1,L 2,0,2013
+16,09-11-13,,Edmonton Oilers,4,2,W,,5,10,1,W 1,0,2013
+17,12-11-13,@,Ottawa Senators,5,0,W,,6,10,1,W 2,0,2013
+18,13-11-13,@,Pittsburgh Penguins,2,1,W,,7,10,1,W 3,0,2013
+19,15-11-13,@,Winnipeg Jets,2,3,L,SO,7,10,2,L 1,0,2013
+20,19-11-13,,Ottawa Senators,5,2,W,,8,10,2,W 1,0,2013
+21,21-11-13,,Buffalo Sabres,4,1,W,,9,10,2,W 2,0,2013
+22,23-11-13,,New York Islanders,5,2,W,,10,10,2,W 3,0,2013
+23,25-11-13,@,Florida Panthers,1,3,L,,10,11,2,L 1,0,2013
+24,27-11-13,@,Tampa Bay Lightning,2,4,L,,10,12,2,L 2,0,2013
+25,29-11-13,,Winnipeg Jets,2,1,W,,11,12,2,W 1,0,2013
+26,30-11-13,@,Nashville Predators,3,2,W,SO,12,12,2,W 2,0,2013
+27,02-12-13,@,Minnesota Wild,0,2,L,,12,13,2,L 1,0,2013
+28,04-12-13,@,Detroit Red Wings,6,3,W,,13,13,2,W 1,0,2013
+29,07-12-13,@,Dallas Stars,1,5,L,,13,14,2,L 1,0,2013
+30,09-12-13,@,Ottawa Senators,4,5,L,SO,13,14,3,L 2,0,2013
+31,11-12-13,@,Chicago Blackhawks,2,7,L,,13,15,3,L 3,0,2013
+32,12-12-13,,Montreal Canadiens,2,1,W,,14,15,3,W 1,0,2013
+33,15-12-13,@,Washington Capitals,4,5,L,SO,14,15,4,L 1,0,2013
+34,17-12-13,,Washington Capitals,5,2,W,,15,15,4,W 1,0,2013
+35,19-12-13,,Columbus Blue Jackets,5,4,W,,16,15,4,W 2,0,2013
+36,21-12-13,@,Columbus Blue Jackets,3,6,L,,16,16,4,L 1,0,2013
+37,23-12-13,,Minnesota Wild,4,1,W,,17,16,4,W 1,0,2013
+38,28-12-13,@,Edmonton Oilers,4,3,W,SO,18,16,4,W 2,0,2013
+39,30-12-13,@,Vancouver Canucks,4,3,W,SO,19,16,4,W 3,0,2013
+40,31-12-13,@,Calgary Flames,4,1,W,,20,16,4,W 4,0,2013
+41,02-01-14,@,Colorado Avalanche,1,2,L,,20,17,4,L 1,0,2013
+42,04-01-14,@,Phoenix Coyotes,5,3,W,,21,17,4,W 1,0,2013
+43,07-01-14,@,New Jersey Devils,3,2,W,OT,22,17,4,W 2,0,2013
+44,08-01-14,,Montreal Canadiens,3,1,W,,23,17,4,W 3,0,2013
+45,11-01-14,,Tampa Bay Lightning,3,6,L,,23,18,4,L 1,0,2013
+46,12-01-14,@,New York Rangers,1,4,L,,23,19,4,L 2,0,2013
+47,14-01-14,@,Buffalo Sabres,4,3,W,,24,19,4,W 1,0,2013
+48,16-01-14,,Nashville Predators,3,4,L,SO,24,19,5,L 1,0,2013
+49,18-01-14,,New York Islanders,6,4,W,,25,19,5,W 1,0,2013
+50,20-01-14,@,New York Islanders,3,4,L,SO,25,19,6,L 1,0,2013
+51,21-01-14,,Carolina Hurricanes,,,,,,,,,0,2013
+52,22-01-14,,Carolina Hurricanes,2,3,L,,25,20,6,L 1,0,2013
+53,23-01-14,@,Columbus Blue Jackets,2,5,L,,25,21,6,L 2,0,2013
+54,25-01-14,,Boston Bruins,1,6,L,,25,22,6,L 3,0,2013
+55,28-01-14,,Detroit Red Wings,5,0,W,,26,22,6,W 1,0,2013
+56,30-01-14,@,Anaheim Ducks,3,5,L,,26,23,6,L 1,0,2013
+57,01-02-14,@,Los Angeles Kings,2,0,W,,27,23,6,W 1,0,2013
+58,03-02-14,@,San Jose Sharks,5,2,W,,28,23,6,W 2,0,2013
+59,06-02-14,,Colorado Avalanche,3,1,W,,29,23,6,W 3,0,2013
+60,08-02-14,,Calgary Flames,2,1,W,,30,23,6,W 4,0,2013
+61,27-02-14,,San Jose Sharks,3,7,L,,30,24,6,L 1,0,2013
+62,01-03-14,,New York Rangers,4,2,W,,31,24,6,W 1,0,2013
+63,02-03-14,@,Washington Capitals,5,4,W,OT,32,24,6,W 2,0,2013
+64,05-03-14,,Washington Capitals,6,4,W,,33,24,6,W 3,0,2013
+65,08-03-14,@,Toronto Maple Leafs,3,4,L,OT,33,24,7,L 1,0,2013
+66,11-03-14,,New Jersey Devils,1,2,L,,33,25,7,L 2,0,2013
+67,15-03-14,,Pittsburgh Penguins,4,0,W,,34,25,7,W 1,0,2013
+68,16-03-14,@,Pittsburgh Penguins,4,3,W,,35,25,7,W 2,0,2013
+69,18-03-14,,Chicago Blackhawks,3,2,W,OT,36,25,7,W 3,0,2013
+70,20-03-14,,Dallas Stars,4,2,W,,37,25,7,W 4,0,2013
+71,22-03-14,,St. Louis Blues,4,1,W,,38,25,7,W 5,0,2013
+72,24-03-14,,Los Angeles Kings,2,3,L,,38,26,7,L 1,0,2013
+73,26-03-14,@,New York Rangers,1,3,L,,38,27,7,L 2,0,2013
+74,28-03-14,,Toronto Maple Leafs,4,2,W,,39,27,7,W 1,0,2013
+75,30-03-14,,Boston Bruins,3,4,L,SO,39,27,8,L 1,0,2013
+76,01-04-14,@,St. Louis Blues,0,1,L,SO,39,27,9,L 2,0,2013
+77,03-04-14,,Columbus Blue Jackets,0,2,L,,39,28,9,L 3,0,2013
+78,05-04-14,@,Boston Bruins,2,5,L,,39,29,9,L 4,0,2013
+79,06-04-14,,Buffalo Sabres,5,2,W,,40,29,9,W 1,0,2013
+80,08-04-14,@,Florida Panthers,5,2,W,,41,29,9,W 2,0,2013
+81,10-04-14,@,Tampa Bay Lightning,2,4,L,,41,30,9,L 1,0,2013
+82,12-04-14,@,Pittsburgh Penguins,4,3,W,OT,42,30,9,W 1,0,2013
+83,13-04-14,,Carolina Hurricanes,5,6,L,SO,42,30,10,L 1,0,2013
+1,17-04-14,@,New York Rangers,1,4,L,,0,1,L 1,,1,2013
+2,20-04-14,@,New York Rangers,4,2,W,,1,1,W 1,,1,2013
+3,22-04-14,,New York Rangers,1,4,L,,1,2,L 1,,1,2013
+4,25-04-14,,New York Rangers,2,1,W,,2,2,W 1,,1,2013
+5,27-04-14,@,New York Rangers,2,4,L,,2,3,L 1,,1,2013
+6,29-04-14,,New York Rangers,5,2,W,,3,3,W 1,,1,2013
+7,30-04-14,@,New York Rangers,1,2,L,,3,4,L 1,,1,2013
