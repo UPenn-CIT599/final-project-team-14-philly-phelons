@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-public class RobbyQuestions {
+public class CrimeRateChangePerTeamCalculationOutput {
 
     //Question 7 for all Crime Rate Types//
     public static Double getNHLWinVsAllCrimeRateCumulative() {
