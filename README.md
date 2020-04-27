@@ -1,9 +1,23 @@
-# final-project-team-14-philly-phelons
+# Project Description
+This data analysis project will take Philadelphia crime data and data from four major leage sport Teams (Phillies, 76'ers, Flyers and Eagles) to determine statistics in different crime rates in the neighborhoods (called Regions) surrounding the teams' respective venues on game days.
 
-## Team:
-[Robby](https://github.com/P0bbn), [Tian](https://github.com/txue2020) and [Claudia](https://github.com/QueenClau)
+The following are required in your local computer to run this program efficiently: 
+* Java version 13.0 or higher
+* Eclipse IDE
 
-## Project Description: 
-This project will take Philadelphia crime data and data from four major leage sport Teams (Phillies, 76'ers, Flyers and Eagles) to determine if there is an increased, decreased or neutral effect on the violent property crime rates in the neighborhoods surrounding the teams' respective venues on game days.
+# Getting Started:
+1. Download this repo as a ZIP file.
+2. Unzip and open in Eclipse. 
 
-Graphical User Interface will be built using Swing.
+## How to run in Eclipse: 
+1. In Eclipse, run the `AppViewer.java` class. 
+
+## Built With:
+* JavaSwing
+* [JFree Chart](http://www.jfree.org/jfreechart/)
+
+## Data Sources:
+[Open Data Philly]https://www.opendataphilly.org/ Data was cleaned up and pulled for years 2009 - 2011.
+
+## Authors:
+[Claudia](https://github.com/QueenClau), [Tian](https://github.com/txue2020) and [Robby](https://github.com/P0bbn)
