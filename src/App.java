@@ -21,15 +21,20 @@ import javax.swing.border.TitledBorder;
  */
 public class App extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	// window dimensions
-	private static final int FRAME_WIDTH = 600;
-	private static final int FRAME_HEIGHT = 400;
+	private static final int FRAME_WIDTH = 700;
+	private static final int FRAME_HEIGHT = 600;
 
 	// labels where answers will go
 	private JLabel resultLabel = new JLabel("result goes here");
 //	private JLabel radioLabel = new JLabel("radio button selected goes here");
 //	private JLabel comboBoxLabel = new JLabel("combo box selection goes here");
 
+	@SuppressWarnings("rawtypes")
 	private JComboBox crimeStatList;
 
 	// radio buttons
@@ -107,6 +112,7 @@ public class App extends JFrame {
 	 * 
 	 * @return JPanel
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private JPanel createComboBox() {
 		String[] crimeStatOptions = { "Most Frequent Crime", "Region with Highest Crime", "Game Wins and Crime Rates",
 				"Game Losses and Crime Rates", "Sport with Highest Crime Rate", "Opponent with Highest Crime Rate" };
@@ -129,6 +135,7 @@ public class App extends JFrame {
 	 * 
 	 * @return JPanel
 	 */
+	
 	private JPanel createButtonGroup() {
 		JButton getButton = createButton("Get Stat");
 
@@ -142,9 +149,8 @@ public class App extends JFrame {
 		panel.add(getButton);
 
 		return panel;
-
 	}
-
+	
 	/**
 	 * createButton will build a button and add an action listener for it
 	 * 
@@ -197,6 +203,7 @@ public class App extends JFrame {
 			
 			resultLabel.setText(AppQuery.queryAnswer());
 			
+			add(AppQuery.getChart("chart title goes here"), BorderLayout.SOUTH);
 //			comboBoxLabel.setText(comboBoxString);
 //			radioLabel.setText(getRadioSelected());
 		}

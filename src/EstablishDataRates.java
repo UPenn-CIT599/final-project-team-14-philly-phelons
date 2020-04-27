@@ -274,8 +274,4 @@ public class EstablishDataRates {
 		return crimeCodeRate;// Returns the probability that a given crime code occurred on a given day in
 								// the supplied district
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a3d77afc914818927464e463fec83edadee10448

@@ -1,4 +1,6 @@
-import org.jfree.ui.RefineryUtilities;
+import java.util.HashMap;
+
+import javax.swing.JPanel;
 
 public class AppQuery {
 
@@ -25,12 +27,15 @@ public class AppQuery {
 		radioBox = radioBoxOption;
 	}
 
-	public static PieChart getChart(String pieChartTitle) {
+	public static JPanel getChart(String pieChartTitle) {
 		PieChart pieChartResult = new PieChart(pieChartTitle);
-		pieChartResult.setSize(560, 367);
-		RefineryUtilities.centerFrameOnScreen(pieChartResult);
-		pieChartResult.setVisible(true);
-		return pieChartResult;
+		HashMap<String, Integer> pieChartLabels = new HashMap<String, Integer>();
+		pieChartLabels.put("one", 20);
+		pieChartLabels.put("two", 30);
+		pieChartLabels.put("three", 50);
+		pieChartResult.setPieChartLabels(pieChartLabels);
+		JPanel chartPanel = pieChartResult.createChartPanel();
+		return chartPanel;
 	}
 
 	
