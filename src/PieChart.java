@@ -19,7 +19,7 @@ import org.jfree.data.general.PieDataset;
 public class PieChart extends JFrame {
 
 	private static final long serialVersionUID = -8986772773938935787L;
-	private static HashMap<String, Integer> pieChartLabels = new HashMap<String, Integer>();
+	private static HashMap<String, Double> pieChartLabels = new HashMap<String, Double>();
 	private static String pieChartTitle = "";
 
 	public PieChart(String title) {
@@ -32,11 +32,11 @@ public class PieChart extends JFrame {
 	 * @return
 	 */
 	
-	public static HashMap<String, Integer> getPieChartLabels() {
+	public static HashMap<String, Double> getPieChartLabels() {
 		return pieChartLabels;
 	}
 
-	public void setPieChartLabels(HashMap<String, Integer> pieChartLabels) {
+	public void setPieChartLabels(HashMap<String, Double> pieChartLabels) {
 		PieChart.pieChartLabels = pieChartLabels;
 	}
 
@@ -57,9 +57,9 @@ public class PieChart extends JFrame {
 	private static PieDataset createDataset() {
 		DefaultPieDataset dataset = new DefaultPieDataset();
 
-		for (Map.Entry<String, Integer> keyLabel : pieChartLabels.entrySet()) {
+		for (Map.Entry<String, Double> keyLabel : pieChartLabels.entrySet()) {
 			String key = keyLabel.getKey();
-			Integer number = keyLabel.getValue();
+			Double number = keyLabel.getValue();
 			dataset.setValue(key, number);
 		}
 		return dataset;

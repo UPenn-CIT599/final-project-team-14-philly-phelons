@@ -114,7 +114,7 @@ public class App extends JFrame {
 	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private JPanel createComboBox() {
-		String[] crimeStatOptions = { "Most Frequent Crime", "Region with Highest Crime", "Game Wins and Crime Rates",
+		String[] crimeStatOptions = { "Most Frequent Crime", "Regions with Highest Crimes", "Game Wins and Crime Rates",
 				"Game Losses and Crime Rates", "Sport with Highest Crime Rate", "Opponent with Highest Crime Rate" };
 
 		crimeStatList = new JComboBox(crimeStatOptions);

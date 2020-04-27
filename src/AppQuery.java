@@ -7,7 +7,8 @@ import javax.swing.JPanel;
 
 /**
  * AppQuery will conduct the query and call the right classes/methods
- * @author claudiaromano
+ * 
+ * @author claudia peinado romano
  *
  */
 
@@ -15,12 +16,14 @@ public class AppQuery {
 
 	private static String comboBox;
 	private static String radioBox;
+	private static HashMap<String, Double> pieChartLabels = new HashMap<String, Double>();
 
 	/**
-	 * queryAnswer() will run the appropriate search 
+	 * queryAnswer() will run the appropriate search
+	 * 
 	 * @return String of answers
 	 */
-	
+
 	public static String queryAnswer() {
 
 		CrimeReader reader;
@@ -31,8 +34,8 @@ public class AppQuery {
 
 			if (comboBox.equals("Most Frequent Crime")) {
 				resultString = getMostFrequentCrime(crimeArray);
-			} else if (comboBox.equals("Region with Highest Crime")) {
-
+			} else if (comboBox.equals("Regions with Highest Crimes")) {
+				resultString = getRegionWithHighestCrime(crimeArray);
 			} else if (comboBox.equals("Game Wins and Crime Rates")) {
 
 			} else if (comboBox.equals("Game Losses and Crime Rates")) {
@@ -48,39 +51,102 @@ public class AppQuery {
 			e.printStackTrace();
 		}
 
-		return resultString;
+		return "Results for the " + comboBox + " for the " + radioBox + " : ";
 	}
 
 	/**
-	 * getMostFrequentCrime will search for the most frequent crime in the league as identified by the user
-	 * @param crimeArray
-	 * @return String result
+	 * populateChartHashDouble will fill in labels for the pie chart and read results when Hash is made up of String: Double
+	 * @param answer
+	 * @return
 	 */
-	private static String getMostFrequentCrime(ArrayList<Crime> crimeArray) {
+	private static String populateChartHashDouble(HashMap<String, Double> answer) {
 		String resultString = "";
-		MostFrequentCrimeOfLeagueEachYear thisQuestion = new MostFrequentCrimeOfLeagueEachYear(crimeArray);
-		HashMap<String, String> thisAnswer = thisQuestion.getMostFrequentCrimeOfLeagueEachYearOf2007To2011(crimeArray,
-				radioBox);
-
-		for (Map.Entry<String, String> keyAnswer : thisAnswer.entrySet()) {
+		for (Map.Entry<String, Double> keyAnswer : answer.entrySet()) {
 			String key = keyAnswer.getKey();
-			String value = keyAnswer.getValue();
+			Double value = keyAnswer.getValue();
 			resultString = resultString + " " + key + " " + value;
+			pieChartLabels.put(key, value);
 		}
 		return resultString;
 	}
+
+	/**
+	 * populateChartHashString will fill in labels for pie cahrt and read results when Hash is made up of Strings
+	 * @param answer
+	 * @return
+	 */
+	private static String populateChartHashString(HashMap<String, String> answer) {
+		String resultString = "";
+		for (Map.Entry<String, String> keyAnswer : answer.entrySet()) {
+			String key = keyAnswer.getKey();
+			String value = keyAnswer.getValue();
+			resultString = resultString + " " + key + " " + value;
+			Double valueDouble = Double.parseDouble(value);
+			pieChartLabels.put(key, valueDouble);
+
+		}
+		return resultString;
+	}
+
+	/**
+	 * getRegionWithDisturbanceCrime will search for the frequent crimes for each
+	 * Region
+	 * 
+	 * @param crimeArray
+	 * @return
+	 */
+	private static String getRegionWithDisturbanceCrime(ArrayList<Crime> crimeArray) {
+
+		// Question Regions with their Disturbance Crime Rate Per League
+		RegionQuestionsLeague thisRegionQuestions = new RegionQuestionsLeague(crimeArray);
+		HashMap<String, Double> answer = thisRegionQuestions.findRegionWithHighestDisturbanceRatePerLeague(crimeArray,
+				radioBox);
+
+		return populateChartHashDouble(answer);
+	}
+
+	/**
+	 * getRegionWithHighestCrime will search for the frequent crimes for each Region
+	 * 
+	 * @param crimeArray
+	 * @return
+	 */
+
+	private static String getRegionWithHighestCrime(ArrayList<Crime> crimeArray) {
+		RegionQuestionsLeague thisRegionQuestions = new RegionQuestionsLeague(crimeArray);
+		HashMap<String, String> answer = thisRegionQuestions.getMostFrequentCrimeOfEachRegionReport(crimeArray,
+				radioBox);
+
+		return populateChartHashString(answer);
+	}
+
+	/**
+	 * getMostFrequentCrime will search for the most frequent crime in the league as
+	 * identified by the user
+	 * 
+	 * @param crimeArray
+	 * @return String result
+	 */
+
+	private static String getMostFrequentCrime(ArrayList<Crime> crimeArray) {
+		MostFrequentCrimeOfLeagueEachYear thisQuestion = new MostFrequentCrimeOfLeagueEachYear(crimeArray);
+		HashMap<String, String> answer = thisQuestion.getMostFrequentCrimeOfLeagueEachYearOf2007To2011(crimeArray,
+				radioBox);
+
+		return populateChartHashString(answer);
+	}
+
 	/**
 	 * getChart will create the panel and the chart based on what the user requests
+	 * 
 	 * @param pieChartTitle
 	 * @return
 	 */
-	
+
 	public static JPanel getChart(String pieChartTitle) {
 		PieChart pieChartResult = new PieChart(pieChartTitle);
-		HashMap<String, Integer> pieChartLabels = new HashMap<String, Integer>();
-		pieChartLabels.put("one", 20);
-		pieChartLabels.put("two", 30);
-		pieChartLabels.put("three", 50);
+//		HashMap<String, Integer> pieChartLabels = new HashMap<String, Integer>();
+
 		pieChartResult.setPieChartLabels(pieChartLabels);
 		JPanel chartPanel = pieChartResult.createChartPanel();
 		return chartPanel;
@@ -88,9 +154,10 @@ public class AppQuery {
 
 	/**
 	 * Getters and Setters
+	 * 
 	 * @return
 	 */
-	
+
 	public static String getComboBox() {
 		return comboBox;
 	}
