@@ -45,9 +45,7 @@ public class CrimeReader {
 		return genDisturbanceArray;
 	}
 	
-	public static ArrayList<Crime> getCrimeArrayWithoutCode800(){
-	        return crimeArrayWithoutCode800;
-	}
+
 
 
 
