@@ -2,7 +2,7 @@ import java.util.Map.Entry;
 
 public class RobbyQuestions {
 
-    
+    //Question 7 for all Crime Rate Types//
     public static Double getNHLWinVsAllCrimeRateCumulative() {
         Double crimeRateChangeSum = 0.0;
 
@@ -208,7 +208,7 @@ public class RobbyQuestions {
     }
     
     
-    //Question 8//
+    //Question 8 for all 3 Different Crime Rate Types and for Both Wins and losses//
     
     public static String whichSportHasHighestAllCrimeRateForWins() {
         String teamWithHighestAllCrimeRate = "";
