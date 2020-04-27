@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Map.Entry;
 
 public class RobbyQuestions {
@@ -355,5 +356,127 @@ public class RobbyQuestions {
             teamWithHighestGDCrimeRate = "MLB";
         }
         return teamWithHighestGDCrimeRate;
+    }
+    
+    //Question 9//
+    public static String NFLOpponentWithHighestCrimeRateforLoss() {
+        Entry<String, Double> maxEntry = null;
+        String opponentWithHighestCrimeRate = "";
+        for(Entry<String, Double> entry : GameWinLossVSCrimeRate.NFLLossVsAllCrimeRateChangeMap.entrySet()) {
+            if(maxEntry == null || entry.getValue() > maxEntry.getValue()) {
+                maxEntry = entry;
+            }
+        }
+        for(Games game : LeagueReader.NFLArray) {
+            if(maxEntry.getKey().equals(game.getGameDate().toString())){
+                opponentWithHighestCrimeRate = game.getAwayTeam();
+            }
+        }
+        return opponentWithHighestCrimeRate;
+    }
+    public static String NHLOpponentWithHighestCrimeRateForLoss() {
+        Entry<String, Double> maxEntry = null;
+        String opponentWithHighestCrimeRate = "";
+        for(Entry<String, Double> entry : GameWinLossVSCrimeRate.NHLLossVsAllCrimeRateChangeMap.entrySet()) {
+            if(maxEntry == null || entry.getValue() > maxEntry.getValue()) {
+                maxEntry = entry;
+            }
+        }
+        for(Games game : LeagueReader.NHLArray) {
+            if(maxEntry.getKey().equals(game.getGameDate().toString())){
+                opponentWithHighestCrimeRate = game.getAwayTeam();
+            }
+        }
+        return opponentWithHighestCrimeRate;
+    }
+    public static String NBAOpponentWithHighestCrimeRateForLoss() {
+        Entry<String, Double> maxEntry = null;
+        String opponentWithHighestCrimeRate = "";
+        for(Entry<String, Double> entry : GameWinLossVSCrimeRate.NBALossVsAllCrimeRateChangeMap.entrySet()) {
+            if(maxEntry == null || entry.getValue() > maxEntry.getValue()) {
+                maxEntry = entry;
+            }
+        }
+        for(Games game : LeagueReader.NBAArray) {
+            if(maxEntry.getKey().equals(game.getGameDate().toString())){
+                opponentWithHighestCrimeRate = game.getAwayTeam();
+            }
+        }
+        return opponentWithHighestCrimeRate;
+    }
+    public static String MLBOpponentWithHighestCrimeRateForLoss() {
+        Entry<String, Double> maxEntry = null;
+        String opponentWithHighestCrimeRate = "";
+        for(Entry<String, Double> entry : GameWinLossVSCrimeRate.MLBLossVsAllCrimeRateChangeMap.entrySet()) {
+            if(maxEntry == null || entry.getValue() > maxEntry.getValue()) {
+                maxEntry = entry;
+            }
+        }
+        for(Games game : LeagueReader.MLBArray) {
+            if(maxEntry.getKey().equals(game.getGameDate().toString())){
+                opponentWithHighestCrimeRate = game.getAwayTeam();
+            }
+        }
+        return opponentWithHighestCrimeRate;
+    }
+    public static String NFLOpponentWithHighestCrimeRateForWin() {
+        Entry<String, Double> maxEntry = null;
+        String opponentWithHighestCrimeRate = "";
+        for(Entry<String, Double> entry : GameWinLossVSCrimeRate.NFLWinVsAllCrimeRateChangeMap.entrySet()) {
+            if(maxEntry == null || entry.getValue() > maxEntry.getValue()) {
+                maxEntry = entry;
+            }
+        }
+        for(Games game : LeagueReader.NFLArray) {
+            if(maxEntry.getKey().equals(game.getGameDate().toString())){
+                opponentWithHighestCrimeRate = game.getAwayTeam();
+            }
+        }
+        return opponentWithHighestCrimeRate;
+    }
+    public static String NHLOpponentWithHighestCrimeRateForWin() {
+        Entry<String, Double> maxEntry = null;
+        String opponentWithHighestCrimeRate = "";
+        for(Entry<String, Double> entry : GameWinLossVSCrimeRate.NHLWinVsAllCrimeRateChangeMap.entrySet()) {
+            if(maxEntry == null || entry.getValue() > maxEntry.getValue()) {
+                maxEntry = entry;
+            }
+        }
+        for(Games game : LeagueReader.NHLArray) {
+            if(maxEntry.getKey().equals(game.getGameDate().toString())){
+                opponentWithHighestCrimeRate = game.getAwayTeam();
+            }
+        }
+        return opponentWithHighestCrimeRate;
+    }
+    public static String NBAOpponentWithHighestCrimeRateForWin() {
+        Entry<String, Double> maxEntry = null;
+        String opponentWithHighestCrimeRate = "";
+        for(Entry<String, Double> entry : GameWinLossVSCrimeRate.NBAWinVsAllCrimeRateChangeMap.entrySet()) {
+            if(maxEntry == null || entry.getValue() > maxEntry.getValue()) {
+                maxEntry = entry;
+            }
+        }
+        for(Games game : LeagueReader.NBAArray) {
+            if(maxEntry.getKey().equals(game.getGameDate().toString())){
+                opponentWithHighestCrimeRate = game.getAwayTeam();
+            }
+        }
+        return opponentWithHighestCrimeRate;
+    }
+    public static String MLBOpponentWithHighestCrimeRateForWin() {
+        Entry<String, Double> maxEntry = null;
+        String opponentWithHighestCrimeRate = "";
+        for(Entry<String, Double> entry : GameWinLossVSCrimeRate.MLBWinVsAllCrimeRateChangeMap.entrySet()) {
+            if(maxEntry == null || entry.getValue() > maxEntry.getValue()) {
+                maxEntry = entry;
+            }
+        }
+        for(Games game : LeagueReader.MLBArray) {
+            if(maxEntry.getKey().equals(game.getGameDate().toString())){
+                opponentWithHighestCrimeRate = game.getAwayTeam();
+            }
+        }
+        return opponentWithHighestCrimeRate;
     }
 }
