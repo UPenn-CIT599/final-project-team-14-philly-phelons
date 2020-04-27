@@ -36,14 +36,6 @@ public class AppQuery {
 				resultString = getMostFrequentCrime(crimeArray);
 			} else if (comboBox.equals("Regions with Highest Crimes")) {
 				resultString = getRegionWithHighestCrime(crimeArray);
-			} else if (comboBox.equals("Game Wins and Crime Rates")) {
-
-			} else if (comboBox.equals("Game Losses and Crime Rates")) {
-
-			} else if (comboBox.equals("Sport with Highest Crime Rate")) {
-
-			} else if (comboBox.equals("Opponent with Highest Crime Rate")) {
-
 			}
 
 		} catch (FileNotFoundException e) {
@@ -71,7 +63,7 @@ public class AppQuery {
 	}
 
 	/**
-	 * populateChartHashString will fill in labels for pie cahrt and read results when Hash is made up of Strings
+	 * populateChartHashString will fill in labels for pie chart and read results when Hash is made up of Strings
 	 * @param answer
 	 * @return
 	 */
@@ -81,8 +73,8 @@ public class AppQuery {
 			String key = keyAnswer.getKey();
 			String value = keyAnswer.getValue();
 			resultString = resultString + " " + key + " " + value;
-			Double valueDouble = Double.parseDouble(value);
-			pieChartLabels.put(key, valueDouble);
+			Double valueDouble = 30.00;
+			pieChartLabels.put((key + " : " + value), valueDouble);
 
 		}
 		return resultString;
