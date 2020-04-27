@@ -126,8 +126,8 @@ public class RegionQuestionsLeague extends Questions {
 			String crimeRegion = calculateMostFrequentCrimeOfEachRegionPerLeague(crimeArray, region, league);
 			crimeRegionReport.put(region, crimeRegion);//update the HashMap with region and associated most frequent crime type
 		}
-		addCrimeTypeLabel(crimeRegionReport);
-		return crimeRegionReport;
+		HashMap<String, String> labelledCrimeReport = addCrimeTypeLabel(crimeRegionReport);
+		return labelledCrimeReport;
 	}
 
 }

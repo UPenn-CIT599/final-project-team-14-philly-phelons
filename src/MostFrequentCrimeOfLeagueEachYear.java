@@ -38,8 +38,8 @@ public class MostFrequentCrimeOfLeagueEachYear extends Questions {
 			String annualData = calculateMostFrequentCrimeOfEachYear(crimeArray, Integer.toString(i).substring(2, 3), league);
 			annualReport.put(Integer.toString(i), annualData);
 		}
-		addCrimeTypeLabel(annualReport);
-		return annualReport;
+		HashMap <String, String> labelledAnnualReport = addCrimeTypeLabel(annualReport);
+		return labelledAnnualReport;
 	}
 
 }
