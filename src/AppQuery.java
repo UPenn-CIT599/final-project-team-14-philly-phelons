@@ -16,7 +16,8 @@ public class AppQuery {
 
 	private static String comboBox;
 	private static String radioBox;
-	private static HashMap<String, Double> pieChartLabels = new HashMap<String, Double>();
+	private static HashMap<String, Double> queryPieChartLabels = new HashMap<String, Double>();
+
 
 	/**
 	 * queryAnswer() will run the appropriate search
@@ -27,19 +28,22 @@ public class AppQuery {
 	public static String queryAnswer() {
 
 		CrimeReader reader;
-		String resultString = radioBox;
+		@SuppressWarnings("unused")
+		String resultString = "";
 		try {
 			reader = new CrimeReader();
+			@SuppressWarnings("static-access")
 			ArrayList<Crime> crimeArray = reader.getAllCrimeArray();
 
 			if (comboBox.equals("Most Frequent Crime")) {
 				resultString = getMostFrequentCrime(crimeArray);
 			} else if (comboBox.equals("Regions with Highest Crimes")) {
 				resultString = getRegionWithHighestCrime(crimeArray);
+			} else if (comboBox.equals("Region with Disturbance Crime")) {
+				resultString = getRegionWithDisturbanceCrime(crimeArray);
 			}
 
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -51,13 +55,14 @@ public class AppQuery {
 	 * @param answer
 	 * @return
 	 */
+	
 	private static String populateChartHashDouble(HashMap<String, Double> answer) {
 		String resultString = "";
 		for (Map.Entry<String, Double> keyAnswer : answer.entrySet()) {
-			String key = keyAnswer.getKey();
+			String key = "District " + keyAnswer.getKey();
 			Double value = keyAnswer.getValue();
 			resultString = resultString + " " + key + " " + value;
-			pieChartLabels.put(key, value);
+			queryPieChartLabels.put(key, value);
 		}
 		return resultString;
 	}
@@ -67,14 +72,14 @@ public class AppQuery {
 	 * @param answer
 	 * @return
 	 */
+	
 	private static String populateChartHashString(HashMap<String, String> answer) {
 		String resultString = "";
 		for (Map.Entry<String, String> keyAnswer : answer.entrySet()) {
 			String key = keyAnswer.getKey();
 			String value = keyAnswer.getValue();
 			resultString = resultString + " " + key + " " + value;
-			Double valueDouble = 30.00;
-			pieChartLabels.put((key + " : " + value), valueDouble);
+			queryPieChartLabels.put((key + " : " + value), 10.0);
 
 		}
 		return resultString;
@@ -137,10 +142,10 @@ public class AppQuery {
 
 	public static JPanel getChart(String pieChartTitle) {
 		PieChart pieChartResult = new PieChart(pieChartTitle);
-//		HashMap<String, Integer> pieChartLabels = new HashMap<String, Integer>();
 
-		pieChartResult.setPieChartLabels(pieChartLabels);
+		pieChartResult.setPieChartLabels(queryPieChartLabels);
 		JPanel chartPanel = pieChartResult.createChartPanel();
+		clearPieChartLabels();
 		return chartPanel;
 	}
 
@@ -164,6 +169,14 @@ public class AppQuery {
 
 	public static void setRadioBox(String radioBoxOption) {
 		radioBox = radioBoxOption;
+	}
+
+	/**
+	 * will clear the queryPieChartLabels otherwise the chart will populate with previous labels.
+	 */
+	
+	public static void clearPieChartLabels() {
+		AppQuery.queryPieChartLabels = new HashMap<String, Double>();
 	}
 
 }
