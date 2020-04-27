@@ -19,10 +19,11 @@ import java.util.ArrayList;
  *
  */
 public class CrimeReader {
-
-    public static ArrayList<Crime> allCrimeArray = new ArrayList<Crime>();
+	
+	public static ArrayList<Crime> allCrimeArray = new ArrayList<Crime>();
 	public static ArrayList<Crime> violentCrimeArray = new ArrayList<Crime>();
 	public static ArrayList<Crime> genDisturbanceArray = new ArrayList<Crime>();
+	public static ArrayList<Crime> crimeArrayWithoutCode800 = new ArrayList<Crime>();
 
 	public CrimeReader() throws FileNotFoundException {
 		allCrimeArray = makeAllCrimeArray();
@@ -44,6 +45,11 @@ public class CrimeReader {
 	public static ArrayList<Crime> getGenDisturbanceArray() {
 		return genDisturbanceArray;
 	}
+	
+	public static ArrayList<Crime> getCrimeArrayWithoutCode800(){
+	        return crimeArrayWithoutCode800;
+	}
+
 
 
 
@@ -70,7 +76,9 @@ public class CrimeReader {
 				String crimeCode = dataLineSplit[2];
 
 				Crime crime = new Crime(district, date, crimeCode);
-
+				if(!(crime.getCrimeCode().equals("800"))) {
+				    crimeArrayWithoutCode800.add(crime);
+				}
 				crimeArray.add(crime);
 			}
 			br.close();
