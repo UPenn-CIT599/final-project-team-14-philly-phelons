@@ -5,8 +5,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * @author Robby Ballard

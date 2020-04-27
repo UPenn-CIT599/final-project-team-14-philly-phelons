@@ -17,12 +17,10 @@ public class LeagueSeason {
 	private static ArrayList<Games> NFLSeason;
 	private static ArrayList<Games> NBASeason;
 
-	private LeagueReader lr = new LeagueReader();
-
-	private ArrayList<Games> MLBGameArray = lr.MLBArray;
-	private ArrayList<Games> NHLGameArray = lr.NHLArray;
-	private ArrayList<Games> NFLGameArray = lr.NFLArray;
-	private ArrayList<Games> NBAGameArray = lr.NBAArray;
+	private ArrayList<Games> MLBGameArray = LeagueReader.MLBArray;
+	private ArrayList<Games> NHLGameArray = LeagueReader.NHLArray;
+	private ArrayList<Games> NFLGameArray = LeagueReader.NFLArray;
+	private ArrayList<Games> NBAGameArray = LeagueReader.NBAArray;
 
 	/**
 	 * Constructor will load League's Season Array Lists
