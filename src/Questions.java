@@ -130,12 +130,18 @@ public abstract class Questions {
 	public HashMap<String, Double> CalculateRate(HashMap<String, Integer> hm1, HashMap<String, Integer> hm2, HashMap<String, Boolean> hm3){
 		HashMap<String, Double> rate = new HashMap<String, Double>();
 		for(String string : hm3.keySet()) {
-			rate.put(string, (double)hm2.get(string)/(double)hm1.get(string));
+			double ratio = (double)hm2.get(string)/(double)hm1.get(string);
+			rate.put(string, ratio);
 		}
 		return rate;
 	}
 	
-	public ArrayList<LocalDate> getLeagueGameDate(String league){
+	/**
+	 * Create an ArrayList to store game dates according to different leagues
+	 * @param league
+	 * @return ArrayList of dates
+	 */
+	public ArrayList<LocalDate> getLeagueGameDate(String league) {
 		ArrayList<LocalDate> leagueGameDate = new ArrayList<LocalDate>();
 		
 		try {
@@ -157,7 +163,7 @@ public abstract class Questions {
 			}
 		}
 		if (league.equals("NHL")) {
-			for(Games game : newLeague.NHLArray) {
+			for(Games game : newLeague.getNHLArray()) {
 				leagueGameDate.add(game.getGameDate());
 			}
 		}

@@ -11,13 +11,13 @@ public class RegionQuestionsLeague extends Questions {
 	}
 	
 	/**
-	 * Based of each league, calculate the disturbance crime rate of each region and sort to find the region 
+	 * Based of each league, calculate the disturbance crime rate of each region and display 
 	 * with highest disturbance crime rate
 	 * @param crimeArray
 	 * @param league
-	 * @return region with highest disturbance crime rate
+	 * @return disturbance rate of each region
 	 */
-	public String findRegionWithHighestDisturbanceRatePerLeague(ArrayList<Crime> crimeArray, String league) {
+	public HashMap<String, Double> findRegionWithHighestDisturbanceRatePerLeague(ArrayList<Crime> crimeArray, String league) {
 		HashMap<String, Integer> thisQuestionCount = TotalCrimeCountByDistrict(crimeArray);
 		HashMap<String, Integer> thisDisturbanceCount = TotalCrimeCountByDistrict(CrimeReader.getViolentCrimeArray());
 		HashMap<String, Boolean> thisRegionSet = regionSet(crimeArray);
@@ -39,17 +39,25 @@ public class RegionQuestionsLeague extends Questions {
 		}
 		
 		HashMap<String, Double> disturbanceRate = CalculateRate(thisQuestionCount, thisDisturbanceCount, thisRegionSet);//calculate the disturbance crime rate for each region
-   
-		String thisQuestionAnswer = sortedCrimeRate(disturbanceRate);
+		return disturbanceRate;
+	}
+	
+	/**
+	 * Sort and find the region with highest disturbance rate
+	 * @param regionDisturbanceRate
+	 * @return the region with with highest disturbance rate
+	 */
+	public String getRegionWithHighestDisturbanceRatePerLeague(HashMap<String, Double> regionDisturbanceRate) {
+		String thisQuestionAnswer = sortedCrimeRate(regionDisturbanceRate);
 		return thisQuestionAnswer;
 	}
 	
 	/**
-	 * Calculate the violent crime rate of each region and sort to find the region with highest violent crime rate
+	 * Based of each league, calculate the violent crime rate of each region and display
 	 * @param crimeArray
-	 * @return region with highest violent crime rate
+	 * @return violent crime rate of each region
 	 */
-	public String findRegionWithHighestViolentRate(ArrayList<Crime> crimeArray, String league) {
+	public HashMap<String, Double> findRegionWithHighestViolentRate(ArrayList<Crime> crimeArray, String league) {
 		HashMap<String, Integer> thisQuestionCount = TotalCrimeCountByDistrict(crimeArray); // create a HashMap to store count of crime for each region
 		HashMap<String, Integer> thisViolenceCount = TotalCrimeCountByDistrict(CrimeReader.getViolentCrimeArray()); // create a HashMap to store count of violent crime for each region
 		HashMap<String, Boolean> thisRegionSet = regionSet(crimeArray); // create a HashMap to store regions
@@ -71,7 +79,16 @@ public class RegionQuestionsLeague extends Questions {
 			}
 		}
 		HashMap<String, Double> violenceRate = CalculateRate(thisQuestionCount, thisViolenceCount, thisRegionSet); // create a HashMap to store region and associated violent crime rate
-		String thisQuestionAnswer = sortedCrimeRate(violenceRate); // Sort the regions with violent crime rate to output the highest region
+		return violenceRate;
+	}
+	
+	/**
+	 * Sort and find the region with highest disturbance rate
+	 * @param regionDisturbanceRate
+	 * @return the region with with highest disturbance rate
+	 */
+	public String getRegionWithHighestViolentRatePerLeague(HashMap<String, Double> regionViolenceRate) {
+		String thisQuestionAnswer = sortedCrimeRate(regionViolenceRate); // Sort the regions with violent crime rate to output the highest region
 		return thisQuestionAnswer;
 	}
 	
@@ -102,7 +119,7 @@ public class RegionQuestionsLeague extends Questions {
 	 * @param crimeData
 	 * @return region crime report
 	 */
-	public HashMap<String, String> mostFrequentCrimeOfEachRegionReport(ArrayList<Crime> crimeArray, String league){ //create a HashMap to store region and associated crime type
+	public HashMap<String, String> getMostFrequentCrimeOfEachRegionReport(ArrayList<Crime> crimeArray, String league){ //create a HashMap to store region and associated crime type
 		HashMap<String, String> crimeRegionReport = new HashMap<String, String>();
 		Set<String> districtArray = crimeArray.stream().map(v -> v.getDistrict()).collect(Collectors.toSet()); // create a set of regions to traverse
 		for(String region: districtArray) {

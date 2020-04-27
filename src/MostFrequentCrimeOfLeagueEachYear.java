@@ -32,7 +32,7 @@ public class MostFrequentCrimeOfLeagueEachYear extends Questions {
 	 * @param crimeArray
 	 * @return annual report
 	 */
-	public HashMap <String, String> MostFrequentCrimeOfLeagueEachYearOf2007To2011(ArrayList<Crime> crimeArray, String league) {
+	public HashMap <String, String> getMostFrequentCrimeOfLeagueEachYearOf2007To2011(ArrayList<Crime> crimeArray, String league) {
 		HashMap<String, String> annualReport = new HashMap<String, String>();
 		for(int i = 2007; i < 2012; i++) {
 			String annualData = calculateMostFrequentCrimeOfEachYear(crimeArray, Integer.toString(i).substring(2, 3), league);
