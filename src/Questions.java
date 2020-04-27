@@ -173,4 +173,32 @@ public abstract class Questions {
 		}
 		return leagueGameDate;
 	}
+	
+	/**
+	 * Create a new HashMap to store crime type
+	 * @param hm
+	 * @return a HashMap with crime type instead of code
+	 */
+	public HashMap<String, String> addCrimeTypeLabel(HashMap<String, String> hm){
+		HashMap<String, String> labelAdded = new HashMap<String, String>();
+		HashMap<String, String> labelSet = new HashMap<String, String>();
+		labelSet.put("100", "Homicide");
+		labelSet.put("200", "Rape");
+		labelSet.put("300", "Robbery Firearm");
+		labelSet.put("400", "Aggravated Assault Firearm/Aggravated Assault No Firearm");
+		labelSet.put("800", "Other Assaults");
+		labelSet.put("900", "Arson");
+		labelSet.put("1500", "Weapon Violations");
+		labelSet.put("1400", "Vandalism/Criminal Mischief");
+		labelSet.put("2100", "Driving Under the Influence");
+		labelSet.put("2300", "Public Drunkenness");
+		labelSet.put("2400", "Disorderly Conduct");
+		
+		for(String key : hm.keySet()) {
+			if(labelSet.keySet().contains(hm.get(key))) {
+				labelAdded.put(key, labelSet.get(hm.get(key)));
+			}
+		}
+		return labelAdded;
+	}
 }
