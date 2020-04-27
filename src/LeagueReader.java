@@ -140,9 +140,9 @@ public class LeagueReader {
 
         for (String[] gameData : leagueData) {
 
-            String gameDate = gameData[3]; // gameDate value.
-            String season = gameData[1];// season value.
-            String gameType = gameData[2]; // gameType value.
+        	String gameDate = gameData[1]; // gameDate value.
+        	String season = gameData[13];// season value.
+        	String gameType = gameData[2]; // gameType value.
             String awayTeam = gameData[5]; // awayTeam value.
             String homeTeam = gameData[6]; // homeTeam value.
             String awayScore = gameData[7]; // awayScore value.
