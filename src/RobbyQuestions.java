@@ -479,4 +479,53 @@ public class RobbyQuestions {
         }
         return opponentWithHighestCrimeRate;
     }
+    
+    public static void printQuestion7() {
+        System.out.println("When the Phillies won, the TOTAL crime rate changed, on average, by " + getMLBWinVsAllCrimeRateCumulative() + "%");
+        System.out.println("When the Phillies lost, the TOTAL crime rate changed, on average, by " + getMLBLossVsAllCrimeRateCumulative() + "%");
+        System.out.println("When the Eagles won, the TOTAL crime rate changed, on average, by " + getNFLWinVsAllCrimeRateCumulative() + "%");
+        System.out.println("When the Eagles lost, the TOTAL crime rate changed, on average, by " + getNFLLossVsAllCrimeRateCumulative() + "%");
+        System.out.println("When the 76ers won, the TOTAL crime rate changed, on average, by " + getNBAWinVsAllCrimeRateCumulative() + "%");
+        System.out.println("When the 76ers lost, the TOTAL crime rate changed, on average, by " + getNBALossVsAllCrimeRateCumulative() + "%");
+        System.out.println("When the Flyers won, the TOTAL crime rate changed, on average, by " + getNHLWinVsAllCrimeRateCumulative() + "%");
+        System.out.println("When the Flyers lost, the TOTAL crime rate changed, on average, by " + getNHLLossVsAllCrimeRateCumulative() + "%");
+        System.out.println("When the Phillies won, the VIOLENT crime rate changed, on average, by " + getMLBWinVsViolentCrimeRateCumulative() + "%");
+        System.out.println("When the Phillies lost, the VIOLENT crime rate changed, on average, by " + getMLBLossVsViolentCrimeRateCumulative() + "%");
+        System.out.println("When the Eagles won, the VIOLENT crime rate changed, on average, by " + getNFLWinVsViolentCrimeRateCumulative() + "%");
+        System.out.println("When the Eagles lost, the VIOLENT crime rate changed, on average, by " + getNFLLossVsViolentCrimeRateCumulative() + "%");
+        System.out.println("When the 76ers won, the VIOLENT crime rate changed, on average, by " + getNBAWinVsViolentCrimeRateCumulative() + "%");
+        System.out.println("When the 76ers lost, the VIOLENT crime rate changed, on average, by " + getNBALossVsViolentCrimeRateCumulative() + "%");
+        System.out.println("When the Flyers won, the VIOLENT crime rate changed, on average, by " + getNHLWinVsViolentCrimeRateCumulative() + "%");
+        System.out.println("When the Flyers lost, the VIOLENT crime rate changed, on average, by " + getNHLLossVsViolentCrimeRateCumulative() + "%");
+        System.out.println("When the Phillies won, the GENERAL DISTURBANCE crime rate changed, on average, by " + getMLBWinVsGDCrimeRateCumulative() + "%");
+        System.out.println("When the Phillies lost, the GENERAL DISTURBANCE crime rate changed, on average, by " + getMLBLossVsGDCrimeRateCumulative() + "%");
+        System.out.println("When the Eagles won, the GENERAL DISTURBANCE crime rate changed, on average, by " + getNFLWinVsGDCrimeRateCumulative() + "%");
+        System.out.println("When the Eagles lost, the GENERAL DISTURBANCE crime rate changed, on average, by " + getNFLLossVsGDCrimeRateCumulative() + "%");
+        System.out.println("When the 76ers won, the GENERAL DISTURBANCE crime rate changed, on average, by " + getNBAWinVsGDCrimeRateCumulative() + "%");
+        System.out.println("When the 76ers lost, the GENERAL DISTURBANCE crime rate changed, on average, by " + getNBALossVsGDCrimeRateCumulative() + "%");
+        System.out.println("When the Flyers won, the GENERAL DISTURBANCE crime rate changed, on average, by " + getNHLWinVsGDCrimeRateCumulative() + "%");
+        System.out.println("When the Flyers won, the GENERAL DISTURBANCE crime rate changed, on average, by " + getNHLLossVsGDCrimeRateCumulative() + "%");
+    }
+        public static void printQuestion8() {
+        
+        System.out.println("Philadelphia's " + whichSportHasHighestViolentCrimeRateForWins() + " franchise had the VIOLENT highest crime rate when they won a game.");
+        System.out.println("Philadelphia's " + whichSportHasHighestGDCrimeRateForWins() + " franchise had the highest GENERAL DISTURBANCE crime rate when they won a game.");
+        System.out.println("Philadelphia's " + whichSportHasHighestAllCrimeRateForWins() + " franchise had the highest TOTAL crime rate when they won a game.");
+        System.out.println("Philadelphia's " + whichSportHasHighestViolentCrimeRateForLosses() + " franchise had the VIOLENT highest crime rate when they lost a game.");
+        System.out.println("Philadelphia's " + whichSportHasHighestGDCrimeRateForLosses() + " franchise had the highest GENERAL DISTURBANCE crime rate when they lost a game.");
+        System.out.println("Philadelphia's " + whichSportHasHighestAllCrimeRateForLosses() + " franchise had the highest TOTAL crime rate when they lost a game.");
+
+    }
+        
+        public static void printQuestion9() {
+            System.out.println("The highest crime rate on a day when the Eagles won occurred when they played " + NFLOpponentWithHighestCrimeRateForWin());
+            System.out.println("The highest crime rate on a day when the Eagles lost occurred when they played " + NFLOpponentWithHighestCrimeRateforLoss());
+            System.out.println("The highest crime rate on a day when the Phillies won occurred when they played " + MLBOpponentWithHighestCrimeRateForWin());
+            System.out.println("The highest crime rate on a day when the Phillies lost occurred when they played " + MLBOpponentWithHighestCrimeRateForWin());
+            System.out.println("The highest crime rate on a day when the Flyers won occurred when they played " + NHLOpponentWithHighestCrimeRateForWin());
+            System.out.println("The highest crime rate on a day when the Flyers won occurred when they played " + NHLOpponentWithHighestCrimeRateForLoss());
+            System.out.println("The highest crime rate on a day when the 76ers won occurred when they played " + NBAOpponentWithHighestCrimeRateForWin());
+            System.out.println("The highest crime rate on a day when the 76ers won occurred when they played " + NBAOpponentWithHighestCrimeRateForWin());
+
+        }
 }
