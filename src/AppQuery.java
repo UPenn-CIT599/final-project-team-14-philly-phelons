@@ -11,14 +11,15 @@ public class AppQuery {
 	private static String radioBox;
 
 	public static String queryAnswer() {
+	
 		CrimeReader reader;
-		String resultString = "the result string";
+		String resultString = radioBox;
 		try {
 			reader = new CrimeReader();
 			ArrayList<Crime> crimeArray = reader.getAllCrimeArray();
 			MostFrequentCrimeOfLeagueEachYear thisQuestion = new MostFrequentCrimeOfLeagueEachYear(crimeArray);
 			HashMap<String, String> thisAnswer = thisQuestion
-					.getMostFrequentCrimeOfLeagueEachYearOf2007To2011(crimeArray, "NFL");
+					.getMostFrequentCrimeOfLeagueEachYearOf2007To2011(crimeArray, radioBox);
 
 			for (Map.Entry<String, String> keyAnswer : thisAnswer.entrySet()) {
 				String key = keyAnswer.getKey();
