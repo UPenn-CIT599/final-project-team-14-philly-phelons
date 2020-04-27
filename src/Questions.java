@@ -162,7 +162,7 @@ public abstract class Questions {
 			}
 		}
 		if (league.equals("NHL")) {
-			for(Games game : LeagueReader.NHLArray) {
+			for(Games game : newLeague.getNHLArray()) {
 				leagueGameDate.add(game.getGameDate());
 			}
 		}
