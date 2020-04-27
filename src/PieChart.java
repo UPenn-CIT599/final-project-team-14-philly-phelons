@@ -11,10 +11,13 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
 
+/**
+ * PieChart Class builds the PieChart
+ * @author claudiaromano
+ *
+ */
 public class PieChart extends JFrame {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -8986772773938935787L;
 	private static HashMap<String, Integer> pieChartLabels = new HashMap<String, Integer>();
 	private static String pieChartTitle = "";
@@ -24,6 +27,11 @@ public class PieChart extends JFrame {
 		setContentPane(createChartPanel());
 	}
 
+	/**
+	 * Getters and Setters
+	 * @return
+	 */
+	
 	public static HashMap<String, Integer> getPieChartLabels() {
 		return pieChartLabels;
 	}
@@ -57,6 +65,11 @@ public class PieChart extends JFrame {
 		return dataset;
 	}
 
+	/**
+	 * Will create the chart
+	 * @param dataset
+	 * @return
+	 */
 	private static JFreeChart createChart(PieDataset dataset) {
 		JFreeChart chart = ChartFactory.createPieChart(pieChartTitle, // title
 				dataset, // data
@@ -66,11 +79,19 @@ public class PieChart extends JFrame {
 		return chart;
 	}
 
+	/**
+	 * Will create the JPanel to add to the JFrame
+	 * @return
+	 */
 	public JPanel createChartPanel() {
 		JFreeChart chart = createChart(createDataset());
 		return new ChartPanel(chart);
 	}
 
+	/**
+	 * JFreeChart needs main()
+	 * @param args
+	 */
 	public static void main(String[] args) {
 	}
 }

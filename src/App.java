@@ -30,9 +30,9 @@ public class App extends JFrame {
 	private static final int FRAME_HEIGHT = 600;
 
 	// labels where answers will go
-	private JLabel resultLabel = new JLabel("result goes here");
-//	private JLabel radioLabel = new JLabel("radio button selected goes here");
-//	private JLabel comboBoxLabel = new JLabel("combo box selection goes here");
+	private JLabel resultLabel = new JLabel(" ");
+	private JLabel radioLabel = new JLabel(" ");
+	private JLabel comboBoxLabel = new JLabel(" ");
 
 	@SuppressWarnings("rawtypes")
 	private JComboBox crimeStatList;
@@ -75,8 +75,8 @@ public class App extends JFrame {
 		centerPanel.add(createComboBox());
 		centerPanel.add(createButtonGroup());
 		centerPanel.add(resultLabel);
-//		centerPanel.add(radioLabel);
-//		centerPanel.add(comboBoxLabel);
+		centerPanel.add(radioLabel);
+		centerPanel.add(comboBoxLabel);
 
 		return centerPanel;
 	}
@@ -135,7 +135,7 @@ public class App extends JFrame {
 	 * 
 	 * @return JPanel
 	 */
-	
+
 	private JPanel createButtonGroup() {
 		JButton getButton = createButton("Get Stat");
 
@@ -150,7 +150,7 @@ public class App extends JFrame {
 
 		return panel;
 	}
-	
+
 	/**
 	 * createButton will build a button and add an action listener for it
 	 * 
@@ -200,12 +200,10 @@ public class App extends JFrame {
 
 			AppQuery.setComboBox(comboBoxString);
 			AppQuery.setRadioBox(radioSelectedString);
-			
+
 			resultLabel.setText(AppQuery.queryAnswer());
-			
+
 			add(AppQuery.getChart("chart title goes here"), BorderLayout.SOUTH);
-//			comboBoxLabel.setText(comboBoxString);
-//			radioLabel.setText(getRadioSelected());
 		}
 	}
 }
