@@ -1,0 +1,24 @@
+
+Project Summary : Philly Phelons
+
+Team Members: Claudia Peinado Romano, Tian Xue, Robby Ballard
+
+Project Repo Link: 
+https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons
+
+Project Description: 
+This data analysis project will take Philadelphia crime data and data from four major league sport Teams (Phillies, 76'ers, Flyers and Eagles) to determine statistics in different crime rates in the neighborhoods (called Regions) surrounding the teams' respective venues on game days.
+
+Work Breakdown: 
+
+Claudia Peinado Romano
+- GUI, Refactoring Code throughout project
+- Classes: App, AppQuery, AppViewer, PieChart, BarChart
+
+Tian Xue
+- Testing, Question Statistics
+- Classes: Questions, RegionQuestionsLeague, MostFrequentCrimeOfLeagueEachYear
+
+Robby Ballard
+- Data Sourcing, File Reading
+- Classes: Crime, CrimeReader, EstablishDataRates, Games, GameWInLossVSCrimeRate, LeagueReader, LeagueSeason
