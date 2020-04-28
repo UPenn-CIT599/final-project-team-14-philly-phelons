@@ -22,6 +22,12 @@ The following are required in your local computer to run this program efficientl
 ## Results for Regions with Disturbance Crimes
 ![Image3](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/Screen%20Shot%202020-04-27%20at%2016.49.18.png)
 
+## JUnit test result
+![Image4](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/JUnit%20test.JPG)
+
+## JUnit test result 2
+![Image5](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/JUnit%20Test%202.JPG)
+
 ## Built With:
 * JavaSwing
 * [JFree Chart](http://www.jfree.org/jfreechart/)
