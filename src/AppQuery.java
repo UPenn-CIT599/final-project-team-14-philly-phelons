@@ -33,7 +33,7 @@ public class AppQuery {
 		try {
 			reader = new CrimeReader();
 			@SuppressWarnings("static-access")
-			ArrayList<Crime> crimeArray = reader.getAllCrimeArray();
+			ArrayList<Crime> crimeArray = reader.getCrimeArrayWithoutCode800();
 
 			if (comboBox.equals("Most Frequent Crime")) {
 				resultString = getMostFrequentCrime(crimeArray);
