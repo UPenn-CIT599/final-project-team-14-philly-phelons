@@ -13,14 +13,14 @@ The following are required in your local computer to run this program efficientl
 1. In Eclipse, run the `AppViewer.java` class. 
 
 ## Results for Most Frequent Crime in the league selected by user
-![Image1](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/Screen%20Shot%202020-04-27%20at%2016.48.42.png)
+![Image1](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/Test_Run_Result_1.JPG)
 
 
 ## Results for Regions with the Highest Crimes
-![Image2](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/Screen%20Shot%202020-04-27%20at%2016.48.53.png)
+![Image2](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/Test_Run_Result_2.JPG)
 
 ## Results for Regions with Disturbance Crimes
-![Image3](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/Screen%20Shot%202020-04-27%20at%2016.49.18.png)
+![Image3](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/Test_Run_Result_3.JPG)
 
 ## JUnit test result
 ![Image4](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/JUnit%20test.JPG)
