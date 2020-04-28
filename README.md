@@ -10,7 +10,8 @@ The following are required in your local computer to run this program efficientl
 2. Unzip and open in Eclipse. 
 
 ## How to run in Eclipse: 
-1. In Eclipse, run the `AppViewer.java` class. 
+1. In Eclipse, add both jcommon and jfreechart to the project's Build Path. 
+2. Run the `AppViewer.java` class to run the program. 
 
 ## Results for Most Frequent Crime in the league selected by user
 ![Image1](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/Test_Run_Result_1.JPG)
