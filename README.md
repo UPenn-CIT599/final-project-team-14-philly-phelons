@@ -33,7 +33,7 @@ The following are required in your local computer to run this program efficientl
 * [JFree Chart](http://www.jfree.org/jfreechart/)
 
 ## Data Sources:
-[Open Data Philly](https://www.opendataphilly.org/) Data was cleaned up and pulled for years 2009 - 2011.
+[Open Data Philly](https://www.opendataphilly.org/) Data was cleaned up and pulled for years 2007 - 2011.
 
 ## Authors:
 [Claudia](https://github.com/QueenClau), [Tian](https://github.com/txue2020) and [Robby](https://github.com/P0bbn)
