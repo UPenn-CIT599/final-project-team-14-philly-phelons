@@ -16,7 +16,7 @@ Claudia Peinado Romano
 - Classes: App, AppQuery, AppViewer, PieChart, BarChart
 
 Tian Xue
-- Testing, Question Statistics
+- Testing, Reader Debugging, Question Statistics
 - Classes: Questions, RegionQuestionsLeague, MostFrequentCrimeOfLeagueEachYear
 
 Robby Ballard
