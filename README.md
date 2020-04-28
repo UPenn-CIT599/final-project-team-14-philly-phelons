@@ -23,10 +23,10 @@ The following are required in your local computer to run this program efficientl
 ![Image3](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/Test_Run_Result_3.JPG)
 
 ## JUnit test result
-![Image4](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/JUnit%20test.JPG)
+![Image4](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/JUnit%20test%20new.JPG)
 
 ## JUnit test result 2
-![Image5](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/JUnit%20Test%202.JPG)
+![Image5](https://github.com/UPenn-CIT599/final-project-team-14-philly-phelons/blob/master/JUnit%20Test%202%20new.JPG)
 
 ## Built With:
 * JavaSwing
